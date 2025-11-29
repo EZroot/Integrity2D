@@ -1,5 +1,5 @@
 public interface IAssetManager : IService
 {
     void InitializeAssets();
-    void LoadAsset(string assetPath);
+    ImageData LoadAsset(string assetPath);
 }
