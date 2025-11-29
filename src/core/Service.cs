@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 public static class Service
 {
     private static Dictionary<Type, object?>? m_Registry = null;
@@ -15,7 +17,7 @@ public static class Service
 
         var service = GetClassFromAssemblyByInterface(typeof(T));
 
-        System.Diagnostics.Debug.Assert(service != null, $"No implementation found for service interface {typeof(T).FullName}");
+        Debug.Assert(service != null, $"No implementation found for service interface {typeof(T).FullName}");
 
         object? instance = Activator.CreateInstance(service);
         m_Registry[typeof(T)] = instance;

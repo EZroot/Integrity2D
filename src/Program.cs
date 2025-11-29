@@ -4,5 +4,6 @@
     {
         var engine = new Engine(new DefaultGame());
         await engine.InitializeAsync();
+        engine.Run();
     }
 }
