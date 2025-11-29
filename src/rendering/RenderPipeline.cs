@@ -78,31 +78,19 @@ public class RenderPipeline : IRenderPipeline
         m_GlApi.UseProgram(0);
     }
 
-    public void DrawTexture(GLTexture texture)
+    /// <summary>
+    /// Draws a sprite using its associated SpriteComponent for texture and TransformComponent for position, scale, and rotation.
+    /// </summary>
+    /// <param name="sprite"></param>
+    /// <param name="transform"></param>
+    public void DrawSprite(SpriteComponent sprite, TransformComponent transform)
     {
         Debug.Assert(m_GlApi != null, "GL API is null.");
 
         m_GlApi.UseProgram(m_ShaderProgramId);
-        
-        texture.Use(TextureUnit.Texture0);
-        int location = m_GlApi.GetUniformLocation(m_ShaderProgramId, "textureSampler");
-        m_GlApi.Uniform1(location, 0); 
+        sprite.Texture.Use(TextureUnit.Texture0);
 
-        m_GlApi.BindVertexArray(m_VaoId);
-        m_GlApi.DrawArrays(PrimitiveType.Triangles, 0, 6);
-
-        m_GlApi.BindVertexArray(0);
-        m_GlApi.BindTexture(TextureTarget.Texture2D, 0);
-    }
-
-    public void DrawTextureAt(GLTexture texture, float x, float y, float width, float height)
-    {
-        Debug.Assert(m_GlApi != null, "GL API is null.");
-
-        m_GlApi.UseProgram(m_ShaderProgramId);
-        texture.Use(TextureUnit.Texture0);
-
-        var model = MathHelper.Translation(x, y, width, height);
+        var model = MathHelper.Translation(transform.X, transform.Y, sprite.Texture.Width * transform.ScaleX, sprite.Texture.Height * transform.ScaleY);
         int modelLoc = m_GlApi.GetUniformLocation(m_ShaderProgramId, "model");
         unsafe
         {
