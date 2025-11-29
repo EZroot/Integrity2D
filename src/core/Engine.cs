@@ -5,8 +5,9 @@ using Silk.NET.SDL;
 public class Engine
 {
     private Sdl? m_SdlApi;
-    private readonly EngineSettings m_Settings;
     private readonly IGame m_Game;
+    private readonly IEngineSettings m_Settings;
+    private readonly IAssetManager m_AssetManager;
     private readonly IInputManager m_InputManager;
     private readonly IWindowPipeline m_WindowPipe;
     private readonly IRenderPipeline m_RenderPipe;
@@ -15,10 +16,15 @@ public class Engine
 
     private bool m_IsRunning;
 
+    /// <summary>
+    /// Initializes a new instance of the Engine class with the specified game and all the required services.
+    /// </summary>
+    /// <param name="game"></param>
+    /// <exception cref="Exception"></exception>
     public Engine(IGame game)
     {
-        m_Settings = new EngineSettings();
-
+        m_Settings = Service.Get<IEngineSettings>() ?? throw new Exception("Engine Settings service not found.");
+        m_AssetManager = Service.Get<IAssetManager>() ?? throw new Exception("Asset Manager service not found.");
         m_InputManager = Service.Get<IInputManager>() ?? throw new Exception("Input Manager service not found.");
         m_WindowPipe = Service.Get<IWindowPipeline>() ?? throw new Exception("Window Pipeline service not found.");
         m_RenderPipe = Service.Get<IRenderPipeline>() ?? throw new Exception("Render Pipeline service not found.");
@@ -28,6 +34,9 @@ public class Engine
         m_Game = game;
     }
 
+    /// <summary>
+    /// Runs the main engine loop.
+    /// </summary>
     public void Run()
     {
         Initialize();
@@ -43,24 +52,30 @@ public class Engine
         Cleanup();
     }
 
+    /// <summary>
+    /// Initializes the asynchronous components of the engine.
+    /// </summary>
+    /// <returns></returns>
     public async Task InitializeAsync()
     {
         await m_Settings.LoadSettingsAsync();
-        Logger.Log($"Engine '{m_Settings.EngineName}' version {m_Settings.EngineVersion} initialized.", Logger.LogSeverity.Info);
+        Logger.Log($"Engine '{m_Settings.Data.EngineName}' version {m_Settings.Data.EngineVersion} initialized.",
+         Logger.LogSeverity.Info);
     }
 
     private unsafe void Initialize()
     {
         m_SdlApi = Sdl.GetApi();
         if (m_SdlApi.Init(Sdl.InitVideo) < 0)
-        {
             throw new Exception("Failed to initialize SDL Video subsystem.");
-        };
+            
         Logger.Log("SDL Video subsystem initialized.", Logger.LogSeverity.Info);
 
-        m_WindowPipe.InitializeWindow(m_SdlApi, m_Settings.WindowTitle, m_Settings.WindowWidth, m_Settings.WindowHeight);
+        m_WindowPipe.InitializeWindow(m_SdlApi, m_Settings.Data.WindowTitle, 
+            m_Settings.Data.WindowWidth, 
+            m_Settings.Data.WindowHeight
+        );
         m_RenderPipe.InitializeRenderer(m_SdlApi, m_WindowPipe.WindowHandler);
-        
         m_Game.Initialize();
     }
 
@@ -77,7 +92,7 @@ public class Engine
     private void Render()
     {
         m_RenderPipe.RenderFrame();
-        
+
         m_Game.Render();
     }
 
