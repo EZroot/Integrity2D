@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using ImGuiNET;
 using Silk.NET.SDL;
 
 public class Engine
@@ -11,9 +12,9 @@ public class Engine
     private readonly IInputManager m_InputManager;
     private readonly IWindowPipeline m_WindowPipe;
     private readonly IRenderPipeline m_RenderPipe;
+    private readonly IImGuiPipeline m_ImGuiPipe;
     private readonly ISceneManager m_SceneManager;
     private readonly IAudioManager m_AudioManager;
-
     private bool m_IsRunning;
 
     // DEBUG TESTING
@@ -32,6 +33,7 @@ public class Engine
         m_InputManager = Service.Get<IInputManager>() ?? throw new Exception("Input Manager service not found.");
         m_WindowPipe = Service.Get<IWindowPipeline>() ?? throw new Exception("Window Pipeline service not found.");
         m_RenderPipe = Service.Get<IRenderPipeline>() ?? throw new Exception("Render Pipeline service not found.");
+        m_ImGuiPipe = Service.Get<IImGuiPipeline>() ?? throw new Exception("ImGui Pipeline service not found.");
         m_SceneManager = Service.Get<ISceneManager>() ?? throw new Exception("Scene Manager service not found.");
         m_AudioManager = Service.Get<IAudioManager>() ?? throw new Exception("Audio Manager service not found.");
 
@@ -80,6 +82,8 @@ public class Engine
             m_Settings.Data.WindowHeight
         );
         m_RenderPipe.InitializeRenderer(m_SdlApi, m_WindowPipe.WindowHandler);
+        m_ImGuiPipe.Initialize(m_RenderPipe.GlApi!, m_SdlApi, m_WindowPipe.WindowHandler, m_WindowPipe.GlContext);
+
         m_Game.Initialize();
 
         // DEBUG TESTING
@@ -87,9 +91,20 @@ public class Engine
         // END DEBUG
     }
 
-    private void HandleInput()
+    private unsafe void HandleInput()
     {
-        m_InputManager?.ProcessInput();
+        Event ev;
+        while (m_SdlApi!.PollEvent(&ev) != 0) 
+        {
+            if ((EventType)ev.Type == EventType.Windowevent && ev.Window.Event == (byte)WindowEventID.SizeChanged)
+            {
+                int newW, newH;
+                m_SdlApi.GetWindowSize(m_WindowPipe.WindowHandler, &newW, &newH);
+                m_RenderPipe.UpdateViewportSize(newW, newH); 
+            }
+            m_ImGuiPipe.ProcessEvents(ev);
+            m_InputManager.ProcessInput(); 
+        }
     }
 
     private void Update()
@@ -105,11 +120,15 @@ public class Engine
         Debug.Assert(m_testObject != null, "Test texture is null in Engine Render.");
         //TODO: Replace with proper sprite rendering system
         // Such as m_SceneManager.GetActiveScene().GetAllObjects() or something similar
-        
         m_RenderPipe.DrawSprite(m_testObject.Sprite, m_testObject.Transform);
         // END DEBUG
 
         m_Game.Render();
+
+        m_ImGuiPipe.BeginFrame();
+        ImGui.ShowDemoWindow();
+        m_ImGuiPipe.EndFrame();
+
         m_RenderPipe.RenderFrameEnd();
     }
 

@@ -50,7 +50,7 @@ public class RenderPipeline : IRenderPipeline
 
         var settings = Service.Get<IEngineSettings>();
         Debug.Assert(settings != null, "Engine Settings service not found in RenderPipeline.");
-        m_GlApi.Viewport(0,0, (uint)settings.Data.WindowWidth, (uint)settings.Data.WindowHeight);
+        UpdateViewportSize(settings.Data.WindowWidth, settings.Data.WindowHeight);
 
         m_ShaderProgramId = CreateShaderProgram(
             Path.Combine(SHADER_DIR, "default.vert"), 
@@ -119,6 +119,35 @@ public class RenderPipeline : IRenderPipeline
     {
         Debug.Assert(m_SdlApi != null, "SDL API is not initialized in RenderPipeline.");
         m_SdlApi.GLSwapWindow(m_WindowHandler);
+    }
+
+    /// <summary>
+    /// Updates the OpenGL Viewport and Projection Matrix when the window size changes.
+    /// </summary>
+    public unsafe void UpdateViewportSize(int width, int height)
+    {
+        Debug.Assert(m_GlApi != null, "GL API is null in RenderPipeline UpdateSize.");
+
+        // 1. Update Viewport
+        m_GlApi.Viewport(0, 0, (uint)width, (uint)height);
+
+        // 2. Update Projection Matrix (Orthographic Off Center)
+        m_ProjectionMatrix = Matrix4x4.CreateOrthographicOffCenter(
+            0, 
+            width,
+            height, 
+            0, // Top (makes Y=0 the top of the window)
+            -1.0f, 
+            1.0f
+        );
+
+        // 3. Upload new Projection Matrix to the Shader
+        m_GlApi.UseProgram(m_ShaderProgramId);
+        fixed(float* ptr = &m_ProjectionMatrix.M11)
+        {
+            m_GlApi.UniformMatrix4(m_ProjectionUniformLocation, 1, false, ptr);         
+        }
+        m_GlApi.UseProgram(0);
     }
 
     private uint CreateShaderProgram(string vertexPath, string fragmentPath)

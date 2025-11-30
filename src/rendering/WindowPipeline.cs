@@ -6,12 +6,13 @@ public class WindowPipeline : IWindowPipeline
 {
     private unsafe Window* m_WindowHandler;
     private Sdl? m_SdlApi;
-    private IntPtr m_GlApi;
+    private unsafe void* m_GlContext;
 
     private readonly WindowFlags m_WindowFlags = WindowFlags.Opengl | WindowFlags.Resizable | WindowFlags.AllowHighdpi;
 
     public unsafe Window* WindowHandler => m_WindowHandler;
-    
+    public unsafe void* GlContext => m_GlContext;
+
     public unsafe void InitializeWindow(Sdl sdlApi, string title, int width, int height)
     {
         m_SdlApi = sdlApi;
@@ -27,10 +28,8 @@ public class WindowPipeline : IWindowPipeline
 
         m_SdlApi.SetHint(Sdl.HintRenderScaleQuality, "linear");
 
-        m_GlApi = (IntPtr)m_SdlApi.GLCreateContext(m_WindowHandler);
-        Debug.Assert(m_GlApi != IntPtr.Zero, "Failed to get OpenGL API from SDL.");
-
-        m_SdlApi.GLMakeCurrent(m_WindowHandler, (void*)m_GlApi);
+        m_GlContext = m_SdlApi.GLCreateContext(m_WindowHandler);
+        m_SdlApi.GLMakeCurrent(m_WindowHandler, m_GlContext);
         m_SdlApi.GLSetSwapInterval(1); // Vsync
     }
 

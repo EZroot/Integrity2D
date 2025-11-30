@@ -8,4 +8,5 @@ public interface IRenderPipeline : IService
     void DrawSprite(SpriteComponent sprite, TransformComponent transform);
     void RenderFrameStart();
     void RenderFrameEnd();
+    unsafe void UpdateViewportSize(int width, int height);
 }
