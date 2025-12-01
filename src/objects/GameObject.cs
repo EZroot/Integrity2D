@@ -4,9 +4,11 @@ public class GameObject
 {
     private readonly Dictionary<Type, IComponent> m_ComponentMap = new();
     public TransformComponent Transform { get; }
+    public Guid Id { get; }
 
     public GameObject()
     {
+        Id = Guid.NewGuid();
         Transform = new TransformComponent();
         AddComponent(Transform);
     }
