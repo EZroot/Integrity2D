@@ -135,12 +135,20 @@ public class Engine
         logo.Transform.ScaleY = 0.25f;
 
         var pinkface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/pink_face.png");
-        var blueface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/blue_face.png");
         var yellowface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/yellow_face.png");
+        
+        var stress = 10000;
+        for(var i = 0; i < stress; i++)
+        {
+            var blueface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/blue_face.png");
+            var rand = new Random();
+            blueface.Transform.X = rand.Next(-1000, 1000);
+            blueface.Transform.Y = rand.Next(-1000, 1000);
+            defaultScene.RegisterGameObject(blueface);   
+        }
 
         defaultScene.RegisterGameObject(logo);
         defaultScene.RegisterGameObject(pinkface);
-        defaultScene.RegisterGameObject(blueface);
         defaultScene.RegisterGameObject(yellowface);
         // END DEBUG
 
@@ -195,10 +203,9 @@ public class Engine
         // DEBUG TESTING
         if (m_SceneManager.CurrentScene != null)
         {
-            m_Profiler.StartRenderProfile("Draw_Sprite_Instanced");
+            m_Profiler.StartCpuProfile("Sprite_Sorting");
             var sceneGameObjects = m_SceneManager.CurrentScene.GetAllSpriteObjects();
             m_RenderingBatchMap.Clear();
-
             foreach (var obj in sceneGameObjects)
             {
                 if (obj.Sprite == null) continue;
@@ -217,7 +224,9 @@ public class Engine
 
                 list.Add(model);
             }
+            m_Profiler.StopCpuProfile("Sprite_Sorting");
 
+            m_Profiler.StartRenderProfile("Draw_Sprite_Instanced");
             foreach (var kvp in m_RenderingBatchMap)
             {
                 var texture = kvp.Key;
