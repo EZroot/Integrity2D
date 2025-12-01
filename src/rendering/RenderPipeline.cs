@@ -249,7 +249,7 @@ public class RenderPipeline : IRenderPipeline
                 (void*)(i * sizeof(Vector4))  // offset = i-th column (or row depending layout)
             );
             // Per-instance (crucial for instancing)
-            m_GlApi.VertexAttribDivisor(attribLocation, 1); 
+            m_GlApi.VertexAttribDivisor(attribLocation, 1);
         }
 
         m_GlApi.BindBuffer(GLEnum.ArrayBuffer, 0);

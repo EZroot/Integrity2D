@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Numerics;
+using Silk.NET.OpenGL;
 using Silk.NET.SDL;
 
 public class Engine
@@ -22,7 +23,15 @@ public class Engine
     // DEBUG
     const float cameraSpeed = 300.0f;
     // END DEBUG
-    private readonly Dictionary<GLTexture, List<Matrix4x4>> m_BatchMap = new();
+
+    private readonly Dictionary<GLTexture, List<Matrix4x4>> m_RenderingBatchMap;
+
+    // Profiling
+    private float m_LastCpuTimeMs;
+    private float m_LastRenderTimeMs;
+    uint[] m_GpuQueries = new uint[2]; 
+    int m_CurrentIndex = 0;
+    
     private bool m_IsRunning;
 
     // DEBUG TESTING
@@ -36,6 +45,7 @@ public class Engine
     /// <exception cref="Exception"></exception>
     public Engine(IGame game)
     {
+        m_RenderingBatchMap = new();
         m_Stopwatch = new Stopwatch();
 
         m_Settings = Service.Get<IEngineSettings>() ?? throw new Exception("Engine Settings service not found.");
@@ -58,15 +68,19 @@ public class Engine
     public void Run()
     {
         Initialize();
+        SetupRenderTimer();
         m_Stopwatch.Start();
         m_IsRunning = true;
         while (m_IsRunning)
         {
+            var cpuStopwatch = Stopwatch.StartNew();
             long elapsedTicks = m_Stopwatch.ElapsedTicks;
             m_Stopwatch.Restart();
             float deltaTime = (float)elapsedTicks / Stopwatch.Frequency;
             HandleInput();
             Update(deltaTime);
+            cpuStopwatch.Stop();
+            m_LastCpuTimeMs = (float)cpuStopwatch.Elapsed.TotalMilliseconds;
             Render();
         }
 
@@ -156,6 +170,12 @@ public class Engine
 
     private void Render()
     {
+        int prevIndex = (m_CurrentIndex + 1) % 2; // previous frame
+        uint currentQuery = m_GpuQueries[m_CurrentIndex];
+        uint previousQuery = m_GpuQueries[prevIndex];
+
+        m_RenderPipe.GlApi!.BeginQuery(GLEnum.TimeElapsed, currentQuery);
+
         m_RenderPipe.RenderFrameStart();
 
         Matrix4x4 cameraMatrix = m_CameraManager.MainCamera!.GetViewProjectionMatrix();
@@ -165,16 +185,16 @@ public class Engine
         if (m_SceneManager.CurrentScene != null)
         {
             var sceneGameObjects = m_SceneManager.CurrentScene.GetAllSpriteObjects();
-            m_BatchMap.Clear();
+            m_RenderingBatchMap.Clear();
 
             foreach (var obj in sceneGameObjects)
             {
                 if (obj.Sprite == null) continue;
 
-                if (!m_BatchMap.TryGetValue(obj.Sprite.Texture, out var list))
+                if (!m_RenderingBatchMap.TryGetValue(obj.Sprite.Texture, out var list))
                 {
                     list = new List<Matrix4x4>();
-                    m_BatchMap[obj.Sprite.Texture] = list;
+                    m_RenderingBatchMap[obj.Sprite.Texture] = list;
                 }
 
                 var model = MathHelper.Translation(
@@ -186,7 +206,7 @@ public class Engine
                 list.Add(model);
             }
 
-            foreach (var kvp in m_BatchMap)
+            foreach (var kvp in m_RenderingBatchMap)
             {
                 var texture = kvp.Key;
                 var matrices = kvp.Value;
@@ -201,14 +221,34 @@ public class Engine
 
         m_ImGuiPipe.BeginFrame();
         m_ImGuiPipe.Tools.DrawMenuBar();
-        m_ImGuiPipe.Tools.DrawTools();
+        m_ImGuiPipe.Tools.DrawTools(m_LastCpuTimeMs, m_LastRenderTimeMs);
         m_ImGuiPipe.EndFrame();
 
         m_RenderPipe.RenderFrameEnd();
+
+        m_RenderPipe.GlApi.EndQuery(GLEnum.TimeElapsed);
+
+        uint available = 0;
+        m_RenderPipe.GlApi.GetQueryObject(previousQuery, GLEnum.QueryResultAvailable, out available);
+        if (available != 0)
+        {
+            ulong timeNs = 0;
+            m_RenderPipe.GlApi.GetQueryObject(previousQuery, GLEnum.QueryResult, out timeNs);
+            m_LastRenderTimeMs = timeNs / 1_000_000.0f;
+        }
+
+        m_CurrentIndex = prevIndex;
     }
 
     private void Cleanup()
     {
         m_Game.Cleanup();
+    }
+
+    private void SetupRenderTimer()
+    {
+        if(m_RenderPipe.GlApi == null) { Logger.Log("SetupRenderTimer couldnt find GlApi!", Logger.LogSeverity.Error); return;}
+        m_GpuQueries[0] = m_RenderPipe.GlApi.GenQuery();
+        m_GpuQueries[1] = m_RenderPipe.GlApi.GenQuery();
     }
 }

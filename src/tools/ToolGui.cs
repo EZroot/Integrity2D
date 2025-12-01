@@ -25,15 +25,15 @@ public class ToolGui
         }
     }
 
-    public void DrawTools()
+    public void DrawTools(float cpuTime, float renderTime)
     {
         if (m_EngineStatusWindowOpened)
         {
-            DrawEngineStatusTool(Service.Get<ISceneManager>()!, Service.Get<ICameraManager>()!, Service.Get<IEngineSettings>()!);
+            DrawEngineStatusTool(Service.Get<ISceneManager>()!, Service.Get<ICameraManager>()!, Service.Get<IEngineSettings>()!, cpuTime, renderTime);
         }
     }
 
-    private void DrawEngineStatusTool(ISceneManager sceneManager, ICameraManager cameraManager, IEngineSettings engineSettings)
+    private void DrawEngineStatusTool(ISceneManager sceneManager, ICameraManager cameraManager, IEngineSettings engineSettings, float cpuTime, float renderTime)
     {
         if (ImGui.Begin("Engine Status & Debug"))
         {
@@ -295,6 +295,19 @@ public class ToolGui
                     }
                     ImGui.EndTabItem();
                 }
+                
+                if (ImGui.BeginTabItem("CPU Profile"))
+                {
+                    ImGui.Text($"CPU Time: {cpuTime:F2} ms");
+                    ImGui.EndTabItem();
+                }
+
+                if (ImGui.BeginTabItem("Render Profile"))
+                {
+                    ImGui.Text($"GPU Render Time: {renderTime:F2} ms");
+                    ImGui.EndTabItem();
+                }
+
                 ImGui.EndTabBar();
             }
 
