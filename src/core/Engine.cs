@@ -33,10 +33,6 @@ public class Engine
     private float m_CurrentFps; // The stable, averaged FPS value
     private bool m_IsRunning;
 
-    // DEBUG TESTING
-    private SpriteObject? m_testObject;
-    // END
-
     /// <summary>
     /// Initializes a new instance of the Engine class with the specified game and all the required services.
     /// </summary>
@@ -133,19 +129,24 @@ public class Engine
 
         m_Game.Initialize();
 
-        // DEBUG TESTING
         Scene defaultScene = new Scene("DefaultScene");
-        m_testObject = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/logo.png");
-        m_testObject.Transform.ScaleX = 0.25f;
-        m_testObject.Transform.ScaleY = 0.25f;
+        // DEBUG TESTING
+        var logo = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/logo.png");
+        logo.Transform.ScaleX = 0.25f;
+        logo.Transform.ScaleY = 0.25f;
 
-        if (m_testObject != null)
-        {
-            defaultScene.RegisterGameObject(m_testObject);
-        }
+        var pinkface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/pink_face.png");
+        var blueface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/blue_face.png");
+        var yellowface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/yellow_face.png");
+
+        defaultScene.RegisterGameObject(logo);
+        defaultScene.RegisterGameObject(pinkface);
+        defaultScene.RegisterGameObject(blueface);
+        defaultScene.RegisterGameObject(yellowface);
+        // END DEBUG
+
         m_SceneManager.AddScene(defaultScene);
         m_SceneManager.LoadScene(defaultScene);
-        // END DEBUG
 
         Camera2D mainCamera = new Camera2D("MainCamera", m_Settings.Data.WindowWidth, m_Settings.Data.WindowHeight);
         m_CameraManager.RegisterCamera(mainCamera);

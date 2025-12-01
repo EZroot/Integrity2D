@@ -23,7 +23,6 @@ void main()
         instModelCol3,
         instModelCol4
     );
-    instModel = transpose(instModel);
 
     // Apply the per-instance model matrix and then the projection matrix
     gl_Position = projection * instModel * vec4(aPos, 0.0, 1.0);
