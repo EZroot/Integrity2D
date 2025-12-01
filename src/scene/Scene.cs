@@ -11,7 +11,7 @@ public class Scene
 
     public Scene(string name)
     {
-        Id = new Guid();
+        Id = Guid.NewGuid();
         Name = name;
 
         m_GameObjectsMap = new Dictionary<Guid, GameObject>(capacity: 1024);

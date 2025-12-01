@@ -11,10 +11,9 @@ public class EngineSettings : IEngineSettings
         public int WindowWidth { get; set; }
         public int WindowHeight { get; set; }
         public string WindowTitle { get; set; }
-
         public EngineSettingsData()
         {
-            EngineName = "Integrity";
+            EngineName = "Integrity2D";
             EngineVersion = "0.1.0";
             WindowWidth = 1280;
             WindowHeight = 720;
@@ -51,7 +50,7 @@ public class EngineSettings : IEngineSettings
             
             if (tempSettings.WindowWidth <= 0) tempSettings.WindowWidth = new EngineSettingsData().WindowWidth;
             if (tempSettings.WindowHeight <= 0) tempSettings.WindowHeight = new EngineSettingsData().WindowHeight;
-            
+
             m_SettingsData = tempSettings;
         }
         catch (FileNotFoundException)

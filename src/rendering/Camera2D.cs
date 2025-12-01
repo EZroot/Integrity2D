@@ -2,6 +2,7 @@ using System.Numerics;
 
 public class Camera2D
 {
+    public Guid Id { get; }
     public Vector2 Position { get; set; } = Vector2.Zero;
     public float Zoom { get; set; } = 1.0f;
     
@@ -10,6 +11,7 @@ public class Camera2D
     
     public Camera2D(int width, int height)
     {
+        Id = Guid.NewGuid();
         m_Width = width;
         m_Height = height;
     }

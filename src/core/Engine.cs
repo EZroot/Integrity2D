@@ -17,9 +17,8 @@ public class Engine
     private readonly IImGuiPipeline m_ImGuiPipe;
     private readonly ISceneManager m_SceneManager;
     private readonly IAudioManager m_AudioManager;
+    private readonly ICameraManager m_CameraManager;
 
-    private Scene? m_DefaultScene;
-    private Camera2D? m_MainCamera;
     // DEBUG
     const float cameraSpeed = 300.0f; 
     // END DEBUG
@@ -44,7 +43,7 @@ public class Engine
         m_ImGuiPipe = Service.Get<IImGuiPipeline>() ?? throw new Exception("ImGui Pipeline service not found.");
         m_SceneManager = Service.Get<ISceneManager>() ?? throw new Exception("Scene Manager service not found.");
         m_AudioManager = Service.Get<IAudioManager>() ?? throw new Exception("Audio Manager service not found.");
-
+        m_CameraManager = Service.Get<ICameraManager>() ?? throw new Exception("Camera Manager service not found.");
         m_Game = game;
     }
 
@@ -95,17 +94,18 @@ public class Engine
         m_Game.Initialize();
 
         // DEBUG TESTING
-        m_DefaultScene = new Scene("DefaultScene");
+        Scene defaultScene = new Scene("DefaultScene");
         m_testObject = Service.Get<IGameObjectFactory>()?.CreateSpriteObject("/home/ezroot/Repos/Integrity/DefaultEngineAssets/logo.png");
         if(m_testObject != null)
         {
-            m_DefaultScene.RegisterGameObject(m_testObject);
+            defaultScene.RegisterGameObject(m_testObject);
         }
-        m_SceneManager.AddScene(m_DefaultScene);
-        m_SceneManager.LoadScene(m_DefaultScene);
+        m_SceneManager.AddScene(defaultScene);
+        m_SceneManager.LoadScene(defaultScene);
         // END DEBUG
 
-        m_MainCamera = new Camera2D(m_Settings.Data.WindowWidth, m_Settings.Data.WindowHeight);
+        Camera2D mainCamera = new Camera2D(m_Settings.Data.WindowWidth, m_Settings.Data.WindowHeight);
+        m_CameraManager.RegisterCamera(mainCamera);
     }
 
     private unsafe void HandleInput()
@@ -120,7 +120,7 @@ public class Engine
             {
                 int newW, newH;
                 m_SdlApi.GetWindowSize(m_WindowPipe.WindowHandler, &newW, &newH);
-                m_MainCamera!.UpdateViewportSize(newW, newH);
+                m_CameraManager.MainCamera!.UpdateViewportSize(newW, newH);
                 m_RenderPipe.UpdateViewportSize(newW, newH); 
             }
         }
@@ -131,13 +131,13 @@ public class Engine
     {
         float deltaTime = 1.0f / 60.0f; 
         if (m_InputManager.IsKeyDown(Scancode.ScancodeW))
-            m_MainCamera!.Position += new Vector2(0, -cameraSpeed * deltaTime);
+            m_CameraManager.MainCamera!.Position += new Vector2(0, -cameraSpeed * deltaTime);
         if (m_InputManager.IsKeyDown(Scancode.ScancodeS))
-            m_MainCamera!.Position += new Vector2(0, cameraSpeed * deltaTime);
+            m_CameraManager.MainCamera!.Position += new Vector2(0, cameraSpeed * deltaTime);
         if (m_InputManager.IsKeyDown(Scancode.ScancodeA))
-            m_MainCamera!.Position += new Vector2(-cameraSpeed * deltaTime, 0);
+            m_CameraManager.MainCamera!.Position += new Vector2(-cameraSpeed * deltaTime, 0);
         if (m_InputManager.IsKeyDown(Scancode.ScancodeD))
-            m_MainCamera!.Position += new Vector2(cameraSpeed * deltaTime, 0);   
+            m_CameraManager.MainCamera!.Position += new Vector2(cameraSpeed * deltaTime, 0);   
 
         m_Game.Update();
     }
@@ -146,7 +146,7 @@ public class Engine
     {
         m_RenderPipe.RenderFrameStart();
         
-        Matrix4x4 cameraMatrix = m_MainCamera!.GetViewProjectionMatrix(); 
+        Matrix4x4 cameraMatrix = m_CameraManager.MainCamera!.GetViewProjectionMatrix(); 
         m_RenderPipe.SetProjectionMatrix(in cameraMatrix);
 
         // DEBUG TESTING
@@ -164,7 +164,9 @@ public class Engine
         m_Game.Render();
 
         m_ImGuiPipe.BeginFrame();
-        ImGui.ShowDemoWindow();
+        m_ImGuiPipe.Tools.DrawMenuBar(m_SceneManager, m_Settings);
+        m_ImGuiPipe.Tools.DrawEngineStatusTool(m_SceneManager, m_CameraManager, m_Settings);
+        // ImGui.ShowDemoWindow();
         m_ImGuiPipe.EndFrame();
 
         m_RenderPipe.RenderFrameEnd();

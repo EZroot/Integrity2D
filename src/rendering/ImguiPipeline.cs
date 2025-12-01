@@ -25,6 +25,8 @@ public class ImGuiPipeline : IImGuiPipeline
     private int m_AttribLocationUV;
     private int m_AttribLocationColor;
 
+    private ToolGui m_Tools;
+    public ToolGui Tools => m_Tools;
 
     public unsafe void Initialize(GL glApi, Sdl sdlApi, Window* windowHandler, void* glContext)
     {
@@ -65,7 +67,7 @@ public class ImGuiPipeline : IImGuiPipeline
         ImGui.StyleColorsDark();
 
         SetupRenderResources();
-        
+        m_Tools = new ToolGui();
         m_IsInitialized = true;
     }
 
