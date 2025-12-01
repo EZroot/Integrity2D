@@ -19,19 +19,13 @@ public class Engine
     private readonly IAudioManager m_AudioManager;
     private readonly ICameraManager m_CameraManager;
     private readonly IGameObjectFactory m_GameObjectFactory;
-
+    private readonly IProfiler m_Profiler;
     // DEBUG
     const float cameraSpeed = 300.0f;
     // END DEBUG
 
     private readonly Dictionary<GLTexture, List<Matrix4x4>> m_RenderingBatchMap;
 
-    // Profiling
-    private float m_LastCpuTimeMs;
-    private float m_LastRenderTimeMs;
-    uint[] m_GpuQueries = new uint[2]; 
-    int m_CurrentIndex = 0;
-    
     private bool m_IsRunning;
 
     // DEBUG TESTING
@@ -58,6 +52,7 @@ public class Engine
         m_AudioManager = Service.Get<IAudioManager>() ?? throw new Exception("Audio Manager service not found.");
         m_CameraManager = Service.Get<ICameraManager>() ?? throw new Exception("Camera Manager service not found.");
         m_GameObjectFactory = Service.Get<IGameObjectFactory>() ?? throw new Exception("GameObjectFactory service not found.");
+        m_Profiler = Service.Get<IProfiler>() ?? throw new Exception("Profiler service not found.");
 
         m_Game = game;
     }
@@ -68,20 +63,27 @@ public class Engine
     public void Run()
     {
         Initialize();
-        SetupRenderTimer();
+        m_Profiler.InitializeRenderProfiler("Full_Render");
+        m_Profiler.InitializeRenderProfiler("Draw_Sprite_Instanced");
+        m_Profiler.InitializeRenderProfiler("Draw_ImGui");
         m_Stopwatch.Start();
         m_IsRunning = true;
         while (m_IsRunning)
         {
-            var cpuStopwatch = Stopwatch.StartNew();
-            long elapsedTicks = m_Stopwatch.ElapsedTicks;
+            m_Profiler.StartCpuProfile("Full_Update");
+            m_Stopwatch.Stop();
+            float deltaTime = (float)m_Stopwatch.Elapsed.TotalSeconds;
             m_Stopwatch.Restart();
-            float deltaTime = (float)elapsedTicks / Stopwatch.Frequency;
+            m_Profiler.StartCpuProfile("Cpu_Input");
             HandleInput();
+            m_Profiler.StopCpuProfile("Cpu_Input");
+            m_Profiler.StartCpuProfile("Cpu_Update");
             Update(deltaTime);
-            cpuStopwatch.Stop();
-            m_LastCpuTimeMs = (float)cpuStopwatch.Elapsed.TotalMilliseconds;
+            m_Profiler.StopCpuProfile("Cpu_Update");
+            m_Profiler.StopCpuProfile("Full_Update");
+            m_Profiler.StartRenderProfile("Full_Render");
             Render();
+            m_Profiler.StopRenderProfile("Full_Render");
         }
 
         Cleanup();
@@ -170,20 +172,14 @@ public class Engine
 
     private void Render()
     {
-        int prevIndex = (m_CurrentIndex + 1) % 2; // previous frame
-        uint currentQuery = m_GpuQueries[m_CurrentIndex];
-        uint previousQuery = m_GpuQueries[prevIndex];
-
-        m_RenderPipe.GlApi!.BeginQuery(GLEnum.TimeElapsed, currentQuery);
-
         m_RenderPipe.RenderFrameStart();
-
         Matrix4x4 cameraMatrix = m_CameraManager.MainCamera!.GetViewProjectionMatrix();
         m_RenderPipe.SetProjectionMatrix(in cameraMatrix);
 
         // DEBUG TESTING
         if (m_SceneManager.CurrentScene != null)
         {
+            m_Profiler.StartRenderProfile("Draw_Sprite_Instanced");
             var sceneGameObjects = m_SceneManager.CurrentScene.GetAllSpriteObjects();
             m_RenderingBatchMap.Clear();
 
@@ -212,43 +208,25 @@ public class Engine
                 var matrices = kvp.Value;
                 m_RenderPipe.DrawSpritesInstanced(texture, matrices, matrices.Count);
             }
-
+            m_Profiler.StopRenderProfile("Draw_Sprite_Instanced");
         }
 
         // END DEBUG
 
         m_Game.Render();
 
+        m_Profiler.StartRenderProfile("Draw_ImGui");
         m_ImGuiPipe.BeginFrame();
         m_ImGuiPipe.Tools.DrawMenuBar();
-        m_ImGuiPipe.Tools.DrawTools(m_LastCpuTimeMs, m_LastRenderTimeMs);
+        m_ImGuiPipe.Tools.DrawTools(m_Profiler);
         m_ImGuiPipe.EndFrame();
+        m_Profiler.StopRenderProfile("Draw_ImGui");
 
         m_RenderPipe.RenderFrameEnd();
-
-        m_RenderPipe.GlApi.EndQuery(GLEnum.TimeElapsed);
-
-        uint available = 0;
-        m_RenderPipe.GlApi.GetQueryObject(previousQuery, GLEnum.QueryResultAvailable, out available);
-        if (available != 0)
-        {
-            ulong timeNs = 0;
-            m_RenderPipe.GlApi.GetQueryObject(previousQuery, GLEnum.QueryResult, out timeNs);
-            m_LastRenderTimeMs = timeNs / 1_000_000.0f;
-        }
-
-        m_CurrentIndex = prevIndex;
     }
 
     private void Cleanup()
     {
         m_Game.Cleanup();
-    }
-
-    private void SetupRenderTimer()
-    {
-        if(m_RenderPipe.GlApi == null) { Logger.Log("SetupRenderTimer couldnt find GlApi!", Logger.LogSeverity.Error); return;}
-        m_GpuQueries[0] = m_RenderPipe.GlApi.GenQuery();
-        m_GpuQueries[1] = m_RenderPipe.GlApi.GenQuery();
     }
 }

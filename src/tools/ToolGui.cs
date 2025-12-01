@@ -12,28 +12,77 @@ public class ToolGui
     private float m_GlobalVolume = 0.5f;
     private System.Numerics.Vector3 m_ClearColor = new(0.1f, 0.1f, 0.15f);
     private bool m_EngineStatusWindowOpened;
+    private bool m_MonitorWindowOpened;
+    private bool m_ProfilerWindowOpened;
+
+    private const int HISTORY_LENGTH = 120;
+    private readonly Queue<float> m_GCMemoryHistory = new Queue<float>(HISTORY_LENGTH);
+    private readonly Queue<float> m_FrameTimeHistory = new Queue<float>(HISTORY_LENGTH);
+    private readonly Queue<float> m_RenderTimeHistory = new Queue<float>(HISTORY_LENGTH);
 
     public void DrawToolsUpdate(float deltaTime)
     {
-        if (!m_CaptureMemory) return;
+        UpdateProfilerHistory(Service.Get<IProfiler>()!);
         m_TimeSinceLastMemoryUpdate += deltaTime;
         if (m_TimeSinceLastMemoryUpdate >= MEMORY_UPDATE_INTERVAL)
         {
-            m_SnapshotCache = MemoryMonitor.LogMemoryUsage();
+            if (m_CaptureMemory)
+            {
+                m_SnapshotCache = MemoryMonitor.LogMemoryUsage();
+                UpdateMemoryHistory(m_SnapshotCache);
+            }
 
             m_TimeSinceLastMemoryUpdate -= MEMORY_UPDATE_INTERVAL;
         }
     }
 
-    public void DrawTools(float cpuTime, float renderTime)
+    public void UpdateProfilerHistory(IProfiler profiler)
     {
+        if (m_FrameTimeHistory.Count >= HISTORY_LENGTH)
+        {
+            m_FrameTimeHistory.Dequeue();
+        }
+
+        if (m_RenderTimeHistory.Count >= HISTORY_LENGTH)
+        {
+            m_RenderTimeHistory.Dequeue();
+        }
+
+        float maxCpuTime = profiler.CpuProfileResults.Values.Max(r => (float?)r.LastTimeMs) ?? 0.0f;
+        float maxRenderTime = profiler.RenderProfileResults.Values.Max(r => (float?)r.LastTimeMs) ?? 0.0f;
+
+        m_FrameTimeHistory.Enqueue(maxCpuTime);
+        m_RenderTimeHistory.Enqueue(maxRenderTime);
+    }
+
+    public void UpdateMemoryHistory(MemoryMonitor.MemorySnapshot currentSnapshot)
+    {
+        if (m_GCMemoryHistory.Count >= HISTORY_LENGTH)
+        {
+            m_GCMemoryHistory.Dequeue();
+        }
+        m_GCMemoryHistory.Enqueue(currentSnapshot.ManagedHeapSizeMB);
+    }
+
+    public void DrawTools(IProfiler profiler)
+    {
+        if (m_ProfilerWindowOpened)
+        {
+            DrawProfilerTool(profiler);
+        }
+
+        if (m_MonitorWindowOpened)
+        {
+            DrawMonitorStatusTool();
+        }
+
         if (m_EngineStatusWindowOpened)
         {
-            DrawEngineStatusTool(Service.Get<ISceneManager>()!, Service.Get<ICameraManager>()!, Service.Get<IEngineSettings>()!, cpuTime, renderTime);
+            DrawEngineStatusTool(Service.Get<ISceneManager>()!, Service.Get<ICameraManager>()!);
         }
     }
 
-    private void DrawEngineStatusTool(ISceneManager sceneManager, ICameraManager cameraManager, IEngineSettings engineSettings, float cpuTime, float renderTime)
+    private void DrawEngineStatusTool(ISceneManager sceneManager, ICameraManager cameraManager)
     {
         if (ImGui.Begin("Engine Status & Debug"))
         {
@@ -192,10 +241,7 @@ public class ToolGui
                                     ImGui.Image((nint)glTexture.TextureId, previewSize);
                                     ImGui.Text($"Dimensions: {glTexture.Width}x{glTexture.Height}");
                                 }
-                                if (isTexture)
-                                {
-                                    ImGui.TreePop();
-                                }
+                                ImGui.TreePop();
                             }
 
                             ImGui.PopID();
@@ -248,7 +294,19 @@ public class ToolGui
 
                     ImGui.EndTabItem();
                 }
+                ImGui.EndTabBar();
+            }
 
+            ImGui.End();
+        }
+    }
+
+    private void DrawMonitorStatusTool()
+    {
+        if (ImGui.Begin("Memory Monitor"))
+        {
+            if (ImGui.BeginTabBar("MonitorTabs"))
+            {
                 if (ImGui.BeginTabItem("Monitor"))
                 {
                     ImGui.Text("Memory Monitor:");
@@ -259,10 +317,12 @@ public class ToolGui
                         Logger.Log("Garbage Collection FORCED!", Logger.LogSeverity.Warning);
                     }
 
+                    ImGui.SameLine();
                     if (ImGui.Button($"Capture Snapshot ({m_CaptureMemory})"))
                     {
                         m_CaptureMemory = !m_CaptureMemory;
                     }
+
                     ImGui.Separator();
                     ImGui.Text("Current Metrics (Auto-Updating):");
 
@@ -293,18 +353,226 @@ public class ToolGui
 
                         ImGui.EndTable();
                     }
+
+                    ImGui.Separator();
+                    ImGui.Text("GC Heap History (MB)");
+
+                    if (ImGui.BeginChild("GCPlotChild", new System.Numerics.Vector2(-1, 130), ImGuiChildFlags.Borders))
+                    {
+                        if (m_GCMemoryHistory.Count > 0)
+                        {
+                            float[] gcData = m_GCMemoryHistory.ToArray();
+                            float minGC = m_GCMemoryHistory.Min();
+                            float maxGC = m_GCMemoryHistory.Max();
+                            float plotMax = maxGC * 1.05f;
+                            float plotMin = Math.Max(0f, minGC * 0.95f);
+                            float avgGC = m_GCMemoryHistory.Average();
+
+                            // Y-Axis Max Label
+                            ImGui.TextDisabled($"Max: {plotMax:F2} MB");
+
+                            // X-Axis Overlay Text (Time Labels)
+                            string overlayText = $"Past {gcData.Length} Samples";
+
+                            ImGui.PlotLines(
+                                $"Avg: {avgGC:F2} MB | Samples: {gcData.Length}",
+                                ref gcData[0],
+                                gcData.Length,
+                                0,
+                                overlayText,
+                                plotMin,
+                                plotMax,
+                                new System.Numerics.Vector2(-1, 80)
+                            );
+
+                            ImGui.TextDisabled($"Min: {plotMin:F2} MB");
+                        }
+                        else
+                        {
+                            ImGui.TextDisabled("Waiting for memory history data...");
+                        }
+
+                        ImGui.EndChild();
+                    }
                     ImGui.EndTabItem();
                 }
-                
+                ImGui.EndTabBar();
+            }
+
+            ImGui.End();
+        }
+    }
+
+    private void DrawProfilerTool(IProfiler profiler)
+    {
+        if (ImGui.Begin("Profiler"))
+        {
+            if (ImGui.BeginTabBar("ProfileTabs"))
+            {
                 if (ImGui.BeginTabItem("CPU Profile"))
                 {
-                    ImGui.Text($"CPU Time: {cpuTime:F2} ms");
+                    float maxCpuTime = profiler.CpuProfileResults.Values.Max(r => (float?)r.LastTimeMs) ?? 0.0f;
+                    ImGui.Text($"Max CPU Scope Time (Current Frame): {maxCpuTime:F2} ms");
+                    ImGui.Separator();
+
+                    ImGui.Text("Frame Time History (Max Scope Time in ms)");
+
+                    if (ImGui.BeginChild("CPUPlotChild", new System.Numerics.Vector2(-1, 130), ImGuiChildFlags.Borders))
+                    {
+                        if (m_FrameTimeHistory.Count > 0)
+                        {
+                            float[] cpuData = m_FrameTimeHistory.ToArray();
+                            const float TargetMS = 16.67f;
+                            float maxHistory = m_FrameTimeHistory.Max();
+                            float plotMax = Math.Max(maxHistory * 1.1f, TargetMS * 1.2f);
+                            float avgCPU = m_FrameTimeHistory.Average();
+                            float plotMin = 0f;
+
+                            ImGui.TextDisabled($"Max: {plotMax:F2} ms");
+
+                            string overlayText = $"{TargetMS:F2} ms (60 FPS Target) | Past {cpuData.Length} Samples";
+
+                            ImGui.PlotLines(
+                                $"Avg: {avgCPU:F2} ms | Samples: {cpuData.Length}",
+                                ref cpuData[0],
+                                cpuData.Length,
+                                0,
+                                overlayText,
+                                plotMin,
+                                plotMax,
+                                new System.Numerics.Vector2(-1, 80)
+                            );
+
+                            ImGui.TextDisabled($"Min: {plotMin:F2} ms");
+                        }
+                        else
+                        {
+                            ImGui.TextDisabled("Waiting for CPU profile history data...");
+                        }
+
+                        ImGui.EndChild();
+                    }
+
+                    ImGui.Separator();
+
+                    if (profiler.CpuProfileResults.Count > 0)
+                    {
+                        ImGui.Text("Current Frame Scope Breakdown:");
+
+                        if (ImGui.BeginTable("CPUScopes", 3, ImGuiTableFlags.Borders | ImGuiTableFlags.RowBg | ImGuiTableFlags.SizingFixedFit | ImGuiTableFlags.Sortable))
+                        {
+                            ImGui.TableSetupColumn("Scope Tag", ImGuiTableColumnFlags.WidthStretch);
+                            ImGui.TableSetupColumn("Time (%)", ImGuiTableColumnFlags.WidthFixed, 60.0f);
+                            ImGui.TableSetupColumn("Time (ms)", ImGuiTableColumnFlags.WidthFixed, 100.0f);
+                            ImGui.TableHeadersRow();
+
+                            foreach (var kvp in profiler.CpuProfileResults)
+                            {
+                                float timeMs = kvp.Value.LastTimeMs;
+                                float percentage = (maxCpuTime > 0) ? (timeMs / maxCpuTime) * 100.0f : 0.0f;
+
+                                ImGui.TableNextRow();
+                                ImGui.TableNextColumn();
+                                ImGui.Text(kvp.Value.Tag);
+
+                                ImGui.TableNextColumn();
+                                ImGui.TextDisabled($"{percentage:F1}%");
+
+                                ImGui.TableNextColumn();
+                                ImGui.Text($"{timeMs:F3}");
+                            }
+
+                            ImGui.EndTable();
+                        }
+                    }
+                    else
+                    {
+                        ImGui.Text("No CPU profiling data available.");
+                    }
+
                     ImGui.EndTabItem();
                 }
 
                 if (ImGui.BeginTabItem("Render Profile"))
                 {
-                    ImGui.Text($"GPU Render Time: {renderTime:F2} ms");
+                    float maxGpuTime = profiler.RenderProfileResults.Values.Max(r => (float?)r.LastTimeMs) ?? 0.0f;
+                    ImGui.Text($"Max GPU Scope Time: {maxGpuTime:F2} ms");
+                    ImGui.Separator();
+                    ImGui.Text("Frame Time History (Max Scope Time in ms)");
+
+                    if (ImGui.BeginChild("GpuPlotChild", new System.Numerics.Vector2(-1, 130), ImGuiChildFlags.Borders))
+                    {
+                        if (m_RenderTimeHistory.Count > 0)
+                        {
+                            float[] gpuData = m_RenderTimeHistory.ToArray();
+                            const float TargetMS = 16.67f;
+                            float maxHistory = m_RenderTimeHistory.Max();
+                            float plotMax = Math.Max(maxHistory * 1.1f, TargetMS * 1.2f);
+                            float avgCPU = m_RenderTimeHistory.Average();
+                            float plotMin = 0f;
+
+                            ImGui.TextDisabled($"Max: {plotMax:F2} ms");
+
+                            string overlayText = $"{TargetMS:F2} ms (60 FPS Target) | Past {gpuData.Length} Samples";
+
+                            ImGui.PlotLines(
+                                $"Avg: {avgCPU:F2} ms | Samples: {gpuData.Length}",
+                                ref gpuData[0],
+                                gpuData.Length,
+                                0,
+                                overlayText,
+                                plotMin,
+                                plotMax,
+                                new System.Numerics.Vector2(-1, 80)
+                            );
+
+                            ImGui.TextDisabled($"Min: {plotMin:F2} ms");
+                        }
+                        else
+                        {
+                            ImGui.TextDisabled("Waiting for GPU profile history data...");
+                        }
+
+                        ImGui.EndChild();
+                    }
+
+                    ImGui.Separator();
+                    if (profiler.RenderProfileResults.Count > 0)
+                    {
+                        ImGui.Text("Current Frame GPU Scope Breakdown:");
+
+                        if (ImGui.BeginTable("GPUScopes", 3, ImGuiTableFlags.Borders | ImGuiTableFlags.RowBg | ImGuiTableFlags.SizingFixedFit | ImGuiTableFlags.Sortable))
+                        {
+                            ImGui.TableSetupColumn("Scope Tag", ImGuiTableColumnFlags.WidthStretch);
+                            ImGui.TableSetupColumn("Time (%)", ImGuiTableColumnFlags.WidthFixed, 60.0f);
+                            ImGui.TableSetupColumn("Time (ms)", ImGuiTableColumnFlags.WidthFixed, 100.0f);
+                            ImGui.TableHeadersRow();
+
+                            foreach (var kvp in profiler.RenderProfileResults)
+                            {
+                                float timeMs = kvp.Value.LastTimeMs;
+                                float percentage = (maxGpuTime > 0) ? (timeMs / maxGpuTime) * 100.0f : 0.0f;
+
+                                ImGui.TableNextRow();
+
+                                ImGui.TableNextColumn();
+                                ImGui.Text(kvp.Value.Tag);
+
+                                ImGui.TableNextColumn();
+                                ImGui.TextDisabled($"{percentage:F1}%");
+
+                                ImGui.TableNextColumn();
+                                ImGui.Text($"{timeMs:F3}");
+                            }
+
+                            ImGui.EndTable();
+                        }
+                    }
+                    else
+                    {
+                        ImGui.Text("No GPU profiling data available.");
+                    }
+
                     ImGui.EndTabItem();
                 }
 
@@ -323,6 +591,12 @@ public class ToolGui
             if (ImGui.BeginMenu("Tools"))
             {
                 if (ImGui.MenuItem("Engine Status", "", ref m_EngineStatusWindowOpened))
+                {
+                }
+                if (ImGui.MenuItem("Memory Monitor", "", ref m_MonitorWindowOpened))
+                {
+                }
+                if (ImGui.MenuItem("Profiler", "", ref m_ProfilerWindowOpened))
                 {
                 }
 
