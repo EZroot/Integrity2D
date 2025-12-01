@@ -2,10 +2,29 @@ using ImGuiNET;
 
 public class ToolGui
 {
+    private const float MEMORY_UPDATE_INTERVAL = 1.0f;
+    private float m_TimeSinceLastMemoryUpdate = 0.0f;
+    private bool m_CaptureMemory;
+    private MemoryMonitor.MemorySnapshot m_SnapshotCache;
+
     private bool m_IsVsyncEnabled = true;
     private float m_GlobalVolume = 0.5f;
     private System.Numerics.Vector3 m_ClearColor = new(0.1f, 0.1f, 0.15f);
     private bool m_EngineStatusWindowOpened;
+
+
+
+    public void DrawToolsUpdate(float deltaTime)
+    {
+        if(!m_CaptureMemory) return;
+        m_TimeSinceLastMemoryUpdate += deltaTime; 
+        if (m_TimeSinceLastMemoryUpdate >= MEMORY_UPDATE_INTERVAL)
+        {
+            m_SnapshotCache = MemoryMonitor.LogMemoryUsage(); 
+            
+            m_TimeSinceLastMemoryUpdate -= MEMORY_UPDATE_INTERVAL; 
+        }
+    }
 
     public void DrawTools(ISceneManager sceneManager, ICameraManager cameraManager, IEngineSettings engineSettings)
     {
@@ -14,7 +33,7 @@ public class ToolGui
             DrawEngineStatusTool(sceneManager, cameraManager, engineSettings);
         }
     }
-
+    
     private void DrawEngineStatusTool(ISceneManager sceneManager, ICameraManager cameraManager, IEngineSettings engineSettings)
     {
         if (ImGui.Begin("Engine Status & Debug"))
@@ -125,13 +144,66 @@ public class ToolGui
                     }
                     
                     ImGui.Spacing();
-                    
+                    ImGui.Separator();
                     ImGui.Text("Renderer:");
-                    if (ImGui.ColorEdit3("Clear Color", ref m_ClearColor))
+                    ImGui.Separator();
+                    if (ImGui.ColorEdit3("GL Clear Color", ref m_ClearColor))
                     {
-                        // m_RenderPipe.SetClearColor(m_ClearColor);
+                        var color = System.Drawing.Color.FromArgb(
+                            (int)(m_ClearColor.X * 255),
+                            (int)(m_ClearColor.Y * 255),
+                            (int)(m_ClearColor.Z * 255)
+                        );
+                        Service.Get<IRenderPipeline>()!.SetClearColor(color);
                     }
 
+                    ImGui.EndTabItem();
+                }
+
+                if (ImGui.BeginTabItem("Monitor"))
+                {
+                    ImGui.Text("Memory Monitor:");
+                    
+                    if (ImGui.Button("Force GC Collection"))
+                    {
+                        GC.Collect();
+                        Logger.Log("Garbage Collection FORCED!", Logger.LogSeverity.Warning);
+                    }
+
+                    if (ImGui.Button($"Capture Snapshot ({m_CaptureMemory})"))
+                    {
+                        m_CaptureMemory = !m_CaptureMemory;
+                    }
+                    ImGui.Separator();
+                    ImGui.Text("Current Metrics (Auto-Updating):");
+                    
+                    if (ImGui.BeginTable("MemoryTable", 3, ImGuiTableFlags.Borders | ImGuiTableFlags.RowBg | ImGuiTableFlags.SizingFixedFit))
+                    {
+                        ImGui.TableSetupColumn("Metric");
+                        ImGui.TableSetupColumn("Value (MB)", ImGuiTableColumnFlags.WidthFixed, 80.0f); // Fix width for alignment
+                        ImGui.TableSetupColumn("Value (Bytes)");
+                        ImGui.TableHeadersRow();
+
+                        void DrawMemoryRow(string label, float mbValue, long byteValue)
+                        {
+                            ImGui.TableNextRow();
+                            
+                            ImGui.TableSetColumnIndex(0);
+                            ImGui.Text(label);
+                            
+                            ImGui.TableSetColumnIndex(1);
+                            ImGui.TextDisabled($"{mbValue:F2}");
+                            
+                            ImGui.TableSetColumnIndex(2);
+                            ImGui.Text($"{byteValue:N0}"); 
+                        }
+
+                        DrawMemoryRow("GC Heap", m_SnapshotCache.ManagedHeapSizeMB, m_SnapshotCache.ManagedHeapSizeBytes);
+                        DrawMemoryRow("Private Working Set", m_SnapshotCache.PrivateWorkingSetMB, m_SnapshotCache.PrivateWorkingSetBytes);
+                        DrawMemoryRow("Virtual Memory", m_SnapshotCache.VirtualMemorySizeMB, m_SnapshotCache.VirtualMemorySizeBytes);
+
+                        ImGui.EndTable();
+                    }
                     ImGui.EndTabItem();
                 }
                 ImGui.EndTabBar();

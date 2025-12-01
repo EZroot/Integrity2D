@@ -11,4 +11,5 @@ public interface IRenderPipeline : IService
     void RenderFrameEnd();
     unsafe void UpdateViewportSize(int width, int height);
     unsafe void SetProjectionMatrix(in Matrix4x4 matrix);
+    void SetClearColor(System.Drawing.Color color);
 }

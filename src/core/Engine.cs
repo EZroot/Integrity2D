@@ -139,6 +139,8 @@ public class Engine
 
     private void Update(float deltaTime)
     {
+        m_ImGuiPipe.Tools.DrawToolsUpdate(deltaTime);
+
         if (m_InputManager.IsKeyDown(Scancode.ScancodeW))
             m_CameraManager.MainCamera!.Position += new Vector2(0, -cameraSpeed * deltaTime);
         if (m_InputManager.IsKeyDown(Scancode.ScancodeS))
@@ -175,7 +177,6 @@ public class Engine
         m_ImGuiPipe.BeginFrame();
         m_ImGuiPipe.Tools.DrawMenuBar(m_SceneManager, m_CameraManager, m_Settings);
         m_ImGuiPipe.Tools.DrawTools(m_SceneManager, m_CameraManager, m_Settings);
-        ImGui.ShowDemoWindow();
         m_ImGuiPipe.EndFrame();
 
         m_RenderPipe.RenderFrameEnd();

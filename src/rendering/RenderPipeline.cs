@@ -24,8 +24,8 @@ public class RenderPipeline : IRenderPipeline
     private uint m_VboId;
 
     private unsafe Window* m_WindowHandler;
-    private readonly System.Drawing.Color ClearColor = System.Drawing.Color.CornflowerBlue;
     private readonly ClearBufferMask m_ClearBufferMask = ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit;
+    private System.Drawing.Color m_ClearColor = System.Drawing.Color.CornflowerBlue;
 
     private int m_ProjectionUniformLocation;
     
@@ -98,7 +98,7 @@ public class RenderPipeline : IRenderPipeline
     public void RenderFrameStart()
     {
         Debug.Assert(m_GlApi != null, "SDL API is not initialized in RenderPipeline.");
-        m_GlApi.ClearColor(ClearColor);
+        m_GlApi.ClearColor(m_ClearColor);
         m_GlApi.Clear(m_ClearBufferMask);
     }
 
@@ -133,6 +133,11 @@ public class RenderPipeline : IRenderPipeline
         }
         
         m_GlApi.UseProgram(0); 
+    }
+
+    public void SetClearColor(System.Drawing.Color color)
+    {
+        m_ClearColor = color;
     }
 
     private uint CreateShaderProgram(string vertexPath, string fragmentPath)
