@@ -27,9 +27,6 @@ public class Engine
     private readonly ICameraManager m_CameraManager;
     private readonly IGameObjectFactory m_GameObjectFactory;
     private readonly IProfiler m_Profiler;
-    // DEBUG
-    const float cameraSpeed = 300.0f;
-    // END DEBUG
 
     private readonly Dictionary<GLTexture, List<Matrix4x4>> m_RenderingBatchMap;
 
@@ -134,35 +131,11 @@ public class Engine
 
         m_Game.Initialize();
 
-        Scene defaultScene = new Scene("DefaultScene");
-        // DEBUG TESTING
-        var logo = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/logo.png");
-        logo.Transform.ScaleX = 0.25f;
-        logo.Transform.ScaleY = 0.25f;
-
-        var pinkface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/pink_face.png");
-        var yellowface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/yellow_face.png");
-        
-        var stress = 10000;
-        for(var i = 0; i < stress; i++)
+        if(m_CameraManager.MainCamera == null)
         {
-            var blueface = m_GameObjectFactory.CreateSpriteObject("TestGameObject", "/home/ezroot/Repos/Integrity/DefaultEngineAssets/blue_face.png");
-            var rand = new Random();
-            blueface.Transform.X = rand.Next(-1000, 1000);
-            blueface.Transform.Y = rand.Next(-1000, 1000);
-            defaultScene.RegisterGameObject(blueface);   
+            Logger.Log("No camera present. Aborting!", Logger.LogSeverity.Error);
+            Environment.Exit(0);
         }
-
-        defaultScene.RegisterGameObject(logo);
-        defaultScene.RegisterGameObject(pinkface);
-        defaultScene.RegisterGameObject(yellowface);
-        // END DEBUG
-
-        m_SceneManager.AddScene(defaultScene);
-        m_SceneManager.LoadScene(defaultScene);
-
-        Camera2D mainCamera = new Camera2D("MainCamera", m_Settings.Data.WindowWidth, m_Settings.Data.WindowHeight);
-        m_CameraManager.RegisterCamera(mainCamera);
     }
 
     private unsafe void HandleInput()
@@ -187,16 +160,6 @@ public class Engine
     private void Update(float deltaTime)
     {
         m_ImGuiPipe.Tools.DrawToolsUpdate(deltaTime);
-
-        if (m_InputManager.IsKeyDown(Scancode.ScancodeW))
-            m_CameraManager.MainCamera!.Position += new Vector2(0, -cameraSpeed * deltaTime);
-        if (m_InputManager.IsKeyDown(Scancode.ScancodeS))
-            m_CameraManager.MainCamera!.Position += new Vector2(0, cameraSpeed * deltaTime);
-        if (m_InputManager.IsKeyDown(Scancode.ScancodeA))
-            m_CameraManager.MainCamera!.Position += new Vector2(-cameraSpeed * deltaTime, 0);
-        if (m_InputManager.IsKeyDown(Scancode.ScancodeD))
-            m_CameraManager.MainCamera!.Position += new Vector2(cameraSpeed * deltaTime, 0);
-
         m_Game.Update(deltaTime);
     }
 
@@ -206,7 +169,6 @@ public class Engine
         Matrix4x4 cameraMatrix = m_CameraManager.MainCamera!.GetViewProjectionMatrix();
         m_RenderPipe.SetProjectionMatrix(in cameraMatrix);
 
-        // DEBUG TESTING
         if (m_SceneManager.CurrentScene != null)
         {
             m_Profiler.StartCpuProfile("Sprite_Sorting");
@@ -241,8 +203,6 @@ public class Engine
             }
             m_Profiler.StopRenderProfile("Draw_Sprite_Instanced");
         }
-
-        // END DEBUG
 
         m_Game.Render();
 

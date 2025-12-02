@@ -3,7 +3,7 @@ using Integrity.Interface;
 namespace Integrity.Settings;
 public class EngineSettings : IEngineSettings
 {
-    public const string SHADER_DIR = "/home/ezroot/Repos/Integrity/DefaultEngineAssets/shaders/";
+    public const string SHADER_DIR = "Shaders/";
     public const string FILENAME_ENGINE_SETTINGS = "engine.ini";
 
     [System.Serializable]
