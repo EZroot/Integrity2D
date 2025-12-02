@@ -1,0 +1,1260 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Tools.Profiler
+  commentId: T:Integrity.Tools.Profiler
+  id: Profiler
+  parent: Integrity.Tools
+  children:
+  - Integrity.Tools.Profiler.#ctor
+  - Integrity.Tools.Profiler.Cleanup
+  - Integrity.Tools.Profiler.CpuProfileResults
+  - Integrity.Tools.Profiler.GetCpuProfile(System.String)
+  - Integrity.Tools.Profiler.GetRenderProfile(System.String)
+  - Integrity.Tools.Profiler.InitializeRenderProfiler(System.String)
+  - Integrity.Tools.Profiler.RenderProfileResults
+  - Integrity.Tools.Profiler.StartCpuProfile(System.String)
+  - Integrity.Tools.Profiler.StartRenderProfile(System.String)
+  - Integrity.Tools.Profiler.StopCpuProfile(System.String)
+  - Integrity.Tools.Profiler.StopRenderProfile(System.String)
+  langs:
+  - csharp
+  - vb
+  name: Profiler
+  nameWithType: Profiler
+  fullName: Integrity.Tools.Profiler
+  type: Class
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  syntax:
+    content: 'public class Profiler : IProfiler, IService'
+    content.vb: Public Class Profiler Implements IProfiler, IService
+  inheritance:
+  - System.Object
+  implements:
+  - Integrity.Interface.IProfiler
+  - Integrity.Interface.IService
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Integrity.Tools.Profiler.#ctor
+  commentId: M:Integrity.Tools.Profiler.#ctor
+  id: '#ctor'
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: Profiler()
+  nameWithType: Profiler.Profiler()
+  fullName: Integrity.Tools.Profiler.Profiler()
+  type: Constructor
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  syntax:
+    content: public Profiler()
+    content.vb: Public Sub New()
+  overload: Integrity.Tools.Profiler.#ctor*
+  nameWithType.vb: Profiler.New()
+  fullName.vb: Integrity.Tools.Profiler.New()
+  name.vb: New()
+- uid: Integrity.Tools.Profiler.InitializeRenderProfiler(System.String)
+  commentId: M:Integrity.Tools.Profiler.InitializeRenderProfiler(System.String)
+  id: InitializeRenderProfiler(System.String)
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: InitializeRenderProfiler(string)
+  nameWithType: Profiler.InitializeRenderProfiler(string)
+  fullName: Integrity.Tools.Profiler.InitializeRenderProfiler(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public void InitializeRenderProfiler(string tag)
+    parameters:
+    - id: tag
+      type: System.String
+    content.vb: Public Sub InitializeRenderProfiler(tag As String)
+  overload: Integrity.Tools.Profiler.InitializeRenderProfiler*
+  implements:
+  - Integrity.Interface.IProfiler.InitializeRenderProfiler(System.String)
+  nameWithType.vb: Profiler.InitializeRenderProfiler(String)
+  fullName.vb: Integrity.Tools.Profiler.InitializeRenderProfiler(String)
+  name.vb: InitializeRenderProfiler(String)
+- uid: Integrity.Tools.Profiler.StartRenderProfile(System.String)
+  commentId: M:Integrity.Tools.Profiler.StartRenderProfile(System.String)
+  id: StartRenderProfile(System.String)
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: StartRenderProfile(string)
+  nameWithType: Profiler.StartRenderProfile(string)
+  fullName: Integrity.Tools.Profiler.StartRenderProfile(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public void StartRenderProfile(string tag)
+    parameters:
+    - id: tag
+      type: System.String
+    content.vb: Public Sub StartRenderProfile(tag As String)
+  overload: Integrity.Tools.Profiler.StartRenderProfile*
+  implements:
+  - Integrity.Interface.IProfiler.StartRenderProfile(System.String)
+  nameWithType.vb: Profiler.StartRenderProfile(String)
+  fullName.vb: Integrity.Tools.Profiler.StartRenderProfile(String)
+  name.vb: StartRenderProfile(String)
+- uid: Integrity.Tools.Profiler.StopRenderProfile(System.String)
+  commentId: M:Integrity.Tools.Profiler.StopRenderProfile(System.String)
+  id: StopRenderProfile(System.String)
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: StopRenderProfile(string)
+  nameWithType: Profiler.StopRenderProfile(string)
+  fullName: Integrity.Tools.Profiler.StopRenderProfile(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public void StopRenderProfile(string tag)
+    parameters:
+    - id: tag
+      type: System.String
+    content.vb: Public Sub StopRenderProfile(tag As String)
+  overload: Integrity.Tools.Profiler.StopRenderProfile*
+  implements:
+  - Integrity.Interface.IProfiler.StopRenderProfile(System.String)
+  nameWithType.vb: Profiler.StopRenderProfile(String)
+  fullName.vb: Integrity.Tools.Profiler.StopRenderProfile(String)
+  name.vb: StopRenderProfile(String)
+- uid: Integrity.Tools.Profiler.GetRenderProfile(System.String)
+  commentId: M:Integrity.Tools.Profiler.GetRenderProfile(System.String)
+  id: GetRenderProfile(System.String)
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: GetRenderProfile(string)
+  nameWithType: Profiler.GetRenderProfile(string)
+  fullName: Integrity.Tools.Profiler.GetRenderProfile(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public Profiler.ProfileResultGpu? GetRenderProfile(string tag)
+    parameters:
+    - id: tag
+      type: System.String
+    return:
+      type: Integrity.Tools.Profiler.ProfileResultGpu
+    content.vb: Public Function GetRenderProfile(tag As String) As Profiler.ProfileResultGpu
+  overload: Integrity.Tools.Profiler.GetRenderProfile*
+  implements:
+  - Integrity.Interface.IProfiler.GetRenderProfile(System.String)
+  nameWithType.vb: Profiler.GetRenderProfile(String)
+  fullName.vb: Integrity.Tools.Profiler.GetRenderProfile(String)
+  name.vb: GetRenderProfile(String)
+- uid: Integrity.Tools.Profiler.StartCpuProfile(System.String)
+  commentId: M:Integrity.Tools.Profiler.StartCpuProfile(System.String)
+  id: StartCpuProfile(System.String)
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: StartCpuProfile(string)
+  nameWithType: Profiler.StartCpuProfile(string)
+  fullName: Integrity.Tools.Profiler.StartCpuProfile(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public void StartCpuProfile(string tag)
+    parameters:
+    - id: tag
+      type: System.String
+    content.vb: Public Sub StartCpuProfile(tag As String)
+  overload: Integrity.Tools.Profiler.StartCpuProfile*
+  implements:
+  - Integrity.Interface.IProfiler.StartCpuProfile(System.String)
+  nameWithType.vb: Profiler.StartCpuProfile(String)
+  fullName.vb: Integrity.Tools.Profiler.StartCpuProfile(String)
+  name.vb: StartCpuProfile(String)
+- uid: Integrity.Tools.Profiler.StopCpuProfile(System.String)
+  commentId: M:Integrity.Tools.Profiler.StopCpuProfile(System.String)
+  id: StopCpuProfile(System.String)
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: StopCpuProfile(string)
+  nameWithType: Profiler.StopCpuProfile(string)
+  fullName: Integrity.Tools.Profiler.StopCpuProfile(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public void StopCpuProfile(string tag)
+    parameters:
+    - id: tag
+      type: System.String
+    content.vb: Public Sub StopCpuProfile(tag As String)
+  overload: Integrity.Tools.Profiler.StopCpuProfile*
+  implements:
+  - Integrity.Interface.IProfiler.StopCpuProfile(System.String)
+  nameWithType.vb: Profiler.StopCpuProfile(String)
+  fullName.vb: Integrity.Tools.Profiler.StopCpuProfile(String)
+  name.vb: StopCpuProfile(String)
+- uid: Integrity.Tools.Profiler.GetCpuProfile(System.String)
+  commentId: M:Integrity.Tools.Profiler.GetCpuProfile(System.String)
+  id: GetCpuProfile(System.String)
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: GetCpuProfile(string)
+  nameWithType: Profiler.GetCpuProfile(string)
+  fullName: Integrity.Tools.Profiler.GetCpuProfile(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public Profiler.ProfileResultCpu? GetCpuProfile(string tag)
+    parameters:
+    - id: tag
+      type: System.String
+    return:
+      type: Integrity.Tools.Profiler.ProfileResultCpu
+    content.vb: Public Function GetCpuProfile(tag As String) As Profiler.ProfileResultCpu
+  overload: Integrity.Tools.Profiler.GetCpuProfile*
+  implements:
+  - Integrity.Interface.IProfiler.GetCpuProfile(System.String)
+  nameWithType.vb: Profiler.GetCpuProfile(String)
+  fullName.vb: Integrity.Tools.Profiler.GetCpuProfile(String)
+  name.vb: GetCpuProfile(String)
+- uid: Integrity.Tools.Profiler.Cleanup
+  commentId: M:Integrity.Tools.Profiler.Cleanup
+  id: Cleanup
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: Cleanup()
+  nameWithType: Profiler.Cleanup()
+  fullName: Integrity.Tools.Profiler.Cleanup()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public void Cleanup()
+    content.vb: Public Sub Cleanup()
+  overload: Integrity.Tools.Profiler.Cleanup*
+  implements:
+  - Integrity.Interface.IProfiler.Cleanup
+- uid: Integrity.Tools.Profiler.RenderProfileResults
+  commentId: P:Integrity.Tools.Profiler.RenderProfileResults
+  id: RenderProfileResults
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: RenderProfileResults
+  nameWithType: Profiler.RenderProfileResults
+  fullName: Integrity.Tools.Profiler.RenderProfileResults
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public ReadOnlyDictionary<string, Profiler.ProfileResultGpu> RenderProfileResults { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyDictionary{System.String,Integrity.Tools.Profiler.ProfileResultGpu}
+    content.vb: Public ReadOnly Property RenderProfileResults As ReadOnlyDictionary(Of String, Profiler.ProfileResultGpu)
+  overload: Integrity.Tools.Profiler.RenderProfileResults*
+  implements:
+  - Integrity.Interface.IProfiler.RenderProfileResults
+- uid: Integrity.Tools.Profiler.CpuProfileResults
+  commentId: P:Integrity.Tools.Profiler.CpuProfileResults
+  id: CpuProfileResults
+  parent: Integrity.Tools.Profiler
+  langs:
+  - csharp
+  - vb
+  name: CpuProfileResults
+  nameWithType: Profiler.CpuProfileResults
+  fullName: Integrity.Tools.Profiler.CpuProfileResults
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/tools/Profiler.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Tools
+  example: []
+  syntax:
+    content: public ReadOnlyDictionary<string, Profiler.ProfileResultCpu> CpuProfileResults { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyDictionary{System.String,Integrity.Tools.Profiler.ProfileResultCpu}
+    content.vb: Public ReadOnly Property CpuProfileResults As ReadOnlyDictionary(Of String, Profiler.ProfileResultCpu)
+  overload: Integrity.Tools.Profiler.CpuProfileResults*
+  implements:
+  - Integrity.Interface.IProfiler.CpuProfileResults
+references:
+- uid: Integrity.Tools
+  commentId: N:Integrity.Tools
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Tools
+  nameWithType: Integrity.Tools
+  fullName: Integrity.Tools
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Tools
+    name: Tools
+    isExternal: true
+    href: Integrity.Tools.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Tools
+    name: Tools
+    isExternal: true
+    href: Integrity.Tools.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Integrity.Interface.IProfiler
+  commentId: T:Integrity.Interface.IProfiler
+  parent: Integrity.Interface
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html
+  name: IProfiler
+  nameWithType: IProfiler
+  fullName: Integrity.Interface.IProfiler
+- uid: Integrity.Interface.IService
+  commentId: T:Integrity.Interface.IService
+  parent: Integrity.Interface
+  isExternal: true
+  href: Integrity.Interface.IService.html
+  name: IService
+  nameWithType: IService
+  fullName: Integrity.Interface.IService
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Tools.Profiler.#ctor*
+  commentId: Overload:Integrity.Tools.Profiler.#ctor
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler__ctor
+  name: Profiler
+  nameWithType: Profiler.Profiler
+  fullName: Integrity.Tools.Profiler.Profiler
+  nameWithType.vb: Profiler.New
+  fullName.vb: Integrity.Tools.Profiler.New
+  name.vb: New
+- uid: Integrity.Tools.Profiler.InitializeRenderProfiler*
+  commentId: Overload:Integrity.Tools.Profiler.InitializeRenderProfiler
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_InitializeRenderProfiler_System_String_
+  name: InitializeRenderProfiler
+  nameWithType: Profiler.InitializeRenderProfiler
+  fullName: Integrity.Tools.Profiler.InitializeRenderProfiler
+- uid: Integrity.Interface.IProfiler.InitializeRenderProfiler(System.String)
+  commentId: M:Integrity.Interface.IProfiler.InitializeRenderProfiler(System.String)
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_InitializeRenderProfiler_System_String_
+  name: InitializeRenderProfiler(string)
+  nameWithType: IProfiler.InitializeRenderProfiler(string)
+  fullName: Integrity.Interface.IProfiler.InitializeRenderProfiler(string)
+  nameWithType.vb: IProfiler.InitializeRenderProfiler(String)
+  fullName.vb: Integrity.Interface.IProfiler.InitializeRenderProfiler(String)
+  name.vb: InitializeRenderProfiler(String)
+  spec.csharp:
+  - uid: Integrity.Interface.IProfiler.InitializeRenderProfiler(System.String)
+    name: InitializeRenderProfiler
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_InitializeRenderProfiler_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IProfiler.InitializeRenderProfiler(System.String)
+    name: InitializeRenderProfiler
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_InitializeRenderProfiler_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Integrity.Tools.Profiler.StartRenderProfile*
+  commentId: Overload:Integrity.Tools.Profiler.StartRenderProfile
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_StartRenderProfile_System_String_
+  name: StartRenderProfile
+  nameWithType: Profiler.StartRenderProfile
+  fullName: Integrity.Tools.Profiler.StartRenderProfile
+- uid: Integrity.Interface.IProfiler.StartRenderProfile(System.String)
+  commentId: M:Integrity.Interface.IProfiler.StartRenderProfile(System.String)
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StartRenderProfile_System_String_
+  name: StartRenderProfile(string)
+  nameWithType: IProfiler.StartRenderProfile(string)
+  fullName: Integrity.Interface.IProfiler.StartRenderProfile(string)
+  nameWithType.vb: IProfiler.StartRenderProfile(String)
+  fullName.vb: Integrity.Interface.IProfiler.StartRenderProfile(String)
+  name.vb: StartRenderProfile(String)
+  spec.csharp:
+  - uid: Integrity.Interface.IProfiler.StartRenderProfile(System.String)
+    name: StartRenderProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StartRenderProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IProfiler.StartRenderProfile(System.String)
+    name: StartRenderProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StartRenderProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Integrity.Tools.Profiler.StopRenderProfile*
+  commentId: Overload:Integrity.Tools.Profiler.StopRenderProfile
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_StopRenderProfile_System_String_
+  name: StopRenderProfile
+  nameWithType: Profiler.StopRenderProfile
+  fullName: Integrity.Tools.Profiler.StopRenderProfile
+- uid: Integrity.Interface.IProfiler.StopRenderProfile(System.String)
+  commentId: M:Integrity.Interface.IProfiler.StopRenderProfile(System.String)
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StopRenderProfile_System_String_
+  name: StopRenderProfile(string)
+  nameWithType: IProfiler.StopRenderProfile(string)
+  fullName: Integrity.Interface.IProfiler.StopRenderProfile(string)
+  nameWithType.vb: IProfiler.StopRenderProfile(String)
+  fullName.vb: Integrity.Interface.IProfiler.StopRenderProfile(String)
+  name.vb: StopRenderProfile(String)
+  spec.csharp:
+  - uid: Integrity.Interface.IProfiler.StopRenderProfile(System.String)
+    name: StopRenderProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StopRenderProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IProfiler.StopRenderProfile(System.String)
+    name: StopRenderProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StopRenderProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Integrity.Tools.Profiler.GetRenderProfile*
+  commentId: Overload:Integrity.Tools.Profiler.GetRenderProfile
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_GetRenderProfile_System_String_
+  name: GetRenderProfile
+  nameWithType: Profiler.GetRenderProfile
+  fullName: Integrity.Tools.Profiler.GetRenderProfile
+- uid: Integrity.Interface.IProfiler.GetRenderProfile(System.String)
+  commentId: M:Integrity.Interface.IProfiler.GetRenderProfile(System.String)
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_GetRenderProfile_System_String_
+  name: GetRenderProfile(string)
+  nameWithType: IProfiler.GetRenderProfile(string)
+  fullName: Integrity.Interface.IProfiler.GetRenderProfile(string)
+  nameWithType.vb: IProfiler.GetRenderProfile(String)
+  fullName.vb: Integrity.Interface.IProfiler.GetRenderProfile(String)
+  name.vb: GetRenderProfile(String)
+  spec.csharp:
+  - uid: Integrity.Interface.IProfiler.GetRenderProfile(System.String)
+    name: GetRenderProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_GetRenderProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IProfiler.GetRenderProfile(System.String)
+    name: GetRenderProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_GetRenderProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Integrity.Tools.Profiler.ProfileResultGpu
+  commentId: T:Integrity.Tools.Profiler.ProfileResultGpu
+  parent: Integrity.Tools
+  isExternal: true
+  href: Integrity.Tools.Profiler.html
+  name: Profiler.ProfileResultGpu
+  nameWithType: Profiler.ProfileResultGpu
+  fullName: Integrity.Tools.Profiler.ProfileResultGpu
+  spec.csharp:
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultGpu
+    name: ProfileResultGpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultGpu.html
+  spec.vb:
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultGpu
+    name: ProfileResultGpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultGpu.html
+- uid: Integrity.Tools.Profiler.StartCpuProfile*
+  commentId: Overload:Integrity.Tools.Profiler.StartCpuProfile
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_StartCpuProfile_System_String_
+  name: StartCpuProfile
+  nameWithType: Profiler.StartCpuProfile
+  fullName: Integrity.Tools.Profiler.StartCpuProfile
+- uid: Integrity.Interface.IProfiler.StartCpuProfile(System.String)
+  commentId: M:Integrity.Interface.IProfiler.StartCpuProfile(System.String)
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StartCpuProfile_System_String_
+  name: StartCpuProfile(string)
+  nameWithType: IProfiler.StartCpuProfile(string)
+  fullName: Integrity.Interface.IProfiler.StartCpuProfile(string)
+  nameWithType.vb: IProfiler.StartCpuProfile(String)
+  fullName.vb: Integrity.Interface.IProfiler.StartCpuProfile(String)
+  name.vb: StartCpuProfile(String)
+  spec.csharp:
+  - uid: Integrity.Interface.IProfiler.StartCpuProfile(System.String)
+    name: StartCpuProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StartCpuProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IProfiler.StartCpuProfile(System.String)
+    name: StartCpuProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StartCpuProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Integrity.Tools.Profiler.StopCpuProfile*
+  commentId: Overload:Integrity.Tools.Profiler.StopCpuProfile
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_StopCpuProfile_System_String_
+  name: StopCpuProfile
+  nameWithType: Profiler.StopCpuProfile
+  fullName: Integrity.Tools.Profiler.StopCpuProfile
+- uid: Integrity.Interface.IProfiler.StopCpuProfile(System.String)
+  commentId: M:Integrity.Interface.IProfiler.StopCpuProfile(System.String)
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StopCpuProfile_System_String_
+  name: StopCpuProfile(string)
+  nameWithType: IProfiler.StopCpuProfile(string)
+  fullName: Integrity.Interface.IProfiler.StopCpuProfile(string)
+  nameWithType.vb: IProfiler.StopCpuProfile(String)
+  fullName.vb: Integrity.Interface.IProfiler.StopCpuProfile(String)
+  name.vb: StopCpuProfile(String)
+  spec.csharp:
+  - uid: Integrity.Interface.IProfiler.StopCpuProfile(System.String)
+    name: StopCpuProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StopCpuProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IProfiler.StopCpuProfile(System.String)
+    name: StopCpuProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_StopCpuProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Integrity.Tools.Profiler.GetCpuProfile*
+  commentId: Overload:Integrity.Tools.Profiler.GetCpuProfile
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_GetCpuProfile_System_String_
+  name: GetCpuProfile
+  nameWithType: Profiler.GetCpuProfile
+  fullName: Integrity.Tools.Profiler.GetCpuProfile
+- uid: Integrity.Interface.IProfiler.GetCpuProfile(System.String)
+  commentId: M:Integrity.Interface.IProfiler.GetCpuProfile(System.String)
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_GetCpuProfile_System_String_
+  name: GetCpuProfile(string)
+  nameWithType: IProfiler.GetCpuProfile(string)
+  fullName: Integrity.Interface.IProfiler.GetCpuProfile(string)
+  nameWithType.vb: IProfiler.GetCpuProfile(String)
+  fullName.vb: Integrity.Interface.IProfiler.GetCpuProfile(String)
+  name.vb: GetCpuProfile(String)
+  spec.csharp:
+  - uid: Integrity.Interface.IProfiler.GetCpuProfile(System.String)
+    name: GetCpuProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_GetCpuProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IProfiler.GetCpuProfile(System.String)
+    name: GetCpuProfile
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_GetCpuProfile_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Integrity.Tools.Profiler.ProfileResultCpu
+  commentId: T:Integrity.Tools.Profiler.ProfileResultCpu
+  parent: Integrity.Tools
+  isExternal: true
+  href: Integrity.Tools.Profiler.html
+  name: Profiler.ProfileResultCpu
+  nameWithType: Profiler.ProfileResultCpu
+  fullName: Integrity.Tools.Profiler.ProfileResultCpu
+  spec.csharp:
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultCpu
+    name: ProfileResultCpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultCpu.html
+  spec.vb:
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultCpu
+    name: ProfileResultCpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultCpu.html
+- uid: Integrity.Tools.Profiler.Cleanup*
+  commentId: Overload:Integrity.Tools.Profiler.Cleanup
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_Cleanup
+  name: Cleanup
+  nameWithType: Profiler.Cleanup
+  fullName: Integrity.Tools.Profiler.Cleanup
+- uid: Integrity.Interface.IProfiler.Cleanup
+  commentId: M:Integrity.Interface.IProfiler.Cleanup
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_Cleanup
+  name: Cleanup()
+  nameWithType: IProfiler.Cleanup()
+  fullName: Integrity.Interface.IProfiler.Cleanup()
+  spec.csharp:
+  - uid: Integrity.Interface.IProfiler.Cleanup
+    name: Cleanup
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_Cleanup
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IProfiler.Cleanup
+    name: Cleanup
+    isExternal: true
+    href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_Cleanup
+  - name: (
+  - name: )
+- uid: Integrity.Tools.Profiler.RenderProfileResults*
+  commentId: Overload:Integrity.Tools.Profiler.RenderProfileResults
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_RenderProfileResults
+  name: RenderProfileResults
+  nameWithType: Profiler.RenderProfileResults
+  fullName: Integrity.Tools.Profiler.RenderProfileResults
+- uid: Integrity.Interface.IProfiler.RenderProfileResults
+  commentId: P:Integrity.Interface.IProfiler.RenderProfileResults
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_RenderProfileResults
+  name: RenderProfileResults
+  nameWithType: IProfiler.RenderProfileResults
+  fullName: Integrity.Interface.IProfiler.RenderProfileResults
+- uid: System.Collections.ObjectModel.ReadOnlyDictionary{System.String,Integrity.Tools.Profiler.ProfileResultGpu}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyDictionary{System.String,Integrity.Tools.Profiler.ProfileResultGpu}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2
+  name: ReadOnlyDictionary<string, Profiler.ProfileResultGpu>
+  nameWithType: ReadOnlyDictionary<string, Profiler.ProfileResultGpu>
+  fullName: System.Collections.ObjectModel.ReadOnlyDictionary<string, Integrity.Tools.Profiler.ProfileResultGpu>
+  nameWithType.vb: ReadOnlyDictionary(Of String, Profiler.ProfileResultGpu)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of String, Integrity.Tools.Profiler.ProfileResultGpu)
+  name.vb: ReadOnlyDictionary(Of String, Profiler.ProfileResultGpu)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2
+    name: ReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultGpu
+    name: ProfileResultGpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultGpu.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2
+    name: ReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultGpu
+    name: ProfileResultGpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultGpu.html
+  - name: )
+- uid: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  commentId: T:System.Collections.ObjectModel.ReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2
+  name: ReadOnlyDictionary<TKey, TValue>
+  nameWithType: ReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue)
+  name.vb: ReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2
+    name: ReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2
+    name: ReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: Integrity.Tools.Profiler.CpuProfileResults*
+  commentId: Overload:Integrity.Tools.Profiler.CpuProfileResults
+  isExternal: true
+  href: Integrity.Tools.Profiler.html#Integrity_Tools_Profiler_CpuProfileResults
+  name: CpuProfileResults
+  nameWithType: Profiler.CpuProfileResults
+  fullName: Integrity.Tools.Profiler.CpuProfileResults
+- uid: Integrity.Interface.IProfiler.CpuProfileResults
+  commentId: P:Integrity.Interface.IProfiler.CpuProfileResults
+  parent: Integrity.Interface.IProfiler
+  isExternal: true
+  href: Integrity.Interface.IProfiler.html#Integrity_Interface_IProfiler_CpuProfileResults
+  name: CpuProfileResults
+  nameWithType: IProfiler.CpuProfileResults
+  fullName: Integrity.Interface.IProfiler.CpuProfileResults
+- uid: System.Collections.ObjectModel.ReadOnlyDictionary{System.String,Integrity.Tools.Profiler.ProfileResultCpu}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyDictionary{System.String,Integrity.Tools.Profiler.ProfileResultCpu}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2
+  name: ReadOnlyDictionary<string, Profiler.ProfileResultCpu>
+  nameWithType: ReadOnlyDictionary<string, Profiler.ProfileResultCpu>
+  fullName: System.Collections.ObjectModel.ReadOnlyDictionary<string, Integrity.Tools.Profiler.ProfileResultCpu>
+  nameWithType.vb: ReadOnlyDictionary(Of String, Profiler.ProfileResultCpu)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of String, Integrity.Tools.Profiler.ProfileResultCpu)
+  name.vb: ReadOnlyDictionary(Of String, Profiler.ProfileResultCpu)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2
+    name: ReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultCpu
+    name: ProfileResultCpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultCpu.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2
+    name: ReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultCpu
+    name: ProfileResultCpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultCpu.html
+  - name: )

@@ -1,5 +1,6 @@
 using System.Numerics;
 
+namespace Integrity.Rendering;
 public class Camera2D
 {
     public Guid Id { get; }

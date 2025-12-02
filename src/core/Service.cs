@@ -1,5 +1,7 @@
 using System.Diagnostics;
+using Integrity.Interface;
 
+namespace Integrity.Core;
 public static class Service
 {
     private static Dictionary<Type, object?>? m_Registry = null;

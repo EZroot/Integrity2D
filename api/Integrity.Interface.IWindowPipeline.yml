@@ -1,0 +1,331 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.IWindowPipeline
+  commentId: T:Integrity.Interface.IWindowPipeline
+  id: IWindowPipeline
+  parent: Integrity.Interface
+  children:
+  - Integrity.Interface.IWindowPipeline.GlContext
+  - Integrity.Interface.IWindowPipeline.InitializeWindow(Silk.NET.SDL.Sdl,System.String,System.Int32,System.Int32,System.Int32)
+  - Integrity.Interface.IWindowPipeline.SetVSync(System.Int32)
+  - Integrity.Interface.IWindowPipeline.ShouldClose
+  - Integrity.Interface.IWindowPipeline.WindowHandler
+  langs:
+  - csharp
+  - vb
+  name: IWindowPipeline
+  nameWithType: IWindowPipeline
+  fullName: Integrity.Interface.IWindowPipeline
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/interface/IWindowPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: 'public interface IWindowPipeline : IService'
+    content.vb: Public Interface IWindowPipeline Inherits IService
+- uid: Integrity.Interface.IWindowPipeline.InitializeWindow(Silk.NET.SDL.Sdl,System.String,System.Int32,System.Int32,System.Int32)
+  commentId: M:Integrity.Interface.IWindowPipeline.InitializeWindow(Silk.NET.SDL.Sdl,System.String,System.Int32,System.Int32,System.Int32)
+  id: InitializeWindow(Silk.NET.SDL.Sdl,System.String,System.Int32,System.Int32,System.Int32)
+  parent: Integrity.Interface.IWindowPipeline
+  langs:
+  - csharp
+  - vb
+  name: InitializeWindow(Sdl, string, int, int, int)
+  nameWithType: IWindowPipeline.InitializeWindow(Sdl, string, int, int, int)
+  fullName: Integrity.Interface.IWindowPipeline.InitializeWindow(Silk.NET.SDL.Sdl, string, int, int, int)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/interface/IWindowPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void InitializeWindow(Sdl sdlApi, string title, int width, int height, int useVsync)
+    parameters:
+    - id: sdlApi
+      type: Silk.NET.SDL.Sdl
+    - id: title
+      type: System.String
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    - id: useVsync
+      type: System.Int32
+    content.vb: Sub InitializeWindow(sdlApi As Sdl, title As String, width As Integer, height As Integer, useVsync As Integer)
+  overload: Integrity.Interface.IWindowPipeline.InitializeWindow*
+  nameWithType.vb: IWindowPipeline.InitializeWindow(Sdl, String, Integer, Integer, Integer)
+  fullName.vb: Integrity.Interface.IWindowPipeline.InitializeWindow(Silk.NET.SDL.Sdl, String, Integer, Integer, Integer)
+  name.vb: InitializeWindow(Sdl, String, Integer, Integer, Integer)
+- uid: Integrity.Interface.IWindowPipeline.SetVSync(System.Int32)
+  commentId: M:Integrity.Interface.IWindowPipeline.SetVSync(System.Int32)
+  id: SetVSync(System.Int32)
+  parent: Integrity.Interface.IWindowPipeline
+  langs:
+  - csharp
+  - vb
+  name: SetVSync(int)
+  nameWithType: IWindowPipeline.SetVSync(int)
+  fullName: Integrity.Interface.IWindowPipeline.SetVSync(int)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/interface/IWindowPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void SetVSync(int useVsync)
+    parameters:
+    - id: useVsync
+      type: System.Int32
+    content.vb: Sub SetVSync(useVsync As Integer)
+  overload: Integrity.Interface.IWindowPipeline.SetVSync*
+  nameWithType.vb: IWindowPipeline.SetVSync(Integer)
+  fullName.vb: Integrity.Interface.IWindowPipeline.SetVSync(Integer)
+  name.vb: SetVSync(Integer)
+- uid: Integrity.Interface.IWindowPipeline.ShouldClose
+  commentId: M:Integrity.Interface.IWindowPipeline.ShouldClose
+  id: ShouldClose
+  parent: Integrity.Interface.IWindowPipeline
+  langs:
+  - csharp
+  - vb
+  name: ShouldClose()
+  nameWithType: IWindowPipeline.ShouldClose()
+  fullName: Integrity.Interface.IWindowPipeline.ShouldClose()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/interface/IWindowPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: bool ShouldClose()
+    return:
+      type: System.Boolean
+    content.vb: Function ShouldClose() As Boolean
+  overload: Integrity.Interface.IWindowPipeline.ShouldClose*
+- uid: Integrity.Interface.IWindowPipeline.WindowHandler
+  commentId: P:Integrity.Interface.IWindowPipeline.WindowHandler
+  id: WindowHandler
+  parent: Integrity.Interface.IWindowPipeline
+  langs:
+  - csharp
+  - vb
+  name: WindowHandler
+  nameWithType: IWindowPipeline.WindowHandler
+  fullName: Integrity.Interface.IWindowPipeline.WindowHandler
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/interface/IWindowPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: Window* WindowHandler { get; }
+    parameters: []
+    return:
+      type: Silk.NET.SDL.Window*
+    content.vb: ReadOnly Property WindowHandler As Window*
+  overload: Integrity.Interface.IWindowPipeline.WindowHandler*
+- uid: Integrity.Interface.IWindowPipeline.GlContext
+  commentId: P:Integrity.Interface.IWindowPipeline.GlContext
+  id: GlContext
+  parent: Integrity.Interface.IWindowPipeline
+  langs:
+  - csharp
+  - vb
+  name: GlContext
+  nameWithType: IWindowPipeline.GlContext
+  fullName: Integrity.Interface.IWindowPipeline.GlContext
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/interface/IWindowPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void* GlContext { get; }
+    parameters: []
+    return:
+      type: System.Void*
+    content.vb: ReadOnly Property GlContext As Void*
+  overload: Integrity.Interface.IWindowPipeline.GlContext*
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Interface.IWindowPipeline.InitializeWindow*
+  commentId: Overload:Integrity.Interface.IWindowPipeline.InitializeWindow
+  isExternal: true
+  href: Integrity.Interface.IWindowPipeline.html#Integrity_Interface_IWindowPipeline_InitializeWindow_Silk_NET_SDL_Sdl_System_String_System_Int32_System_Int32_System_Int32_
+  name: InitializeWindow
+  nameWithType: IWindowPipeline.InitializeWindow
+  fullName: Integrity.Interface.IWindowPipeline.InitializeWindow
+- uid: Silk.NET.SDL.Sdl
+  commentId: T:Silk.NET.SDL.Sdl
+  parent: Silk.NET.SDL
+  isExternal: true
+  name: Sdl
+  nameWithType: Sdl
+  fullName: Silk.NET.SDL.Sdl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Silk.NET.SDL
+  commentId: N:Silk.NET.SDL
+  isExternal: true
+  name: Silk.NET.SDL
+  nameWithType: Silk.NET.SDL
+  fullName: Silk.NET.SDL
+  spec.csharp:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.SDL
+    name: SDL
+    isExternal: true
+  spec.vb:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.SDL
+    name: SDL
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Interface.IWindowPipeline.SetVSync*
+  commentId: Overload:Integrity.Interface.IWindowPipeline.SetVSync
+  isExternal: true
+  href: Integrity.Interface.IWindowPipeline.html#Integrity_Interface_IWindowPipeline_SetVSync_System_Int32_
+  name: SetVSync
+  nameWithType: IWindowPipeline.SetVSync
+  fullName: Integrity.Interface.IWindowPipeline.SetVSync
+- uid: Integrity.Interface.IWindowPipeline.ShouldClose*
+  commentId: Overload:Integrity.Interface.IWindowPipeline.ShouldClose
+  isExternal: true
+  href: Integrity.Interface.IWindowPipeline.html#Integrity_Interface_IWindowPipeline_ShouldClose
+  name: ShouldClose
+  nameWithType: IWindowPipeline.ShouldClose
+  fullName: Integrity.Interface.IWindowPipeline.ShouldClose
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Integrity.Interface.IWindowPipeline.WindowHandler*
+  commentId: Overload:Integrity.Interface.IWindowPipeline.WindowHandler
+  isExternal: true
+  href: Integrity.Interface.IWindowPipeline.html#Integrity_Interface_IWindowPipeline_WindowHandler
+  name: WindowHandler
+  nameWithType: IWindowPipeline.WindowHandler
+  fullName: Integrity.Interface.IWindowPipeline.WindowHandler
+- uid: Silk.NET.SDL.Window*
+  isExternal: true
+  name: Window*
+  nameWithType: Window*
+  fullName: Silk.NET.SDL.Window*
+  spec.csharp:
+  - uid: Silk.NET.SDL.Window
+    name: Window
+    isExternal: true
+  - name: '*'
+  spec.vb:
+  - uid: Silk.NET.SDL.Window
+    name: Window
+    isExternal: true
+  - name: '*'
+- uid: Integrity.Interface.IWindowPipeline.GlContext*
+  commentId: Overload:Integrity.Interface.IWindowPipeline.GlContext
+  isExternal: true
+  href: Integrity.Interface.IWindowPipeline.html#Integrity_Interface_IWindowPipeline_GlContext
+  name: GlContext
+  nameWithType: IWindowPipeline.GlContext
+  fullName: Integrity.Interface.IWindowPipeline.GlContext
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'

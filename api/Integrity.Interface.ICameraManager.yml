@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.ICameraManager
+  commentId: T:Integrity.Interface.ICameraManager
+  id: ICameraManager
+  parent: Integrity.Interface
+  children:
+  - Integrity.Interface.ICameraManager.MainCamera
+  - Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  langs:
+  - csharp
+  - vb
+  name: ICameraManager
+  nameWithType: ICameraManager
+  fullName: Integrity.Interface.ICameraManager
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/interface/ICameraManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: 'public interface ICameraManager : IService'
+    content.vb: Public Interface ICameraManager Inherits IService
+- uid: Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  commentId: M:Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  id: RegisterCamera(Integrity.Rendering.Camera2D)
+  parent: Integrity.Interface.ICameraManager
+  langs:
+  - csharp
+  - vb
+  name: RegisterCamera(Camera2D)
+  nameWithType: ICameraManager.RegisterCamera(Camera2D)
+  fullName: Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/interface/ICameraManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void RegisterCamera(Camera2D camera)
+    parameters:
+    - id: camera
+      type: Integrity.Rendering.Camera2D
+    content.vb: Sub RegisterCamera(camera As Camera2D)
+  overload: Integrity.Interface.ICameraManager.RegisterCamera*
+- uid: Integrity.Interface.ICameraManager.MainCamera
+  commentId: P:Integrity.Interface.ICameraManager.MainCamera
+  id: MainCamera
+  parent: Integrity.Interface.ICameraManager
+  langs:
+  - csharp
+  - vb
+  name: MainCamera
+  nameWithType: ICameraManager.MainCamera
+  fullName: Integrity.Interface.ICameraManager.MainCamera
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/interface/ICameraManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: Camera2D? MainCamera { get; }
+    parameters: []
+    return:
+      type: Integrity.Rendering.Camera2D
+    content.vb: ReadOnly Property MainCamera As Camera2D
+  overload: Integrity.Interface.ICameraManager.MainCamera*
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Interface.ICameraManager.RegisterCamera*
+  commentId: Overload:Integrity.Interface.ICameraManager.RegisterCamera
+  isExternal: true
+  href: Integrity.Interface.ICameraManager.html#Integrity_Interface_ICameraManager_RegisterCamera_Integrity_Rendering_Camera2D_
+  name: RegisterCamera
+  nameWithType: ICameraManager.RegisterCamera
+  fullName: Integrity.Interface.ICameraManager.RegisterCamera
+- uid: Integrity.Rendering.Camera2D
+  commentId: T:Integrity.Rendering.Camera2D
+  parent: Integrity.Rendering
+  isExternal: true
+  href: Integrity.Rendering.Camera2D.html
+  name: Camera2D
+  nameWithType: Camera2D
+  fullName: Integrity.Rendering.Camera2D
+- uid: Integrity.Rendering
+  commentId: N:Integrity.Rendering
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Rendering
+  nameWithType: Integrity.Rendering
+  fullName: Integrity.Rendering
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html
+- uid: Integrity.Interface.ICameraManager.MainCamera*
+  commentId: Overload:Integrity.Interface.ICameraManager.MainCamera
+  isExternal: true
+  href: Integrity.Interface.ICameraManager.html#Integrity_Interface_ICameraManager_MainCamera
+  name: MainCamera
+  nameWithType: ICameraManager.MainCamera
+  fullName: Integrity.Interface.ICameraManager.MainCamera

@@ -1,3 +1,8 @@
+using Integrity.Core;
+using Integrity.Interface;
+using Integrity.Objects;
+
+namespace Integrity.Factories;
 public class GameObjectFactory : IGameObjectFactory
 {
     private readonly IAssetManager m_AssetManager;

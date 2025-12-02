@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Src
+  commentId: N:Integrity.Src
+  id: Integrity.Src
+  children:
+  - Integrity.Src.Program
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Src
+  nameWithType: Integrity.Src
+  fullName: Integrity.Src
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Src.Program
+  commentId: T:Integrity.Src.Program
+  isExternal: true
+  href: Integrity.Src.Program.html
+  name: Program
+  nameWithType: Program
+  fullName: Integrity.Src.Program

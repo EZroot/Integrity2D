@@ -1,3 +1,6 @@
+using Integrity.Core;
+
+namespace Integrity.Src;
 ﻿public class Program
 {
     public static async Task Main(string[] args)

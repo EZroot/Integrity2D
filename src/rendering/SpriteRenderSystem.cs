@@ -1,3 +1,6 @@
+using Integrity.Objects;
+
+namespace Integrity.Rendering;
 public class SpriteRenderSystem
 {
     private readonly List<SpriteObject> m_SpriteObjectList = new();

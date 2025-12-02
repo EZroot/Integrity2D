@@ -1,7 +1,10 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using Integrity.Core;
+using Integrity.Interface;
 using Silk.NET.OpenGL;
 
+namespace Integrity.Tools;
 public class Profiler : IProfiler
 {
     public class ProfileResultCpu

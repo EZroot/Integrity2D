@@ -1,0 +1,80 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Settings
+  commentId: N:Integrity.Settings
+  id: Integrity.Settings
+  children:
+  - Integrity.Settings.EngineSettings
+  - Integrity.Settings.EngineSettings.EngineSettingsData
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Settings
+  nameWithType: Integrity.Settings
+  fullName: Integrity.Settings
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Settings.EngineSettings
+  commentId: T:Integrity.Settings.EngineSettings
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.html
+  name: EngineSettings
+  nameWithType: EngineSettings
+  fullName: Integrity.Settings.EngineSettings
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData
+  commentId: T:Integrity.Settings.EngineSettings.EngineSettingsData
+  parent: Integrity.Settings
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.html
+  name: EngineSettings.EngineSettingsData
+  nameWithType: EngineSettings.EngineSettingsData
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData
+  spec.csharp:
+  - uid: Integrity.Settings.EngineSettings
+    name: EngineSettings
+    isExternal: true
+    href: Integrity.Settings.EngineSettings.html
+  - name: .
+  - uid: Integrity.Settings.EngineSettings.EngineSettingsData
+    name: EngineSettingsData
+    isExternal: true
+    href: Integrity.Settings.EngineSettings.EngineSettingsData.html
+  spec.vb:
+  - uid: Integrity.Settings.EngineSettings
+    name: EngineSettings
+    isExternal: true
+    href: Integrity.Settings.EngineSettings.html
+  - name: .
+  - uid: Integrity.Settings.EngineSettings.EngineSettingsData
+    name: EngineSettingsData
+    isExternal: true
+    href: Integrity.Settings.EngineSettings.EngineSettingsData.html
+- uid: Integrity.Settings
+  commentId: N:Integrity.Settings
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Settings
+  nameWithType: Integrity.Settings
+  fullName: Integrity.Settings
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Settings
+    name: Settings
+    isExternal: true
+    href: Integrity.Settings.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Settings
+    name: Settings
+    isExternal: true
+    href: Integrity.Settings.html

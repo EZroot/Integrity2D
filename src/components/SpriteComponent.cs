@@ -1,3 +1,8 @@
+using Integrity.Assets;
+using Integrity.Interface;
+using Integrity.Utils;
+
+namespace Integrity.Components;
 
 public class SpriteComponent : IComponent
 {

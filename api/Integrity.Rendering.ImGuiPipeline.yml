@@ -1,0 +1,896 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Rendering.ImGuiPipeline
+  commentId: T:Integrity.Rendering.ImGuiPipeline
+  id: ImGuiPipeline
+  parent: Integrity.Rendering
+  children:
+  - Integrity.Rendering.ImGuiPipeline.#ctor
+  - Integrity.Rendering.ImGuiPipeline.BeginFrame
+  - Integrity.Rendering.ImGuiPipeline.EndFrame
+  - Integrity.Rendering.ImGuiPipeline.Initialize(Silk.NET.OpenGL.GL,Silk.NET.SDL.Sdl,Silk.NET.SDL.Window*,System.Void*)
+  - Integrity.Rendering.ImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+  - Integrity.Rendering.ImGuiPipeline.RenderDrawDataOpenGL(ImGuiNET.ImDrawDataPtr)
+  - Integrity.Rendering.ImGuiPipeline.Tools
+  langs:
+  - csharp
+  - vb
+  name: ImGuiPipeline
+  nameWithType: ImGuiPipeline
+  fullName: Integrity.Rendering.ImGuiPipeline
+  type: Class
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/ImguiPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  syntax:
+    content: 'public class ImGuiPipeline : IImGuiPipeline, IService'
+    content.vb: Public Class ImGuiPipeline Implements IImGuiPipeline, IService
+  inheritance:
+  - System.Object
+  implements:
+  - Integrity.Interface.IImGuiPipeline
+  - Integrity.Interface.IService
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Integrity.Rendering.ImGuiPipeline.Initialize(Silk.NET.OpenGL.GL,Silk.NET.SDL.Sdl,Silk.NET.SDL.Window*,System.Void*)
+  commentId: M:Integrity.Rendering.ImGuiPipeline.Initialize(Silk.NET.OpenGL.GL,Silk.NET.SDL.Sdl,Silk.NET.SDL.Window*,System.Void*)
+  id: Initialize(Silk.NET.OpenGL.GL,Silk.NET.SDL.Sdl,Silk.NET.SDL.Window*,System.Void*)
+  parent: Integrity.Rendering.ImGuiPipeline
+  langs:
+  - csharp
+  - vb
+  name: Initialize(GL, Sdl, Window*, void*)
+  nameWithType: ImGuiPipeline.Initialize(GL, Sdl, Window*, void*)
+  fullName: Integrity.Rendering.ImGuiPipeline.Initialize(Silk.NET.OpenGL.GL, Silk.NET.SDL.Sdl, Silk.NET.SDL.Window*, void*)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/ImguiPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  example: []
+  syntax:
+    content: public void Initialize(GL glApi, Sdl sdlApi, Window* windowHandler, void* glContext)
+    parameters:
+    - id: glApi
+      type: Silk.NET.OpenGL.GL
+    - id: sdlApi
+      type: Silk.NET.SDL.Sdl
+    - id: windowHandler
+      type: Silk.NET.SDL.Window*
+    - id: glContext
+      type: System.Void*
+    content.vb: Public Sub Initialize(glApi As GL, sdlApi As Sdl, windowHandler As Window*, glContext As Void*)
+  overload: Integrity.Rendering.ImGuiPipeline.Initialize*
+  implements:
+  - Integrity.Interface.IImGuiPipeline.Initialize(Silk.NET.OpenGL.GL,Silk.NET.SDL.Sdl,Silk.NET.SDL.Window*,System.Void*)
+  nameWithType.vb: ImGuiPipeline.Initialize(GL, Sdl, Window*, Void*)
+  fullName.vb: Integrity.Rendering.ImGuiPipeline.Initialize(Silk.NET.OpenGL.GL, Silk.NET.SDL.Sdl, Silk.NET.SDL.Window*, Void*)
+  name.vb: Initialize(GL, Sdl, Window*, Void*)
+- uid: Integrity.Rendering.ImGuiPipeline.BeginFrame
+  commentId: M:Integrity.Rendering.ImGuiPipeline.BeginFrame
+  id: BeginFrame
+  parent: Integrity.Rendering.ImGuiPipeline
+  langs:
+  - csharp
+  - vb
+  name: BeginFrame()
+  nameWithType: ImGuiPipeline.BeginFrame()
+  fullName: Integrity.Rendering.ImGuiPipeline.BeginFrame()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/ImguiPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  example: []
+  syntax:
+    content: public void BeginFrame()
+    content.vb: Public Sub BeginFrame()
+  overload: Integrity.Rendering.ImGuiPipeline.BeginFrame*
+  implements:
+  - Integrity.Interface.IImGuiPipeline.BeginFrame
+- uid: Integrity.Rendering.ImGuiPipeline.EndFrame
+  commentId: M:Integrity.Rendering.ImGuiPipeline.EndFrame
+  id: EndFrame
+  parent: Integrity.Rendering.ImGuiPipeline
+  langs:
+  - csharp
+  - vb
+  name: EndFrame()
+  nameWithType: ImGuiPipeline.EndFrame()
+  fullName: Integrity.Rendering.ImGuiPipeline.EndFrame()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/ImguiPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  example: []
+  syntax:
+    content: public void EndFrame()
+    content.vb: Public Sub EndFrame()
+  overload: Integrity.Rendering.ImGuiPipeline.EndFrame*
+  implements:
+  - Integrity.Interface.IImGuiPipeline.EndFrame
+- uid: Integrity.Rendering.ImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+  commentId: M:Integrity.Rendering.ImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+  id: ProcessEvents(Silk.NET.SDL.Event)
+  parent: Integrity.Rendering.ImGuiPipeline
+  langs:
+  - csharp
+  - vb
+  name: ProcessEvents(Event)
+  nameWithType: ImGuiPipeline.ProcessEvents(Event)
+  fullName: Integrity.Rendering.ImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/ImguiPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  summary: Maps SDL events to ImGui's internal Input/Output system.
+  example: []
+  syntax:
+    content: public void ProcessEvents(Event ev)
+    parameters:
+    - id: ev
+      type: Silk.NET.SDL.Event
+    content.vb: Public Sub ProcessEvents(ev As [Event])
+  overload: Integrity.Rendering.ImGuiPipeline.ProcessEvents*
+  implements:
+  - Integrity.Interface.IImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+- uid: Integrity.Rendering.ImGuiPipeline.RenderDrawDataOpenGL(ImGuiNET.ImDrawDataPtr)
+  commentId: M:Integrity.Rendering.ImGuiPipeline.RenderDrawDataOpenGL(ImGuiNET.ImDrawDataPtr)
+  id: RenderDrawDataOpenGL(ImGuiNET.ImDrawDataPtr)
+  parent: Integrity.Rendering.ImGuiPipeline
+  langs:
+  - csharp
+  - vb
+  name: RenderDrawDataOpenGL(ImDrawDataPtr)
+  nameWithType: ImGuiPipeline.RenderDrawDataOpenGL(ImDrawDataPtr)
+  fullName: Integrity.Rendering.ImGuiPipeline.RenderDrawDataOpenGL(ImGuiNET.ImDrawDataPtr)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/ImguiPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  summary: Executes all OpenGL draw calls based on the generated ImGui draw data.
+  example: []
+  syntax:
+    content: public void RenderDrawDataOpenGL(ImDrawDataPtr drawData)
+    parameters:
+    - id: drawData
+      type: ImGuiNET.ImDrawDataPtr
+    content.vb: Public Sub RenderDrawDataOpenGL(drawData As ImDrawDataPtr)
+  overload: Integrity.Rendering.ImGuiPipeline.RenderDrawDataOpenGL*
+- uid: Integrity.Rendering.ImGuiPipeline.#ctor
+  commentId: M:Integrity.Rendering.ImGuiPipeline.#ctor
+  id: '#ctor'
+  parent: Integrity.Rendering.ImGuiPipeline
+  langs:
+  - csharp
+  - vb
+  name: ImGuiPipeline()
+  nameWithType: ImGuiPipeline.ImGuiPipeline()
+  fullName: Integrity.Rendering.ImGuiPipeline.ImGuiPipeline()
+  type: Constructor
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/ImguiPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  syntax:
+    content: public ImGuiPipeline()
+    content.vb: Public Sub New()
+  overload: Integrity.Rendering.ImGuiPipeline.#ctor*
+  nameWithType.vb: ImGuiPipeline.New()
+  fullName.vb: Integrity.Rendering.ImGuiPipeline.New()
+  name.vb: New()
+- uid: Integrity.Rendering.ImGuiPipeline.Tools
+  commentId: P:Integrity.Rendering.ImGuiPipeline.Tools
+  id: Tools
+  parent: Integrity.Rendering.ImGuiPipeline
+  langs:
+  - csharp
+  - vb
+  name: Tools
+  nameWithType: ImGuiPipeline.Tools
+  fullName: Integrity.Rendering.ImGuiPipeline.Tools
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/ImguiPipeline.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  example: []
+  syntax:
+    content: public ToolGui Tools { get; }
+    parameters: []
+    return:
+      type: Integrity.Tools.ToolGui
+    content.vb: Public ReadOnly Property Tools As ToolGui
+  overload: Integrity.Rendering.ImGuiPipeline.Tools*
+  implements:
+  - Integrity.Interface.IImGuiPipeline.Tools
+references:
+- uid: Integrity.Rendering
+  commentId: N:Integrity.Rendering
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Rendering
+  nameWithType: Integrity.Rendering
+  fullName: Integrity.Rendering
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Integrity.Interface.IImGuiPipeline
+  commentId: T:Integrity.Interface.IImGuiPipeline
+  parent: Integrity.Interface
+  isExternal: true
+  href: Integrity.Interface.IImGuiPipeline.html
+  name: IImGuiPipeline
+  nameWithType: IImGuiPipeline
+  fullName: Integrity.Interface.IImGuiPipeline
+- uid: Integrity.Interface.IService
+  commentId: T:Integrity.Interface.IService
+  parent: Integrity.Interface
+  isExternal: true
+  href: Integrity.Interface.IService.html
+  name: IService
+  nameWithType: IService
+  fullName: Integrity.Interface.IService
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Rendering.ImGuiPipeline.Initialize*
+  commentId: Overload:Integrity.Rendering.ImGuiPipeline.Initialize
+  isExternal: true
+  href: Integrity.Rendering.ImGuiPipeline.html#Integrity_Rendering_ImGuiPipeline_Initialize_Silk_NET_OpenGL_GL_Silk_NET_SDL_Sdl_Silk_NET_SDL_Window__System_Void__
+  name: Initialize
+  nameWithType: ImGuiPipeline.Initialize
+  fullName: Integrity.Rendering.ImGuiPipeline.Initialize
+- uid: Integrity.Interface.IImGuiPipeline.Initialize(Silk.NET.OpenGL.GL,Silk.NET.SDL.Sdl,Silk.NET.SDL.Window*,System.Void*)
+  commentId: M:Integrity.Interface.IImGuiPipeline.Initialize(Silk.NET.OpenGL.GL,Silk.NET.SDL.Sdl,Silk.NET.SDL.Window*,System.Void*)
+  parent: Integrity.Interface.IImGuiPipeline
+  isExternal: true
+  href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_Initialize_Silk_NET_OpenGL_GL_Silk_NET_SDL_Sdl_Silk_NET_SDL_Window__System_Void__
+  name: Initialize(GL, Sdl, Window*, void*)
+  nameWithType: IImGuiPipeline.Initialize(GL, Sdl, Window*, void*)
+  fullName: Integrity.Interface.IImGuiPipeline.Initialize(Silk.NET.OpenGL.GL, Silk.NET.SDL.Sdl, Silk.NET.SDL.Window*, void*)
+  nameWithType.vb: IImGuiPipeline.Initialize(GL, Sdl, Window*, Void*)
+  fullName.vb: Integrity.Interface.IImGuiPipeline.Initialize(Silk.NET.OpenGL.GL, Silk.NET.SDL.Sdl, Silk.NET.SDL.Window*, Void*)
+  name.vb: Initialize(GL, Sdl, Window*, Void*)
+  spec.csharp:
+  - uid: Integrity.Interface.IImGuiPipeline.Initialize(Silk.NET.OpenGL.GL,Silk.NET.SDL.Sdl,Silk.NET.SDL.Window*,System.Void*)
+    name: Initialize
+    isExternal: true
+    href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_Initialize_Silk_NET_OpenGL_GL_Silk_NET_SDL_Sdl_Silk_NET_SDL_Window__System_Void__
+  - name: (
+  - uid: Silk.NET.OpenGL.GL
+    name: GL
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Silk.NET.SDL.Sdl
+    name: Sdl
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Silk.NET.SDL.Window
+    name: Window
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IImGuiPipeline.Initialize(Silk.NET.OpenGL.GL,Silk.NET.SDL.Sdl,Silk.NET.SDL.Window*,System.Void*)
+    name: Initialize
+    isExternal: true
+    href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_Initialize_Silk_NET_OpenGL_GL_Silk_NET_SDL_Sdl_Silk_NET_SDL_Window__System_Void__
+  - name: (
+  - uid: Silk.NET.OpenGL.GL
+    name: GL
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Silk.NET.SDL.Sdl
+    name: Sdl
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Silk.NET.SDL.Window
+    name: Window
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  - name: )
+- uid: Silk.NET.OpenGL.GL
+  commentId: T:Silk.NET.OpenGL.GL
+  parent: Silk.NET.OpenGL
+  isExternal: true
+  name: GL
+  nameWithType: GL
+  fullName: Silk.NET.OpenGL.GL
+- uid: Silk.NET.SDL.Sdl
+  commentId: T:Silk.NET.SDL.Sdl
+  parent: Silk.NET.SDL
+  isExternal: true
+  name: Sdl
+  nameWithType: Sdl
+  fullName: Silk.NET.SDL.Sdl
+- uid: Silk.NET.SDL.Window*
+  isExternal: true
+  name: Window*
+  nameWithType: Window*
+  fullName: Silk.NET.SDL.Window*
+  spec.csharp:
+  - uid: Silk.NET.SDL.Window
+    name: Window
+    isExternal: true
+  - name: '*'
+  spec.vb:
+  - uid: Silk.NET.SDL.Window
+    name: Window
+    isExternal: true
+  - name: '*'
+- uid: System.Void*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.void
+  name: void*
+  nameWithType: void*
+  fullName: void*
+  nameWithType.vb: Void*
+  fullName.vb: Void*
+  name.vb: Void*
+  spec.csharp:
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+- uid: Silk.NET.OpenGL
+  commentId: N:Silk.NET.OpenGL
+  isExternal: true
+  name: Silk.NET.OpenGL
+  nameWithType: Silk.NET.OpenGL
+  fullName: Silk.NET.OpenGL
+  spec.csharp:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+  spec.vb:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+- uid: Silk.NET.SDL
+  commentId: N:Silk.NET.SDL
+  isExternal: true
+  name: Silk.NET.SDL
+  nameWithType: Silk.NET.SDL
+  fullName: Silk.NET.SDL
+  spec.csharp:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.SDL
+    name: SDL
+    isExternal: true
+  spec.vb:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.SDL
+    name: SDL
+    isExternal: true
+- uid: Integrity.Rendering.ImGuiPipeline.BeginFrame*
+  commentId: Overload:Integrity.Rendering.ImGuiPipeline.BeginFrame
+  isExternal: true
+  href: Integrity.Rendering.ImGuiPipeline.html#Integrity_Rendering_ImGuiPipeline_BeginFrame
+  name: BeginFrame
+  nameWithType: ImGuiPipeline.BeginFrame
+  fullName: Integrity.Rendering.ImGuiPipeline.BeginFrame
+- uid: Integrity.Interface.IImGuiPipeline.BeginFrame
+  commentId: M:Integrity.Interface.IImGuiPipeline.BeginFrame
+  parent: Integrity.Interface.IImGuiPipeline
+  isExternal: true
+  href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_BeginFrame
+  name: BeginFrame()
+  nameWithType: IImGuiPipeline.BeginFrame()
+  fullName: Integrity.Interface.IImGuiPipeline.BeginFrame()
+  spec.csharp:
+  - uid: Integrity.Interface.IImGuiPipeline.BeginFrame
+    name: BeginFrame
+    isExternal: true
+    href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_BeginFrame
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IImGuiPipeline.BeginFrame
+    name: BeginFrame
+    isExternal: true
+    href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_BeginFrame
+  - name: (
+  - name: )
+- uid: Integrity.Rendering.ImGuiPipeline.EndFrame*
+  commentId: Overload:Integrity.Rendering.ImGuiPipeline.EndFrame
+  isExternal: true
+  href: Integrity.Rendering.ImGuiPipeline.html#Integrity_Rendering_ImGuiPipeline_EndFrame
+  name: EndFrame
+  nameWithType: ImGuiPipeline.EndFrame
+  fullName: Integrity.Rendering.ImGuiPipeline.EndFrame
+- uid: Integrity.Interface.IImGuiPipeline.EndFrame
+  commentId: M:Integrity.Interface.IImGuiPipeline.EndFrame
+  parent: Integrity.Interface.IImGuiPipeline
+  isExternal: true
+  href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_EndFrame
+  name: EndFrame()
+  nameWithType: IImGuiPipeline.EndFrame()
+  fullName: Integrity.Interface.IImGuiPipeline.EndFrame()
+  spec.csharp:
+  - uid: Integrity.Interface.IImGuiPipeline.EndFrame
+    name: EndFrame
+    isExternal: true
+    href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_EndFrame
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IImGuiPipeline.EndFrame
+    name: EndFrame
+    isExternal: true
+    href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_EndFrame
+  - name: (
+  - name: )
+- uid: Integrity.Rendering.ImGuiPipeline.ProcessEvents*
+  commentId: Overload:Integrity.Rendering.ImGuiPipeline.ProcessEvents
+  isExternal: true
+  href: Integrity.Rendering.ImGuiPipeline.html#Integrity_Rendering_ImGuiPipeline_ProcessEvents_Silk_NET_SDL_Event_
+  name: ProcessEvents
+  nameWithType: ImGuiPipeline.ProcessEvents
+  fullName: Integrity.Rendering.ImGuiPipeline.ProcessEvents
+- uid: Integrity.Interface.IImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+  commentId: M:Integrity.Interface.IImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+  parent: Integrity.Interface.IImGuiPipeline
+  isExternal: true
+  href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_ProcessEvents_Silk_NET_SDL_Event_
+  name: ProcessEvents(Event)
+  nameWithType: IImGuiPipeline.ProcessEvents(Event)
+  fullName: Integrity.Interface.IImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+  spec.csharp:
+  - uid: Integrity.Interface.IImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+    name: ProcessEvents
+    isExternal: true
+    href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_ProcessEvents_Silk_NET_SDL_Event_
+  - name: (
+  - uid: Silk.NET.SDL.Event
+    name: Event
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IImGuiPipeline.ProcessEvents(Silk.NET.SDL.Event)
+    name: ProcessEvents
+    isExternal: true
+    href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_ProcessEvents_Silk_NET_SDL_Event_
+  - name: (
+  - uid: Silk.NET.SDL.Event
+    name: Event
+    isExternal: true
+  - name: )
+- uid: Silk.NET.SDL.Event
+  commentId: T:Silk.NET.SDL.Event
+  parent: Silk.NET.SDL
+  isExternal: true
+  name: Event
+  nameWithType: Event
+  fullName: Silk.NET.SDL.Event
+- uid: Integrity.Rendering.ImGuiPipeline.RenderDrawDataOpenGL*
+  commentId: Overload:Integrity.Rendering.ImGuiPipeline.RenderDrawDataOpenGL
+  isExternal: true
+  href: Integrity.Rendering.ImGuiPipeline.html#Integrity_Rendering_ImGuiPipeline_RenderDrawDataOpenGL_ImGuiNET_ImDrawDataPtr_
+  name: RenderDrawDataOpenGL
+  nameWithType: ImGuiPipeline.RenderDrawDataOpenGL
+  fullName: Integrity.Rendering.ImGuiPipeline.RenderDrawDataOpenGL
+- uid: ImGuiNET.ImDrawDataPtr
+  commentId: T:ImGuiNET.ImDrawDataPtr
+  parent: ImGuiNET
+  isExternal: true
+  name: ImDrawDataPtr
+  nameWithType: ImDrawDataPtr
+  fullName: ImGuiNET.ImDrawDataPtr
+- uid: ImGuiNET
+  commentId: N:ImGuiNET
+  isExternal: true
+  name: ImGuiNET
+  nameWithType: ImGuiNET
+  fullName: ImGuiNET
+- uid: Integrity.Rendering.ImGuiPipeline.#ctor*
+  commentId: Overload:Integrity.Rendering.ImGuiPipeline.#ctor
+  isExternal: true
+  href: Integrity.Rendering.ImGuiPipeline.html#Integrity_Rendering_ImGuiPipeline__ctor
+  name: ImGuiPipeline
+  nameWithType: ImGuiPipeline.ImGuiPipeline
+  fullName: Integrity.Rendering.ImGuiPipeline.ImGuiPipeline
+  nameWithType.vb: ImGuiPipeline.New
+  fullName.vb: Integrity.Rendering.ImGuiPipeline.New
+  name.vb: New
+- uid: Integrity.Rendering.ImGuiPipeline.Tools*
+  commentId: Overload:Integrity.Rendering.ImGuiPipeline.Tools
+  isExternal: true
+  href: Integrity.Rendering.ImGuiPipeline.html#Integrity_Rendering_ImGuiPipeline_Tools
+  name: Tools
+  nameWithType: ImGuiPipeline.Tools
+  fullName: Integrity.Rendering.ImGuiPipeline.Tools
+- uid: Integrity.Interface.IImGuiPipeline.Tools
+  commentId: P:Integrity.Interface.IImGuiPipeline.Tools
+  parent: Integrity.Interface.IImGuiPipeline
+  isExternal: true
+  href: Integrity.Interface.IImGuiPipeline.html#Integrity_Interface_IImGuiPipeline_Tools
+  name: Tools
+  nameWithType: IImGuiPipeline.Tools
+  fullName: Integrity.Interface.IImGuiPipeline.Tools
+- uid: Integrity.Tools.ToolGui
+  commentId: T:Integrity.Tools.ToolGui
+  parent: Integrity.Tools
+  isExternal: true
+  href: Integrity.Tools.ToolGui.html
+  name: ToolGui
+  nameWithType: ToolGui
+  fullName: Integrity.Tools.ToolGui
+- uid: Integrity.Tools
+  commentId: N:Integrity.Tools
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Tools
+  nameWithType: Integrity.Tools
+  fullName: Integrity.Tools
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Tools
+    name: Tools
+    isExternal: true
+    href: Integrity.Tools.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Tools
+    name: Tools
+    isExternal: true
+    href: Integrity.Tools.html

@@ -5,7 +5,11 @@ using System.Numerics;
 using System.Diagnostics;
 using PixelFormat = Silk.NET.OpenGL.PixelFormat;
 using PixelType = Silk.NET.OpenGL.PixelType;
+using Integrity.Interface;
+using Integrity.Tools;
+using Integrity.Settings;
 
+namespace Integrity.Rendering;
 public class ImGuiPipeline : IImGuiPipeline
 {
     private IntPtr m_Context;

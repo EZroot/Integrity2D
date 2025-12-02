@@ -1,0 +1,430 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Assets.AssetInfo
+  commentId: T:Integrity.Assets.AssetInfo
+  id: AssetInfo
+  parent: Integrity.Assets
+  children:
+  - Integrity.Assets.AssetInfo.#ctor(System.String,System.String,System.Int64)
+  - Integrity.Assets.AssetInfo.AssetPath
+  - Integrity.Assets.AssetInfo.MemoryFootprintBytes
+  - Integrity.Assets.AssetInfo.Type
+  langs:
+  - csharp
+  - vb
+  name: AssetInfo
+  nameWithType: AssetInfo
+  fullName: Integrity.Assets.AssetInfo
+  type: Struct
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/AssetInfo.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public struct AssetInfo
+    content.vb: Public Structure AssetInfo
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Integrity.Assets.AssetInfo.#ctor(System.String,System.String,System.Int64)
+  commentId: M:Integrity.Assets.AssetInfo.#ctor(System.String,System.String,System.Int64)
+  id: '#ctor(System.String,System.String,System.Int64)'
+  parent: Integrity.Assets.AssetInfo
+  langs:
+  - csharp
+  - vb
+  name: AssetInfo(string, string, long)
+  nameWithType: AssetInfo.AssetInfo(string, string, long)
+  fullName: Integrity.Assets.AssetInfo.AssetInfo(string, string, long)
+  type: Constructor
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/AssetInfo.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public AssetInfo(string assetPath, string type, long memoryFootprintBytes)
+    parameters:
+    - id: assetPath
+      type: System.String
+    - id: type
+      type: System.String
+    - id: memoryFootprintBytes
+      type: System.Int64
+    content.vb: Public Sub New(assetPath As String, type As String, memoryFootprintBytes As Long)
+  overload: Integrity.Assets.AssetInfo.#ctor*
+  nameWithType.vb: AssetInfo.New(String, String, Long)
+  fullName.vb: Integrity.Assets.AssetInfo.New(String, String, Long)
+  name.vb: New(String, String, Long)
+- uid: Integrity.Assets.AssetInfo.AssetPath
+  commentId: P:Integrity.Assets.AssetInfo.AssetPath
+  id: AssetPath
+  parent: Integrity.Assets.AssetInfo
+  langs:
+  - csharp
+  - vb
+  name: AssetPath
+  nameWithType: AssetInfo.AssetPath
+  fullName: Integrity.Assets.AssetInfo.AssetPath
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/AssetInfo.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public string AssetPath { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AssetPath As String
+  overload: Integrity.Assets.AssetInfo.AssetPath*
+- uid: Integrity.Assets.AssetInfo.Type
+  commentId: P:Integrity.Assets.AssetInfo.Type
+  id: Type
+  parent: Integrity.Assets.AssetInfo
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: AssetInfo.Type
+  fullName: Integrity.Assets.AssetInfo.Type
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/AssetInfo.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public string Type { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Type As String
+  overload: Integrity.Assets.AssetInfo.Type*
+- uid: Integrity.Assets.AssetInfo.MemoryFootprintBytes
+  commentId: P:Integrity.Assets.AssetInfo.MemoryFootprintBytes
+  id: MemoryFootprintBytes
+  parent: Integrity.Assets.AssetInfo
+  langs:
+  - csharp
+  - vb
+  name: MemoryFootprintBytes
+  nameWithType: AssetInfo.MemoryFootprintBytes
+  fullName: Integrity.Assets.AssetInfo.MemoryFootprintBytes
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/AssetInfo.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public long MemoryFootprintBytes { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property MemoryFootprintBytes As Long
+  overload: Integrity.Assets.AssetInfo.MemoryFootprintBytes*
+references:
+- uid: Integrity.Assets
+  commentId: N:Integrity.Assets
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Assets
+  nameWithType: Integrity.Assets
+  fullName: Integrity.Assets
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Assets
+    name: Assets
+    isExternal: true
+    href: Integrity.Assets.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Assets
+    name: Assets
+    isExternal: true
+    href: Integrity.Assets.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Assets.AssetInfo.#ctor*
+  commentId: Overload:Integrity.Assets.AssetInfo.#ctor
+  isExternal: true
+  href: Integrity.Assets.AssetInfo.html#Integrity_Assets_AssetInfo__ctor_System_String_System_String_System_Int64_
+  name: AssetInfo
+  nameWithType: AssetInfo.AssetInfo
+  fullName: Integrity.Assets.AssetInfo.AssetInfo
+  nameWithType.vb: AssetInfo.New
+  fullName.vb: Integrity.Assets.AssetInfo.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Integrity.Assets.AssetInfo.AssetPath*
+  commentId: Overload:Integrity.Assets.AssetInfo.AssetPath
+  isExternal: true
+  href: Integrity.Assets.AssetInfo.html#Integrity_Assets_AssetInfo_AssetPath
+  name: AssetPath
+  nameWithType: AssetInfo.AssetPath
+  fullName: Integrity.Assets.AssetInfo.AssetPath
+- uid: Integrity.Assets.AssetInfo.Type*
+  commentId: Overload:Integrity.Assets.AssetInfo.Type
+  isExternal: true
+  href: Integrity.Assets.AssetInfo.html#Integrity_Assets_AssetInfo_Type
+  name: Type
+  nameWithType: AssetInfo.Type
+  fullName: Integrity.Assets.AssetInfo.Type
+- uid: Integrity.Assets.AssetInfo.MemoryFootprintBytes*
+  commentId: Overload:Integrity.Assets.AssetInfo.MemoryFootprintBytes
+  isExternal: true
+  href: Integrity.Assets.AssetInfo.html#Integrity_Assets_AssetInfo_MemoryFootprintBytes
+  name: MemoryFootprintBytes
+  nameWithType: AssetInfo.MemoryFootprintBytes
+  fullName: Integrity.Assets.AssetInfo.MemoryFootprintBytes

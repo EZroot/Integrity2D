@@ -1,7 +1,13 @@
 using System.Diagnostics;
 using System.Numerics;
+using Integrity.Assets;
+using Integrity.Interface;
+using Integrity.Rendering;
+using Integrity.Scenes;
+using Integrity.Utils;
 using Silk.NET.SDL;
 
+namespace Integrity.Core;
 public class Engine
 {
     private const float FPS_UPDATE_INTERVAL = 1.0f;

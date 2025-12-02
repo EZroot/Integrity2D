@@ -1,3 +1,4 @@
+namespace Integrity.Assets;
 public struct ImageData
 {
     public byte[] PixelData;

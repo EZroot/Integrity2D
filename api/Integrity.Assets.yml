@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Assets
+  commentId: N:Integrity.Assets
+  id: Integrity.Assets
+  children:
+  - Integrity.Assets.AssetInfo
+  - Integrity.Assets.GLTexture
+  - Integrity.Assets.ImageData
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Assets
+  nameWithType: Integrity.Assets
+  fullName: Integrity.Assets
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Assets.AssetInfo
+  commentId: T:Integrity.Assets.AssetInfo
+  isExternal: true
+  href: Integrity.Assets.AssetInfo.html
+  name: AssetInfo
+  nameWithType: AssetInfo
+  fullName: Integrity.Assets.AssetInfo
+- uid: Integrity.Assets.GLTexture
+  commentId: T:Integrity.Assets.GLTexture
+  parent: Integrity.Assets
+  isExternal: true
+  href: Integrity.Assets.GLTexture.html
+  name: GLTexture
+  nameWithType: GLTexture
+  fullName: Integrity.Assets.GLTexture
+- uid: Integrity.Assets.ImageData
+  commentId: T:Integrity.Assets.ImageData
+  parent: Integrity.Assets
+  isExternal: true
+  href: Integrity.Assets.ImageData.html
+  name: ImageData
+  nameWithType: ImageData
+  fullName: Integrity.Assets.ImageData
+- uid: Integrity.Assets
+  commentId: N:Integrity.Assets
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Assets
+  nameWithType: Integrity.Assets
+  fullName: Integrity.Assets
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Assets
+    name: Assets
+    isExternal: true
+    href: Integrity.Assets.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Assets
+    name: Assets
+    isExternal: true
+    href: Integrity.Assets.html

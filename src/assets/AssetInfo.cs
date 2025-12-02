@@ -1,3 +1,4 @@
+namespace Integrity.Assets;
 public struct AssetInfo
 {
     public string AssetPath { get; set; }

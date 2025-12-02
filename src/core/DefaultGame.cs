@@ -1,3 +1,6 @@
+using Integrity.Interface;
+
+namespace Integrity.Core;
 public class DefaultGame : IGame
 {
     public void Initialize()

@@ -1,0 +1,50 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.IService
+  commentId: T:Integrity.Interface.IService
+  id: IService
+  parent: Integrity.Interface
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IService
+  nameWithType: IService
+  fullName: Integrity.Interface.IService
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/interface/IService.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: public interface IService
+    content.vb: Public Interface IService
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html

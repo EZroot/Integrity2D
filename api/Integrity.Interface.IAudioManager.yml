@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.IAudioManager
+  commentId: T:Integrity.Interface.IAudioManager
+  id: IAudioManager
+  parent: Integrity.Interface
+  children:
+  - Integrity.Interface.IAudioManager.InitializeAudio
+  - Integrity.Interface.IAudioManager.PlaySound(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IAudioManager
+  nameWithType: IAudioManager
+  fullName: Integrity.Interface.IAudioManager
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/sound/interface/IAudioManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: 'public interface IAudioManager : IService'
+    content.vb: Public Interface IAudioManager Inherits IService
+- uid: Integrity.Interface.IAudioManager.InitializeAudio
+  commentId: M:Integrity.Interface.IAudioManager.InitializeAudio
+  id: InitializeAudio
+  parent: Integrity.Interface.IAudioManager
+  langs:
+  - csharp
+  - vb
+  name: InitializeAudio()
+  nameWithType: IAudioManager.InitializeAudio()
+  fullName: Integrity.Interface.IAudioManager.InitializeAudio()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/sound/interface/IAudioManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void InitializeAudio()
+    content.vb: Sub InitializeAudio()
+  overload: Integrity.Interface.IAudioManager.InitializeAudio*
+- uid: Integrity.Interface.IAudioManager.PlaySound(System.String)
+  commentId: M:Integrity.Interface.IAudioManager.PlaySound(System.String)
+  id: PlaySound(System.String)
+  parent: Integrity.Interface.IAudioManager
+  langs:
+  - csharp
+  - vb
+  name: PlaySound(string)
+  nameWithType: IAudioManager.PlaySound(string)
+  fullName: Integrity.Interface.IAudioManager.PlaySound(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/sound/interface/IAudioManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void PlaySound(string soundPath)
+    parameters:
+    - id: soundPath
+      type: System.String
+    content.vb: Sub PlaySound(soundPath As String)
+  overload: Integrity.Interface.IAudioManager.PlaySound*
+  nameWithType.vb: IAudioManager.PlaySound(String)
+  fullName.vb: Integrity.Interface.IAudioManager.PlaySound(String)
+  name.vb: PlaySound(String)
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Interface.IAudioManager.InitializeAudio*
+  commentId: Overload:Integrity.Interface.IAudioManager.InitializeAudio
+  isExternal: true
+  href: Integrity.Interface.IAudioManager.html#Integrity_Interface_IAudioManager_InitializeAudio
+  name: InitializeAudio
+  nameWithType: IAudioManager.InitializeAudio
+  fullName: Integrity.Interface.IAudioManager.InitializeAudio
+- uid: Integrity.Interface.IAudioManager.PlaySound*
+  commentId: Overload:Integrity.Interface.IAudioManager.PlaySound
+  isExternal: true
+  href: Integrity.Interface.IAudioManager.html#Integrity_Interface_IAudioManager_PlaySound_System_String_
+  name: PlaySound
+  nameWithType: IAudioManager.PlaySound
+  fullName: Integrity.Interface.IAudioManager.PlaySound
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

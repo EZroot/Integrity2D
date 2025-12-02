@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.IEngineSettings
+  commentId: T:Integrity.Interface.IEngineSettings
+  id: IEngineSettings
+  parent: Integrity.Interface
+  children:
+  - Integrity.Interface.IEngineSettings.Data
+  - Integrity.Interface.IEngineSettings.LoadSettingsAsync
+  - Integrity.Interface.IEngineSettings.SaveSettingsAsync
+  langs:
+  - csharp
+  - vb
+  name: IEngineSettings
+  nameWithType: IEngineSettings
+  fullName: Integrity.Interface.IEngineSettings
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/interface/IEngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: 'public interface IEngineSettings : IService'
+    content.vb: Public Interface IEngineSettings Inherits IService
+- uid: Integrity.Interface.IEngineSettings.LoadSettingsAsync
+  commentId: M:Integrity.Interface.IEngineSettings.LoadSettingsAsync
+  id: LoadSettingsAsync
+  parent: Integrity.Interface.IEngineSettings
+  langs:
+  - csharp
+  - vb
+  name: LoadSettingsAsync()
+  nameWithType: IEngineSettings.LoadSettingsAsync()
+  fullName: Integrity.Interface.IEngineSettings.LoadSettingsAsync()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/interface/IEngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: Task LoadSettingsAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function LoadSettingsAsync() As Task
+  overload: Integrity.Interface.IEngineSettings.LoadSettingsAsync*
+- uid: Integrity.Interface.IEngineSettings.SaveSettingsAsync
+  commentId: M:Integrity.Interface.IEngineSettings.SaveSettingsAsync
+  id: SaveSettingsAsync
+  parent: Integrity.Interface.IEngineSettings
+  langs:
+  - csharp
+  - vb
+  name: SaveSettingsAsync()
+  nameWithType: IEngineSettings.SaveSettingsAsync()
+  fullName: Integrity.Interface.IEngineSettings.SaveSettingsAsync()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/interface/IEngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: Task SaveSettingsAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SaveSettingsAsync() As Task
+  overload: Integrity.Interface.IEngineSettings.SaveSettingsAsync*
+- uid: Integrity.Interface.IEngineSettings.Data
+  commentId: P:Integrity.Interface.IEngineSettings.Data
+  id: Data
+  parent: Integrity.Interface.IEngineSettings
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: IEngineSettings.Data
+  fullName: Integrity.Interface.IEngineSettings.Data
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/interface/IEngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: EngineSettings.EngineSettingsData Data { get; }
+    parameters: []
+    return:
+      type: Integrity.Settings.EngineSettings.EngineSettingsData
+    content.vb: ReadOnly Property Data As EngineSettings.EngineSettingsData
+  overload: Integrity.Interface.IEngineSettings.Data*
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Interface.IEngineSettings.LoadSettingsAsync*
+  commentId: Overload:Integrity.Interface.IEngineSettings.LoadSettingsAsync
+  isExternal: true
+  href: Integrity.Interface.IEngineSettings.html#Integrity_Interface_IEngineSettings_LoadSettingsAsync
+  name: LoadSettingsAsync
+  nameWithType: IEngineSettings.LoadSettingsAsync
+  fullName: Integrity.Interface.IEngineSettings.LoadSettingsAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Integrity.Interface.IEngineSettings.SaveSettingsAsync*
+  commentId: Overload:Integrity.Interface.IEngineSettings.SaveSettingsAsync
+  isExternal: true
+  href: Integrity.Interface.IEngineSettings.html#Integrity_Interface_IEngineSettings_SaveSettingsAsync
+  name: SaveSettingsAsync
+  nameWithType: IEngineSettings.SaveSettingsAsync
+  fullName: Integrity.Interface.IEngineSettings.SaveSettingsAsync
+- uid: Integrity.Interface.IEngineSettings.Data*
+  commentId: Overload:Integrity.Interface.IEngineSettings.Data
+  isExternal: true
+  href: Integrity.Interface.IEngineSettings.html#Integrity_Interface_IEngineSettings_Data
+  name: Data
+  nameWithType: IEngineSettings.Data
+  fullName: Integrity.Interface.IEngineSettings.Data
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData
+  commentId: T:Integrity.Settings.EngineSettings.EngineSettingsData
+  parent: Integrity.Settings
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.html
+  name: EngineSettings.EngineSettingsData
+  nameWithType: EngineSettings.EngineSettingsData
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData
+  spec.csharp:
+  - uid: Integrity.Settings.EngineSettings
+    name: EngineSettings
+    isExternal: true
+    href: Integrity.Settings.EngineSettings.html
+  - name: .
+  - uid: Integrity.Settings.EngineSettings.EngineSettingsData
+    name: EngineSettingsData
+    isExternal: true
+    href: Integrity.Settings.EngineSettings.EngineSettingsData.html
+  spec.vb:
+  - uid: Integrity.Settings.EngineSettings
+    name: EngineSettings
+    isExternal: true
+    href: Integrity.Settings.EngineSettings.html
+  - name: .
+  - uid: Integrity.Settings.EngineSettings.EngineSettingsData
+    name: EngineSettingsData
+    isExternal: true
+    href: Integrity.Settings.EngineSettings.EngineSettingsData.html
+- uid: Integrity.Settings
+  commentId: N:Integrity.Settings
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Settings
+  nameWithType: Integrity.Settings
+  fullName: Integrity.Settings
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Settings
+    name: Settings
+    isExternal: true
+    href: Integrity.Settings.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Settings
+    name: Settings
+    isExternal: true
+    href: Integrity.Settings.html

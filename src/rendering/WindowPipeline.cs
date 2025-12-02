@@ -1,6 +1,8 @@
 using System.Diagnostics;
+using Integrity.Interface;
 using Silk.NET.SDL;
 
+namespace Integrity.Rendering;
 public class WindowPipeline : IWindowPipeline
 {
     private unsafe Window* m_WindowHandler;

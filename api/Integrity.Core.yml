@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Core
+  commentId: N:Integrity.Core
+  id: Integrity.Core
+  children:
+  - Integrity.Core.DefaultGame
+  - Integrity.Core.Engine
+  - Integrity.Core.Service
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Core
+  nameWithType: Integrity.Core
+  fullName: Integrity.Core
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Core.DefaultGame
+  commentId: T:Integrity.Core.DefaultGame
+  isExternal: true
+  href: Integrity.Core.DefaultGame.html
+  name: DefaultGame
+  nameWithType: DefaultGame
+  fullName: Integrity.Core.DefaultGame
+- uid: Integrity.Core.Engine
+  commentId: T:Integrity.Core.Engine
+  isExternal: true
+  href: Integrity.Core.Engine.html
+  name: Engine
+  nameWithType: Engine
+  fullName: Integrity.Core.Engine
+- uid: Integrity.Core.Service
+  commentId: T:Integrity.Core.Service
+  isExternal: true
+  href: Integrity.Core.Service.html
+  name: Service
+  nameWithType: Service
+  fullName: Integrity.Core.Service

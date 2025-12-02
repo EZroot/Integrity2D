@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Scenes
+  commentId: N:Integrity.Scenes
+  id: Integrity.Scenes
+  children:
+  - Integrity.Scenes.Scene
+  - Integrity.Scenes.SceneManager
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Scenes
+  nameWithType: Integrity.Scenes
+  fullName: Integrity.Scenes
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Scenes.Scene
+  commentId: T:Integrity.Scenes.Scene
+  parent: Integrity.Scenes
+  isExternal: true
+  href: Integrity.Scenes.Scene.html
+  name: Scene
+  nameWithType: Scene
+  fullName: Integrity.Scenes.Scene
+- uid: Integrity.Scenes.SceneManager
+  commentId: T:Integrity.Scenes.SceneManager
+  isExternal: true
+  href: Integrity.Scenes.SceneManager.html
+  name: SceneManager
+  nameWithType: SceneManager
+  fullName: Integrity.Scenes.SceneManager
+- uid: Integrity.Scenes
+  commentId: N:Integrity.Scenes
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Scenes
+  nameWithType: Integrity.Scenes
+  fullName: Integrity.Scenes
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Scenes
+    name: Scenes
+    isExternal: true
+    href: Integrity.Scenes.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Scenes
+    name: Scenes
+    isExternal: true
+    href: Integrity.Scenes.html

@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Factories
+  commentId: N:Integrity.Factories
+  id: Integrity.Factories
+  children:
+  - Integrity.Factories.GameObjectFactory
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Factories
+  nameWithType: Integrity.Factories
+  fullName: Integrity.Factories
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Factories.GameObjectFactory
+  commentId: T:Integrity.Factories.GameObjectFactory
+  isExternal: true
+  href: Integrity.Factories.GameObjectFactory.html
+  name: GameObjectFactory
+  nameWithType: GameObjectFactory
+  fullName: Integrity.Factories.GameObjectFactory

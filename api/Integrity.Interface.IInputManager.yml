@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.IInputManager
+  commentId: T:Integrity.Interface.IInputManager
+  id: IInputManager
+  parent: Integrity.Interface
+  children:
+  - Integrity.Interface.IInputManager.IsKeyDown(Silk.NET.SDL.Scancode)
+  - Integrity.Interface.IInputManager.ProcessInput(Silk.NET.SDL.Event)
+  langs:
+  - csharp
+  - vb
+  name: IInputManager
+  nameWithType: IInputManager
+  fullName: Integrity.Interface.IInputManager
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/io/interface/IInputManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: 'public interface IInputManager : IService'
+    content.vb: Public Interface IInputManager Inherits IService
+- uid: Integrity.Interface.IInputManager.ProcessInput(Silk.NET.SDL.Event)
+  commentId: M:Integrity.Interface.IInputManager.ProcessInput(Silk.NET.SDL.Event)
+  id: ProcessInput(Silk.NET.SDL.Event)
+  parent: Integrity.Interface.IInputManager
+  langs:
+  - csharp
+  - vb
+  name: ProcessInput(Event)
+  nameWithType: IInputManager.ProcessInput(Event)
+  fullName: Integrity.Interface.IInputManager.ProcessInput(Silk.NET.SDL.Event)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/io/interface/IInputManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void ProcessInput(Event ev)
+    parameters:
+    - id: ev
+      type: Silk.NET.SDL.Event
+    content.vb: Sub ProcessInput(ev As [Event])
+  overload: Integrity.Interface.IInputManager.ProcessInput*
+- uid: Integrity.Interface.IInputManager.IsKeyDown(Silk.NET.SDL.Scancode)
+  commentId: M:Integrity.Interface.IInputManager.IsKeyDown(Silk.NET.SDL.Scancode)
+  id: IsKeyDown(Silk.NET.SDL.Scancode)
+  parent: Integrity.Interface.IInputManager
+  langs:
+  - csharp
+  - vb
+  name: IsKeyDown(Scancode)
+  nameWithType: IInputManager.IsKeyDown(Scancode)
+  fullName: Integrity.Interface.IInputManager.IsKeyDown(Silk.NET.SDL.Scancode)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/io/interface/IInputManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: bool IsKeyDown(Scancode scancode)
+    parameters:
+    - id: scancode
+      type: Silk.NET.SDL.Scancode
+    return:
+      type: System.Boolean
+    content.vb: Function IsKeyDown(scancode As Scancode) As Boolean
+  overload: Integrity.Interface.IInputManager.IsKeyDown*
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Interface.IInputManager.ProcessInput*
+  commentId: Overload:Integrity.Interface.IInputManager.ProcessInput
+  isExternal: true
+  href: Integrity.Interface.IInputManager.html#Integrity_Interface_IInputManager_ProcessInput_Silk_NET_SDL_Event_
+  name: ProcessInput
+  nameWithType: IInputManager.ProcessInput
+  fullName: Integrity.Interface.IInputManager.ProcessInput
+- uid: Silk.NET.SDL.Event
+  commentId: T:Silk.NET.SDL.Event
+  parent: Silk.NET.SDL
+  isExternal: true
+  name: Event
+  nameWithType: Event
+  fullName: Silk.NET.SDL.Event
+- uid: Silk.NET.SDL
+  commentId: N:Silk.NET.SDL
+  isExternal: true
+  name: Silk.NET.SDL
+  nameWithType: Silk.NET.SDL
+  fullName: Silk.NET.SDL
+  spec.csharp:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.SDL
+    name: SDL
+    isExternal: true
+  spec.vb:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.SDL
+    name: SDL
+    isExternal: true
+- uid: Integrity.Interface.IInputManager.IsKeyDown*
+  commentId: Overload:Integrity.Interface.IInputManager.IsKeyDown
+  isExternal: true
+  href: Integrity.Interface.IInputManager.html#Integrity_Interface_IInputManager_IsKeyDown_Silk_NET_SDL_Scancode_
+  name: IsKeyDown
+  nameWithType: IInputManager.IsKeyDown
+  fullName: Integrity.Interface.IInputManager.IsKeyDown
+- uid: Silk.NET.SDL.Scancode
+  commentId: T:Silk.NET.SDL.Scancode
+  parent: Silk.NET.SDL
+  isExternal: true
+  name: Scancode
+  nameWithType: Scancode
+  fullName: Silk.NET.SDL.Scancode
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,6 +1,8 @@
+using Integrity.Interface;
 using Silk.NET.SDL;
 using System.Numerics;
 
+namespace Integrity.Io;
 public class InputManager : IInputManager
 {
     private readonly Dictionary<Scancode, bool> m_KeyStates = new();

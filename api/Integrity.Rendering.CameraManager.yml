@@ -1,0 +1,491 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Rendering.CameraManager
+  commentId: T:Integrity.Rendering.CameraManager
+  id: CameraManager
+  parent: Integrity.Rendering
+  children:
+  - Integrity.Rendering.CameraManager.#ctor
+  - Integrity.Rendering.CameraManager.MainCamera
+  - Integrity.Rendering.CameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  langs:
+  - csharp
+  - vb
+  name: CameraManager
+  nameWithType: CameraManager
+  fullName: Integrity.Rendering.CameraManager
+  type: Class
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/CameraManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  syntax:
+    content: 'public class CameraManager : ICameraManager, IService'
+    content.vb: Public Class CameraManager Implements ICameraManager, IService
+  inheritance:
+  - System.Object
+  implements:
+  - Integrity.Interface.ICameraManager
+  - Integrity.Interface.IService
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Integrity.Rendering.CameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  commentId: M:Integrity.Rendering.CameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  id: RegisterCamera(Integrity.Rendering.Camera2D)
+  parent: Integrity.Rendering.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: RegisterCamera(Camera2D)
+  nameWithType: CameraManager.RegisterCamera(Camera2D)
+  fullName: Integrity.Rendering.CameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/CameraManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  example: []
+  syntax:
+    content: public void RegisterCamera(Camera2D camera)
+    parameters:
+    - id: camera
+      type: Integrity.Rendering.Camera2D
+    content.vb: Public Sub RegisterCamera(camera As Camera2D)
+  overload: Integrity.Rendering.CameraManager.RegisterCamera*
+  implements:
+  - Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+- uid: Integrity.Rendering.CameraManager.#ctor
+  commentId: M:Integrity.Rendering.CameraManager.#ctor
+  id: '#ctor'
+  parent: Integrity.Rendering.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: CameraManager()
+  nameWithType: CameraManager.CameraManager()
+  fullName: Integrity.Rendering.CameraManager.CameraManager()
+  type: Constructor
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/CameraManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  syntax:
+    content: public CameraManager()
+    content.vb: Public Sub New()
+  overload: Integrity.Rendering.CameraManager.#ctor*
+  nameWithType.vb: CameraManager.New()
+  fullName.vb: Integrity.Rendering.CameraManager.New()
+  name.vb: New()
+- uid: Integrity.Rendering.CameraManager.MainCamera
+  commentId: P:Integrity.Rendering.CameraManager.MainCamera
+  id: MainCamera
+  parent: Integrity.Rendering.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: MainCamera
+  nameWithType: CameraManager.MainCamera
+  fullName: Integrity.Rendering.CameraManager.MainCamera
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/rendering/CameraManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Rendering
+  example: []
+  syntax:
+    content: public Camera2D? MainCamera { get; }
+    parameters: []
+    return:
+      type: Integrity.Rendering.Camera2D
+    content.vb: Public ReadOnly Property MainCamera As Camera2D
+  overload: Integrity.Rendering.CameraManager.MainCamera*
+  implements:
+  - Integrity.Interface.ICameraManager.MainCamera
+references:
+- uid: Integrity.Rendering
+  commentId: N:Integrity.Rendering
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Rendering
+  nameWithType: Integrity.Rendering
+  fullName: Integrity.Rendering
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Integrity.Interface.ICameraManager
+  commentId: T:Integrity.Interface.ICameraManager
+  parent: Integrity.Interface
+  isExternal: true
+  href: Integrity.Interface.ICameraManager.html
+  name: ICameraManager
+  nameWithType: ICameraManager
+  fullName: Integrity.Interface.ICameraManager
+- uid: Integrity.Interface.IService
+  commentId: T:Integrity.Interface.IService
+  parent: Integrity.Interface
+  isExternal: true
+  href: Integrity.Interface.IService.html
+  name: IService
+  nameWithType: IService
+  fullName: Integrity.Interface.IService
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Rendering.CameraManager.RegisterCamera*
+  commentId: Overload:Integrity.Rendering.CameraManager.RegisterCamera
+  isExternal: true
+  href: Integrity.Rendering.CameraManager.html#Integrity_Rendering_CameraManager_RegisterCamera_Integrity_Rendering_Camera2D_
+  name: RegisterCamera
+  nameWithType: CameraManager.RegisterCamera
+  fullName: Integrity.Rendering.CameraManager.RegisterCamera
+- uid: Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  commentId: M:Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  parent: Integrity.Interface.ICameraManager
+  isExternal: true
+  href: Integrity.Interface.ICameraManager.html#Integrity_Interface_ICameraManager_RegisterCamera_Integrity_Rendering_Camera2D_
+  name: RegisterCamera(Camera2D)
+  nameWithType: ICameraManager.RegisterCamera(Camera2D)
+  fullName: Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+  spec.csharp:
+  - uid: Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+    name: RegisterCamera
+    isExternal: true
+    href: Integrity.Interface.ICameraManager.html#Integrity_Interface_ICameraManager_RegisterCamera_Integrity_Rendering_Camera2D_
+  - name: (
+  - uid: Integrity.Rendering.Camera2D
+    name: Camera2D
+    isExternal: true
+    href: Integrity.Rendering.Camera2D.html
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.ICameraManager.RegisterCamera(Integrity.Rendering.Camera2D)
+    name: RegisterCamera
+    isExternal: true
+    href: Integrity.Interface.ICameraManager.html#Integrity_Interface_ICameraManager_RegisterCamera_Integrity_Rendering_Camera2D_
+  - name: (
+  - uid: Integrity.Rendering.Camera2D
+    name: Camera2D
+    isExternal: true
+    href: Integrity.Rendering.Camera2D.html
+  - name: )
+- uid: Integrity.Rendering.Camera2D
+  commentId: T:Integrity.Rendering.Camera2D
+  parent: Integrity.Rendering
+  isExternal: true
+  href: Integrity.Rendering.Camera2D.html
+  name: Camera2D
+  nameWithType: Camera2D
+  fullName: Integrity.Rendering.Camera2D
+- uid: Integrity.Rendering.CameraManager.#ctor*
+  commentId: Overload:Integrity.Rendering.CameraManager.#ctor
+  isExternal: true
+  href: Integrity.Rendering.CameraManager.html#Integrity_Rendering_CameraManager__ctor
+  name: CameraManager
+  nameWithType: CameraManager.CameraManager
+  fullName: Integrity.Rendering.CameraManager.CameraManager
+  nameWithType.vb: CameraManager.New
+  fullName.vb: Integrity.Rendering.CameraManager.New
+  name.vb: New
+- uid: Integrity.Rendering.CameraManager.MainCamera*
+  commentId: Overload:Integrity.Rendering.CameraManager.MainCamera
+  isExternal: true
+  href: Integrity.Rendering.CameraManager.html#Integrity_Rendering_CameraManager_MainCamera
+  name: MainCamera
+  nameWithType: CameraManager.MainCamera
+  fullName: Integrity.Rendering.CameraManager.MainCamera
+- uid: Integrity.Interface.ICameraManager.MainCamera
+  commentId: P:Integrity.Interface.ICameraManager.MainCamera
+  parent: Integrity.Interface.ICameraManager
+  isExternal: true
+  href: Integrity.Interface.ICameraManager.html#Integrity_Interface_ICameraManager_MainCamera
+  name: MainCamera
+  nameWithType: ICameraManager.MainCamera
+  fullName: Integrity.Interface.ICameraManager.MainCamera

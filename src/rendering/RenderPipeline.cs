@@ -1,9 +1,14 @@
 using System.Diagnostics;
 using System.Numerics;
 using System.Runtime.InteropServices;
+using Integrity.Assets;
+using Integrity.Core;
+using Integrity.Interface;
+using Integrity.Settings;
 using Silk.NET.OpenGL;
 using Silk.NET.SDL;
 
+namespace Integrity.Rendering;
 public class RenderPipeline : IRenderPipeline
 {
     private static readonly float[] s_QuadVertices = {

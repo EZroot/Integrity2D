@@ -1,0 +1,297 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.ISceneManager
+  commentId: T:Integrity.Interface.ISceneManager
+  id: ISceneManager
+  parent: Integrity.Interface
+  children:
+  - Integrity.Interface.ISceneManager.AddScene(Integrity.Scenes.Scene)
+  - Integrity.Interface.ISceneManager.CurrentScene
+  - Integrity.Interface.ISceneManager.GetScene(System.Guid)
+  - Integrity.Interface.ISceneManager.GetScene(System.String)
+  - Integrity.Interface.ISceneManager.LoadScene(Integrity.Scenes.Scene)
+  - Integrity.Interface.ISceneManager.UnloadScene(Integrity.Scenes.Scene)
+  langs:
+  - csharp
+  - vb
+  name: ISceneManager
+  nameWithType: ISceneManager
+  fullName: Integrity.Interface.ISceneManager
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/interface/ISceneManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: 'public interface ISceneManager : IService'
+    content.vb: Public Interface ISceneManager Inherits IService
+- uid: Integrity.Interface.ISceneManager.LoadScene(Integrity.Scenes.Scene)
+  commentId: M:Integrity.Interface.ISceneManager.LoadScene(Integrity.Scenes.Scene)
+  id: LoadScene(Integrity.Scenes.Scene)
+  parent: Integrity.Interface.ISceneManager
+  langs:
+  - csharp
+  - vb
+  name: LoadScene(Scene)
+  nameWithType: ISceneManager.LoadScene(Scene)
+  fullName: Integrity.Interface.ISceneManager.LoadScene(Integrity.Scenes.Scene)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/interface/ISceneManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void LoadScene(Scene scene)
+    parameters:
+    - id: scene
+      type: Integrity.Scenes.Scene
+    content.vb: Sub LoadScene(scene As Scene)
+  overload: Integrity.Interface.ISceneManager.LoadScene*
+- uid: Integrity.Interface.ISceneManager.UnloadScene(Integrity.Scenes.Scene)
+  commentId: M:Integrity.Interface.ISceneManager.UnloadScene(Integrity.Scenes.Scene)
+  id: UnloadScene(Integrity.Scenes.Scene)
+  parent: Integrity.Interface.ISceneManager
+  langs:
+  - csharp
+  - vb
+  name: UnloadScene(Scene)
+  nameWithType: ISceneManager.UnloadScene(Scene)
+  fullName: Integrity.Interface.ISceneManager.UnloadScene(Integrity.Scenes.Scene)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/interface/ISceneManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void UnloadScene(Scene scene)
+    parameters:
+    - id: scene
+      type: Integrity.Scenes.Scene
+    content.vb: Sub UnloadScene(scene As Scene)
+  overload: Integrity.Interface.ISceneManager.UnloadScene*
+- uid: Integrity.Interface.ISceneManager.AddScene(Integrity.Scenes.Scene)
+  commentId: M:Integrity.Interface.ISceneManager.AddScene(Integrity.Scenes.Scene)
+  id: AddScene(Integrity.Scenes.Scene)
+  parent: Integrity.Interface.ISceneManager
+  langs:
+  - csharp
+  - vb
+  name: AddScene(Scene)
+  nameWithType: ISceneManager.AddScene(Scene)
+  fullName: Integrity.Interface.ISceneManager.AddScene(Integrity.Scenes.Scene)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/interface/ISceneManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void AddScene(Scene scene)
+    parameters:
+    - id: scene
+      type: Integrity.Scenes.Scene
+    content.vb: Sub AddScene(scene As Scene)
+  overload: Integrity.Interface.ISceneManager.AddScene*
+- uid: Integrity.Interface.ISceneManager.GetScene(System.Guid)
+  commentId: M:Integrity.Interface.ISceneManager.GetScene(System.Guid)
+  id: GetScene(System.Guid)
+  parent: Integrity.Interface.ISceneManager
+  langs:
+  - csharp
+  - vb
+  name: GetScene(Guid)
+  nameWithType: ISceneManager.GetScene(Guid)
+  fullName: Integrity.Interface.ISceneManager.GetScene(System.Guid)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/interface/ISceneManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: Scene? GetScene(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: Integrity.Scenes.Scene
+    content.vb: Function GetScene(id As Guid) As Scene
+  overload: Integrity.Interface.ISceneManager.GetScene*
+- uid: Integrity.Interface.ISceneManager.GetScene(System.String)
+  commentId: M:Integrity.Interface.ISceneManager.GetScene(System.String)
+  id: GetScene(System.String)
+  parent: Integrity.Interface.ISceneManager
+  langs:
+  - csharp
+  - vb
+  name: GetScene(string)
+  nameWithType: ISceneManager.GetScene(string)
+  fullName: Integrity.Interface.ISceneManager.GetScene(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/interface/ISceneManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: Scene? GetScene(string sceneName)
+    parameters:
+    - id: sceneName
+      type: System.String
+    return:
+      type: Integrity.Scenes.Scene
+    content.vb: Function GetScene(sceneName As String) As Scene
+  overload: Integrity.Interface.ISceneManager.GetScene*
+  nameWithType.vb: ISceneManager.GetScene(String)
+  fullName.vb: Integrity.Interface.ISceneManager.GetScene(String)
+  name.vb: GetScene(String)
+- uid: Integrity.Interface.ISceneManager.CurrentScene
+  commentId: P:Integrity.Interface.ISceneManager.CurrentScene
+  id: CurrentScene
+  parent: Integrity.Interface.ISceneManager
+  langs:
+  - csharp
+  - vb
+  name: CurrentScene
+  nameWithType: ISceneManager.CurrentScene
+  fullName: Integrity.Interface.ISceneManager.CurrentScene
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/interface/ISceneManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: Scene? CurrentScene { get; }
+    parameters: []
+    return:
+      type: Integrity.Scenes.Scene
+    content.vb: ReadOnly Property CurrentScene As Scene
+  overload: Integrity.Interface.ISceneManager.CurrentScene*
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Interface.ISceneManager.LoadScene*
+  commentId: Overload:Integrity.Interface.ISceneManager.LoadScene
+  isExternal: true
+  href: Integrity.Interface.ISceneManager.html#Integrity_Interface_ISceneManager_LoadScene_Integrity_Scenes_Scene_
+  name: LoadScene
+  nameWithType: ISceneManager.LoadScene
+  fullName: Integrity.Interface.ISceneManager.LoadScene
+- uid: Integrity.Scenes.Scene
+  commentId: T:Integrity.Scenes.Scene
+  parent: Integrity.Scenes
+  isExternal: true
+  href: Integrity.Scenes.Scene.html
+  name: Scene
+  nameWithType: Scene
+  fullName: Integrity.Scenes.Scene
+- uid: Integrity.Scenes
+  commentId: N:Integrity.Scenes
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Scenes
+  nameWithType: Integrity.Scenes
+  fullName: Integrity.Scenes
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Scenes
+    name: Scenes
+    isExternal: true
+    href: Integrity.Scenes.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Scenes
+    name: Scenes
+    isExternal: true
+    href: Integrity.Scenes.html
+- uid: Integrity.Interface.ISceneManager.UnloadScene*
+  commentId: Overload:Integrity.Interface.ISceneManager.UnloadScene
+  isExternal: true
+  href: Integrity.Interface.ISceneManager.html#Integrity_Interface_ISceneManager_UnloadScene_Integrity_Scenes_Scene_
+  name: UnloadScene
+  nameWithType: ISceneManager.UnloadScene
+  fullName: Integrity.Interface.ISceneManager.UnloadScene
+- uid: Integrity.Interface.ISceneManager.AddScene*
+  commentId: Overload:Integrity.Interface.ISceneManager.AddScene
+  isExternal: true
+  href: Integrity.Interface.ISceneManager.html#Integrity_Interface_ISceneManager_AddScene_Integrity_Scenes_Scene_
+  name: AddScene
+  nameWithType: ISceneManager.AddScene
+  fullName: Integrity.Interface.ISceneManager.AddScene
+- uid: Integrity.Interface.ISceneManager.GetScene*
+  commentId: Overload:Integrity.Interface.ISceneManager.GetScene
+  isExternal: true
+  href: Integrity.Interface.ISceneManager.html#Integrity_Interface_ISceneManager_GetScene_System_Guid_
+  name: GetScene
+  nameWithType: ISceneManager.GetScene
+  fullName: Integrity.Interface.ISceneManager.GetScene
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Integrity.Interface.ISceneManager.CurrentScene*
+  commentId: Overload:Integrity.Interface.ISceneManager.CurrentScene
+  isExternal: true
+  href: Integrity.Interface.ISceneManager.html#Integrity_Interface_ISceneManager_CurrentScene
+  name: CurrentScene
+  nameWithType: ISceneManager.CurrentScene
+  fullName: Integrity.Interface.ISceneManager.CurrentScene

@@ -1,6 +1,8 @@
+using Integrity.Tools;
 using Silk.NET.OpenGL;
 using Silk.NET.SDL;
 
+namespace Integrity.Interface;
 public interface IImGuiPipeline : IService
 {
     public ToolGui Tools { get; }

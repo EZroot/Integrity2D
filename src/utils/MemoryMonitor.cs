@@ -1,5 +1,6 @@
 using System.Diagnostics;
 
+namespace Integrity.Utils;
 public static class MemoryMonitor
 {
     public struct MemorySnapshot

@@ -1,6 +1,7 @@
 
 using System.Collections.ObjectModel;
-using static Profiler;
+using static Integrity.Tools.Profiler;
+namespace Integrity.Interface;
 
 public interface IProfiler : IService
 {

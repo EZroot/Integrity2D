@@ -1,0 +1,835 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Scenes.Scene
+  commentId: T:Integrity.Scenes.Scene
+  id: Scene
+  parent: Integrity.Scenes
+  children:
+  - Integrity.Scenes.Scene.#ctor(System.String)
+  - Integrity.Scenes.Scene.Cleanup
+  - Integrity.Scenes.Scene.GetAllGameObjects
+  - Integrity.Scenes.Scene.GetAllSpriteObjects
+  - Integrity.Scenes.Scene.GetGameObjectById(System.Guid)
+  - Integrity.Scenes.Scene.Id
+  - Integrity.Scenes.Scene.Initialize
+  - Integrity.Scenes.Scene.Name
+  - Integrity.Scenes.Scene.RegisterGameObject(Integrity.Objects.GameObject)
+  - Integrity.Scenes.Scene.SpriteRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: Scene
+  nameWithType: Scene
+  fullName: Integrity.Scenes.Scene
+  type: Class
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  syntax:
+    content: public class Scene
+    content.vb: Public Class Scene
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Integrity.Scenes.Scene.#ctor(System.String)
+  commentId: M:Integrity.Scenes.Scene.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: Scene(string)
+  nameWithType: Scene.Scene(string)
+  fullName: Integrity.Scenes.Scene.Scene(string)
+  type: Constructor
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  syntax:
+    content: public Scene(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Sub New(name As String)
+  overload: Integrity.Scenes.Scene.#ctor*
+  nameWithType.vb: Scene.New(String)
+  fullName.vb: Integrity.Scenes.Scene.New(String)
+  name.vb: New(String)
+- uid: Integrity.Scenes.Scene.Initialize
+  commentId: M:Integrity.Scenes.Scene.Initialize
+  id: Initialize
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: Scene.Initialize()
+  fullName: Integrity.Scenes.Scene.Initialize()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  summary: Called when the scene is first loaded/activated. Initializes all GameObjects.
+  example: []
+  syntax:
+    content: public void Initialize()
+    content.vb: Public Sub Initialize()
+  overload: Integrity.Scenes.Scene.Initialize*
+- uid: Integrity.Scenes.Scene.RegisterGameObject(Integrity.Objects.GameObject)
+  commentId: M:Integrity.Scenes.Scene.RegisterGameObject(Integrity.Objects.GameObject)
+  id: RegisterGameObject(Integrity.Objects.GameObject)
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: RegisterGameObject(GameObject)
+  nameWithType: Scene.RegisterGameObject(GameObject)
+  fullName: Integrity.Scenes.Scene.RegisterGameObject(Integrity.Objects.GameObject)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  syntax:
+    content: public void RegisterGameObject(GameObject obj)
+    parameters:
+    - id: obj
+      type: Integrity.Objects.GameObject
+    content.vb: Public Sub RegisterGameObject(obj As GameObject)
+  overload: Integrity.Scenes.Scene.RegisterGameObject*
+- uid: Integrity.Scenes.Scene.GetGameObjectById(System.Guid)
+  commentId: M:Integrity.Scenes.Scene.GetGameObjectById(System.Guid)
+  id: GetGameObjectById(System.Guid)
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: GetGameObjectById(Guid)
+  nameWithType: Scene.GetGameObjectById(Guid)
+  fullName: Integrity.Scenes.Scene.GetGameObjectById(System.Guid)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  syntax:
+    content: public GameObject? GetGameObjectById(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: Integrity.Objects.GameObject
+    content.vb: Public Function GetGameObjectById(id As Guid) As GameObject
+  overload: Integrity.Scenes.Scene.GetGameObjectById*
+- uid: Integrity.Scenes.Scene.GetAllGameObjects
+  commentId: M:Integrity.Scenes.Scene.GetAllGameObjects
+  id: GetAllGameObjects
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: GetAllGameObjects()
+  nameWithType: Scene.GetAllGameObjects()
+  fullName: Integrity.Scenes.Scene.GetAllGameObjects()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  syntax:
+    content: public IReadOnlyList<GameObject> GetAllGameObjects()
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Integrity.Objects.GameObject}
+    content.vb: Public Function GetAllGameObjects() As IReadOnlyList(Of GameObject)
+  overload: Integrity.Scenes.Scene.GetAllGameObjects*
+- uid: Integrity.Scenes.Scene.GetAllSpriteObjects
+  commentId: M:Integrity.Scenes.Scene.GetAllSpriteObjects
+  id: GetAllSpriteObjects
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: GetAllSpriteObjects()
+  nameWithType: Scene.GetAllSpriteObjects()
+  fullName: Integrity.Scenes.Scene.GetAllSpriteObjects()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  syntax:
+    content: public IReadOnlyList<SpriteObject> GetAllSpriteObjects()
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Integrity.Objects.SpriteObject}
+    content.vb: Public Function GetAllSpriteObjects() As IReadOnlyList(Of SpriteObject)
+  overload: Integrity.Scenes.Scene.GetAllSpriteObjects*
+- uid: Integrity.Scenes.Scene.Cleanup
+  commentId: M:Integrity.Scenes.Scene.Cleanup
+  id: Cleanup
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: Cleanup()
+  nameWithType: Scene.Cleanup()
+  fullName: Integrity.Scenes.Scene.Cleanup()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  summary: Called when the scene is being unloaded. Cleans up all GameObjects.
+  example: []
+  syntax:
+    content: public void Cleanup()
+    content.vb: Public Sub Cleanup()
+  overload: Integrity.Scenes.Scene.Cleanup*
+- uid: Integrity.Scenes.Scene.Id
+  commentId: P:Integrity.Scenes.Scene.Id
+  id: Id
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Scene.Id
+  fullName: Integrity.Scenes.Scene.Id
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  syntax:
+    content: public Guid Id { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public ReadOnly Property Id As Guid
+  overload: Integrity.Scenes.Scene.Id*
+- uid: Integrity.Scenes.Scene.Name
+  commentId: P:Integrity.Scenes.Scene.Name
+  id: Name
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Scene.Name
+  fullName: Integrity.Scenes.Scene.Name
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Integrity.Scenes.Scene.Name*
+- uid: Integrity.Scenes.Scene.SpriteRenderSystem
+  commentId: P:Integrity.Scenes.Scene.SpriteRenderSystem
+  id: SpriteRenderSystem
+  parent: Integrity.Scenes.Scene
+  langs:
+  - csharp
+  - vb
+  name: SpriteRenderSystem
+  nameWithType: Scene.SpriteRenderSystem
+  fullName: Integrity.Scenes.Scene.SpriteRenderSystem
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/scenes/Scene.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Scenes
+  syntax:
+    content: public SpriteRenderSystem SpriteRenderSystem { get; }
+    parameters: []
+    return:
+      type: Integrity.Rendering.SpriteRenderSystem
+    content.vb: Public ReadOnly Property SpriteRenderSystem As SpriteRenderSystem
+  overload: Integrity.Scenes.Scene.SpriteRenderSystem*
+references:
+- uid: Integrity.Scenes
+  commentId: N:Integrity.Scenes
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Scenes
+  nameWithType: Integrity.Scenes
+  fullName: Integrity.Scenes
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Scenes
+    name: Scenes
+    isExternal: true
+    href: Integrity.Scenes.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Scenes
+    name: Scenes
+    isExternal: true
+    href: Integrity.Scenes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Scenes.Scene.#ctor*
+  commentId: Overload:Integrity.Scenes.Scene.#ctor
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene__ctor_System_String_
+  name: Scene
+  nameWithType: Scene.Scene
+  fullName: Integrity.Scenes.Scene.Scene
+  nameWithType.vb: Scene.New
+  fullName.vb: Integrity.Scenes.Scene.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Integrity.Scenes.Scene.Initialize*
+  commentId: Overload:Integrity.Scenes.Scene.Initialize
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene_Initialize
+  name: Initialize
+  nameWithType: Scene.Initialize
+  fullName: Integrity.Scenes.Scene.Initialize
+- uid: Integrity.Scenes.Scene.RegisterGameObject*
+  commentId: Overload:Integrity.Scenes.Scene.RegisterGameObject
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene_RegisterGameObject_Integrity_Objects_GameObject_
+  name: RegisterGameObject
+  nameWithType: Scene.RegisterGameObject
+  fullName: Integrity.Scenes.Scene.RegisterGameObject
+- uid: Integrity.Objects.GameObject
+  commentId: T:Integrity.Objects.GameObject
+  parent: Integrity.Objects
+  isExternal: true
+  href: Integrity.Objects.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: Integrity.Objects.GameObject
+- uid: Integrity.Objects
+  commentId: N:Integrity.Objects
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Objects
+  nameWithType: Integrity.Objects
+  fullName: Integrity.Objects
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Objects
+    name: Objects
+    isExternal: true
+    href: Integrity.Objects.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Objects
+    name: Objects
+    isExternal: true
+    href: Integrity.Objects.html
+- uid: Integrity.Scenes.Scene.GetGameObjectById*
+  commentId: Overload:Integrity.Scenes.Scene.GetGameObjectById
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene_GetGameObjectById_System_Guid_
+  name: GetGameObjectById
+  nameWithType: Scene.GetGameObjectById
+  fullName: Integrity.Scenes.Scene.GetGameObjectById
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Integrity.Scenes.Scene.GetAllGameObjects*
+  commentId: Overload:Integrity.Scenes.Scene.GetAllGameObjects
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene_GetAllGameObjects
+  name: GetAllGameObjects
+  nameWithType: Scene.GetAllGameObjects
+  fullName: Integrity.Scenes.Scene.GetAllGameObjects
+- uid: System.Collections.Generic.IReadOnlyList{Integrity.Objects.GameObject}
+  commentId: T:System.Collections.Generic.IReadOnlyList{Integrity.Objects.GameObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<GameObject>
+  nameWithType: IReadOnlyList<GameObject>
+  fullName: System.Collections.Generic.IReadOnlyList<Integrity.Objects.GameObject>
+  nameWithType.vb: IReadOnlyList(Of GameObject)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Integrity.Objects.GameObject)
+  name.vb: IReadOnlyList(Of GameObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: Integrity.Objects.GameObject
+    name: GameObject
+    isExternal: true
+    href: Integrity.Objects.GameObject.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Integrity.Objects.GameObject
+    name: GameObject
+    isExternal: true
+    href: Integrity.Objects.GameObject.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Integrity.Scenes.Scene.GetAllSpriteObjects*
+  commentId: Overload:Integrity.Scenes.Scene.GetAllSpriteObjects
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene_GetAllSpriteObjects
+  name: GetAllSpriteObjects
+  nameWithType: Scene.GetAllSpriteObjects
+  fullName: Integrity.Scenes.Scene.GetAllSpriteObjects
+- uid: System.Collections.Generic.IReadOnlyList{Integrity.Objects.SpriteObject}
+  commentId: T:System.Collections.Generic.IReadOnlyList{Integrity.Objects.SpriteObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<SpriteObject>
+  nameWithType: IReadOnlyList<SpriteObject>
+  fullName: System.Collections.Generic.IReadOnlyList<Integrity.Objects.SpriteObject>
+  nameWithType.vb: IReadOnlyList(Of SpriteObject)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Integrity.Objects.SpriteObject)
+  name.vb: IReadOnlyList(Of SpriteObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: Integrity.Objects.SpriteObject
+    name: SpriteObject
+    isExternal: true
+    href: Integrity.Objects.SpriteObject.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Integrity.Objects.SpriteObject
+    name: SpriteObject
+    isExternal: true
+    href: Integrity.Objects.SpriteObject.html
+  - name: )
+- uid: Integrity.Scenes.Scene.Cleanup*
+  commentId: Overload:Integrity.Scenes.Scene.Cleanup
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene_Cleanup
+  name: Cleanup
+  nameWithType: Scene.Cleanup
+  fullName: Integrity.Scenes.Scene.Cleanup
+- uid: Integrity.Scenes.Scene.Id*
+  commentId: Overload:Integrity.Scenes.Scene.Id
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene_Id
+  name: Id
+  nameWithType: Scene.Id
+  fullName: Integrity.Scenes.Scene.Id
+- uid: Integrity.Scenes.Scene.Name*
+  commentId: Overload:Integrity.Scenes.Scene.Name
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene_Name
+  name: Name
+  nameWithType: Scene.Name
+  fullName: Integrity.Scenes.Scene.Name
+- uid: Integrity.Scenes.Scene.SpriteRenderSystem*
+  commentId: Overload:Integrity.Scenes.Scene.SpriteRenderSystem
+  isExternal: true
+  href: Integrity.Scenes.Scene.html#Integrity_Scenes_Scene_SpriteRenderSystem
+  name: SpriteRenderSystem
+  nameWithType: Scene.SpriteRenderSystem
+  fullName: Integrity.Scenes.Scene.SpriteRenderSystem
+- uid: Integrity.Rendering.SpriteRenderSystem
+  commentId: T:Integrity.Rendering.SpriteRenderSystem
+  parent: Integrity.Rendering
+  isExternal: true
+  href: Integrity.Rendering.SpriteRenderSystem.html
+  name: SpriteRenderSystem
+  nameWithType: SpriteRenderSystem
+  fullName: Integrity.Rendering.SpriteRenderSystem
+- uid: Integrity.Rendering
+  commentId: N:Integrity.Rendering
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Rendering
+  nameWithType: Integrity.Rendering
+  fullName: Integrity.Rendering
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html

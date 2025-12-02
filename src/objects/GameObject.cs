@@ -1,3 +1,7 @@
+using Integrity.Components;
+using Integrity.Interface;
+
+namespace Integrity.Objects;
 public class GameObject
 {
     private readonly Dictionary<Type, IComponent> m_ComponentMap = new();

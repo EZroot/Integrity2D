@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Sound
+  commentId: N:Integrity.Sound
+  id: Integrity.Sound
+  children:
+  - Integrity.Sound.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Sound
+  nameWithType: Integrity.Sound
+  fullName: Integrity.Sound
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Sound.AudioManager
+  commentId: T:Integrity.Sound.AudioManager
+  isExternal: true
+  href: Integrity.Sound.AudioManager.html
+  name: AudioManager
+  nameWithType: AudioManager
+  fullName: Integrity.Sound.AudioManager

@@ -1,6 +1,11 @@
 using System.Numerics;
 using ImGuiNET;
+using Integrity.Core;
+using Integrity.Interface;
+using Integrity.Objects;
+using Integrity.Utils;
 
+namespace Integrity.Tools;
 public class ToolGui
 {
     private const float MEMORY_UPDATE_INTERVAL = 1.0f;

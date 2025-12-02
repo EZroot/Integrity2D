@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Components
+  commentId: N:Integrity.Components
+  id: Integrity.Components
+  children:
+  - Integrity.Components.SpriteComponent
+  - Integrity.Components.TransformComponent
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Components
+  nameWithType: Integrity.Components
+  fullName: Integrity.Components
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Components.SpriteComponent
+  commentId: T:Integrity.Components.SpriteComponent
+  parent: Integrity.Components
+  isExternal: true
+  href: Integrity.Components.SpriteComponent.html
+  name: SpriteComponent
+  nameWithType: SpriteComponent
+  fullName: Integrity.Components.SpriteComponent
+- uid: Integrity.Components.TransformComponent
+  commentId: T:Integrity.Components.TransformComponent
+  parent: Integrity.Components
+  isExternal: true
+  href: Integrity.Components.TransformComponent.html
+  name: TransformComponent
+  nameWithType: TransformComponent
+  fullName: Integrity.Components.TransformComponent
+- uid: Integrity.Components
+  commentId: N:Integrity.Components
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Components
+  nameWithType: Integrity.Components
+  fullName: Integrity.Components
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Components
+    name: Components
+    isExternal: true
+    href: Integrity.Components.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Components
+    name: Components
+    isExternal: true
+    href: Integrity.Components.html

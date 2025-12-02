@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.IGame
+  commentId: T:Integrity.Interface.IGame
+  id: IGame
+  parent: Integrity.Interface
+  children:
+  - Integrity.Interface.IGame.Cleanup
+  - Integrity.Interface.IGame.Initialize
+  - Integrity.Interface.IGame.Render
+  - Integrity.Interface.IGame.Update(System.Single)
+  langs:
+  - csharp
+  - vb
+  name: IGame
+  nameWithType: IGame
+  fullName: Integrity.Interface.IGame
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/interface/IGame.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: public interface IGame
+    content.vb: Public Interface IGame
+- uid: Integrity.Interface.IGame.Initialize
+  commentId: M:Integrity.Interface.IGame.Initialize
+  id: Initialize
+  parent: Integrity.Interface.IGame
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: IGame.Initialize()
+  fullName: Integrity.Interface.IGame.Initialize()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/interface/IGame.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void Initialize()
+    content.vb: Sub Initialize()
+  overload: Integrity.Interface.IGame.Initialize*
+- uid: Integrity.Interface.IGame.Update(System.Single)
+  commentId: M:Integrity.Interface.IGame.Update(System.Single)
+  id: Update(System.Single)
+  parent: Integrity.Interface.IGame
+  langs:
+  - csharp
+  - vb
+  name: Update(float)
+  nameWithType: IGame.Update(float)
+  fullName: Integrity.Interface.IGame.Update(float)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/interface/IGame.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void Update(float deltaTime)
+    parameters:
+    - id: deltaTime
+      type: System.Single
+    content.vb: Sub Update(deltaTime As Single)
+  overload: Integrity.Interface.IGame.Update*
+  nameWithType.vb: IGame.Update(Single)
+  fullName.vb: Integrity.Interface.IGame.Update(Single)
+  name.vb: Update(Single)
+- uid: Integrity.Interface.IGame.Render
+  commentId: M:Integrity.Interface.IGame.Render
+  id: Render
+  parent: Integrity.Interface.IGame
+  langs:
+  - csharp
+  - vb
+  name: Render()
+  nameWithType: IGame.Render()
+  fullName: Integrity.Interface.IGame.Render()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/interface/IGame.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void Render()
+    content.vb: Sub Render()
+  overload: Integrity.Interface.IGame.Render*
+- uid: Integrity.Interface.IGame.Cleanup
+  commentId: M:Integrity.Interface.IGame.Cleanup
+  id: Cleanup
+  parent: Integrity.Interface.IGame
+  langs:
+  - csharp
+  - vb
+  name: Cleanup()
+  nameWithType: IGame.Cleanup()
+  fullName: Integrity.Interface.IGame.Cleanup()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/interface/IGame.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: void Cleanup()
+    content.vb: Sub Cleanup()
+  overload: Integrity.Interface.IGame.Cleanup*
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Interface.IGame.Initialize*
+  commentId: Overload:Integrity.Interface.IGame.Initialize
+  isExternal: true
+  href: Integrity.Interface.IGame.html#Integrity_Interface_IGame_Initialize
+  name: Initialize
+  nameWithType: IGame.Initialize
+  fullName: Integrity.Interface.IGame.Initialize
+- uid: Integrity.Interface.IGame.Update*
+  commentId: Overload:Integrity.Interface.IGame.Update
+  isExternal: true
+  href: Integrity.Interface.IGame.html#Integrity_Interface_IGame_Update_System_Single_
+  name: Update
+  nameWithType: IGame.Update
+  fullName: Integrity.Interface.IGame.Update
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Interface.IGame.Render*
+  commentId: Overload:Integrity.Interface.IGame.Render
+  isExternal: true
+  href: Integrity.Interface.IGame.html#Integrity_Interface_IGame_Render
+  name: Render
+  nameWithType: IGame.Render
+  fullName: Integrity.Interface.IGame.Render
+- uid: Integrity.Interface.IGame.Cleanup*
+  commentId: Overload:Integrity.Interface.IGame.Cleanup
+  isExternal: true
+  href: Integrity.Interface.IGame.html#Integrity_Interface_IGame_Cleanup
+  name: Cleanup
+  nameWithType: IGame.Cleanup
+  fullName: Integrity.Interface.IGame.Cleanup

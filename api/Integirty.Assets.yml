@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integirty.Assets
+  commentId: N:Integirty.Assets
+  id: Integirty.Assets
+  children:
+  - Integirty.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: Integirty.Assets
+  nameWithType: Integirty.Assets
+  fullName: Integirty.Assets
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integirty.Assets.AssetManager
+  commentId: T:Integirty.Assets.AssetManager
+  isExternal: true
+  href: Integirty.Assets.AssetManager.html
+  name: AssetManager
+  nameWithType: AssetManager
+  fullName: Integirty.Assets.AssetManager

@@ -1,0 +1,439 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Assets.ImageData
+  commentId: T:Integrity.Assets.ImageData
+  id: ImageData
+  parent: Integrity.Assets
+  children:
+  - Integrity.Assets.ImageData.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32)
+  - Integrity.Assets.ImageData.Channels
+  - Integrity.Assets.ImageData.Height
+  - Integrity.Assets.ImageData.PixelData
+  - Integrity.Assets.ImageData.Width
+  langs:
+  - csharp
+  - vb
+  name: ImageData
+  nameWithType: ImageData
+  fullName: Integrity.Assets.ImageData
+  type: Struct
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public struct ImageData
+    content.vb: Public Structure ImageData
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Integrity.Assets.ImageData.PixelData
+  commentId: F:Integrity.Assets.ImageData.PixelData
+  id: PixelData
+  parent: Integrity.Assets.ImageData
+  langs:
+  - csharp
+  - vb
+  name: PixelData
+  nameWithType: ImageData.PixelData
+  fullName: Integrity.Assets.ImageData.PixelData
+  type: Field
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public byte[] PixelData
+    return:
+      type: System.Byte[]
+    content.vb: Public PixelData As Byte()
+- uid: Integrity.Assets.ImageData.Width
+  commentId: F:Integrity.Assets.ImageData.Width
+  id: Width
+  parent: Integrity.Assets.ImageData
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: ImageData.Width
+  fullName: Integrity.Assets.ImageData.Width
+  type: Field
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public int Width
+    return:
+      type: System.Int32
+    content.vb: Public Width As Integer
+- uid: Integrity.Assets.ImageData.Height
+  commentId: F:Integrity.Assets.ImageData.Height
+  id: Height
+  parent: Integrity.Assets.ImageData
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: ImageData.Height
+  fullName: Integrity.Assets.ImageData.Height
+  type: Field
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public int Height
+    return:
+      type: System.Int32
+    content.vb: Public Height As Integer
+- uid: Integrity.Assets.ImageData.Channels
+  commentId: F:Integrity.Assets.ImageData.Channels
+  id: Channels
+  parent: Integrity.Assets.ImageData
+  langs:
+  - csharp
+  - vb
+  name: Channels
+  nameWithType: ImageData.Channels
+  fullName: Integrity.Assets.ImageData.Channels
+  type: Field
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public int Channels
+    return:
+      type: System.Int32
+    content.vb: Public Channels As Integer
+- uid: Integrity.Assets.ImageData.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32)
+  commentId: M:Integrity.Assets.ImageData.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Byte[],System.Int32,System.Int32,System.Int32)'
+  parent: Integrity.Assets.ImageData
+  langs:
+  - csharp
+  - vb
+  name: ImageData(byte[], int, int, int)
+  nameWithType: ImageData.ImageData(byte[], int, int, int)
+  fullName: Integrity.Assets.ImageData.ImageData(byte[], int, int, int)
+  type: Constructor
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Assets
+  syntax:
+    content: public ImageData(byte[] pixelData, int width, int height, int channels)
+    parameters:
+    - id: pixelData
+      type: System.Byte[]
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    - id: channels
+      type: System.Int32
+    content.vb: Public Sub New(pixelData As Byte(), width As Integer, height As Integer, channels As Integer)
+  overload: Integrity.Assets.ImageData.#ctor*
+  nameWithType.vb: ImageData.New(Byte(), Integer, Integer, Integer)
+  fullName.vb: Integrity.Assets.ImageData.New(Byte(), Integer, Integer, Integer)
+  name.vb: New(Byte(), Integer, Integer, Integer)
+references:
+- uid: Integrity.Assets
+  commentId: N:Integrity.Assets
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Assets
+  nameWithType: Integrity.Assets
+  fullName: Integrity.Assets
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Assets
+    name: Assets
+    isExternal: true
+    href: Integrity.Assets.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Assets
+    name: Assets
+    isExternal: true
+    href: Integrity.Assets.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Integrity.Assets.ImageData.#ctor*
+  commentId: Overload:Integrity.Assets.ImageData.#ctor
+  isExternal: true
+  href: Integrity.Assets.ImageData.html#Integrity_Assets_ImageData__ctor_System_Byte___System_Int32_System_Int32_System_Int32_
+  name: ImageData
+  nameWithType: ImageData.ImageData
+  fullName: Integrity.Assets.ImageData.ImageData
+  nameWithType.vb: ImageData.New
+  fullName.vb: Integrity.Assets.ImageData.New
+  name.vb: New

@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Objects
+  commentId: N:Integrity.Objects
+  id: Integrity.Objects
+  children:
+  - Integrity.Objects.GameObject
+  - Integrity.Objects.SpriteObject
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Objects
+  nameWithType: Integrity.Objects
+  fullName: Integrity.Objects
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Objects.GameObject
+  commentId: T:Integrity.Objects.GameObject
+  parent: Integrity.Objects
+  isExternal: true
+  href: Integrity.Objects.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: Integrity.Objects.GameObject
+- uid: Integrity.Objects.SpriteObject
+  commentId: T:Integrity.Objects.SpriteObject
+  parent: Integrity.Objects
+  isExternal: true
+  href: Integrity.Objects.SpriteObject.html
+  name: SpriteObject
+  nameWithType: SpriteObject
+  fullName: Integrity.Objects.SpriteObject
+- uid: Integrity.Objects
+  commentId: N:Integrity.Objects
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Objects
+  nameWithType: Integrity.Objects
+  fullName: Integrity.Objects
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Objects
+    name: Objects
+    isExternal: true
+    href: Integrity.Objects.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Objects
+    name: Objects
+    isExternal: true
+    href: Integrity.Objects.html

@@ -1,3 +1,6 @@
+using Integrity.Interface;
+
+namespace Integrity.Rendering;
 public class CameraManager : ICameraManager
 {
     private Camera2D? m_MainCamera;

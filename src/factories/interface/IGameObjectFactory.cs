@@ -1,3 +1,6 @@
+using Integrity.Objects;
+
+namespace Integrity.Interface;
 public interface IGameObjectFactory : IService
 {
     GameObject CreateGameObject(string name, IComponent[]? componentsToAdd = null);

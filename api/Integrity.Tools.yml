@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Tools
+  commentId: N:Integrity.Tools
+  id: Integrity.Tools
+  children:
+  - Integrity.Tools.Profiler
+  - Integrity.Tools.Profiler.ProfileResultCpu
+  - Integrity.Tools.Profiler.ProfileResultGpu
+  - Integrity.Tools.ToolGui
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Tools
+  nameWithType: Integrity.Tools
+  fullName: Integrity.Tools
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Tools.Profiler
+  commentId: T:Integrity.Tools.Profiler
+  isExternal: true
+  href: Integrity.Tools.Profiler.html
+  name: Profiler
+  nameWithType: Profiler
+  fullName: Integrity.Tools.Profiler
+- uid: Integrity.Tools.Profiler.ProfileResultCpu
+  commentId: T:Integrity.Tools.Profiler.ProfileResultCpu
+  parent: Integrity.Tools
+  isExternal: true
+  href: Integrity.Tools.Profiler.html
+  name: Profiler.ProfileResultCpu
+  nameWithType: Profiler.ProfileResultCpu
+  fullName: Integrity.Tools.Profiler.ProfileResultCpu
+  spec.csharp:
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultCpu
+    name: ProfileResultCpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultCpu.html
+  spec.vb:
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultCpu
+    name: ProfileResultCpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultCpu.html
+- uid: Integrity.Tools.Profiler.ProfileResultGpu
+  commentId: T:Integrity.Tools.Profiler.ProfileResultGpu
+  parent: Integrity.Tools
+  isExternal: true
+  href: Integrity.Tools.Profiler.html
+  name: Profiler.ProfileResultGpu
+  nameWithType: Profiler.ProfileResultGpu
+  fullName: Integrity.Tools.Profiler.ProfileResultGpu
+  spec.csharp:
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultGpu
+    name: ProfileResultGpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultGpu.html
+  spec.vb:
+  - uid: Integrity.Tools.Profiler
+    name: Profiler
+    isExternal: true
+    href: Integrity.Tools.Profiler.html
+  - name: .
+  - uid: Integrity.Tools.Profiler.ProfileResultGpu
+    name: ProfileResultGpu
+    isExternal: true
+    href: Integrity.Tools.Profiler.ProfileResultGpu.html
+- uid: Integrity.Tools.ToolGui
+  commentId: T:Integrity.Tools.ToolGui
+  parent: Integrity.Tools
+  isExternal: true
+  href: Integrity.Tools.ToolGui.html
+  name: ToolGui
+  nameWithType: ToolGui
+  fullName: Integrity.Tools.ToolGui
+- uid: Integrity.Tools
+  commentId: N:Integrity.Tools
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Tools
+  nameWithType: Integrity.Tools
+  fullName: Integrity.Tools
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Tools
+    name: Tools
+    isExternal: true
+    href: Integrity.Tools.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Tools
+    name: Tools
+    isExternal: true
+    href: Integrity.Tools.html

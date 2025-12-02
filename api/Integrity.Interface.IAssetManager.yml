@@ -1,0 +1,287 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.IAssetManager
+  commentId: T:Integrity.Interface.IAssetManager
+  id: IAssetManager
+  parent: Integrity.Interface
+  children:
+  - Integrity.Interface.IAssetManager.GetLoadedAssets
+  - Integrity.Interface.IAssetManager.GetTexture(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IAssetManager
+  nameWithType: IAssetManager
+  fullName: Integrity.Interface.IAssetManager
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/interface/IAssetManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: 'public interface IAssetManager : IService'
+    content.vb: Public Interface IAssetManager Inherits IService
+- uid: Integrity.Interface.IAssetManager.GetLoadedAssets
+  commentId: M:Integrity.Interface.IAssetManager.GetLoadedAssets
+  id: GetLoadedAssets
+  parent: Integrity.Interface.IAssetManager
+  langs:
+  - csharp
+  - vb
+  name: GetLoadedAssets()
+  nameWithType: IAssetManager.GetLoadedAssets()
+  fullName: Integrity.Interface.IAssetManager.GetLoadedAssets()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/interface/IAssetManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: IReadOnlyDictionary<string, AssetInfo> GetLoadedAssets()
+    return:
+      type: System.Collections.Generic.IReadOnlyDictionary{System.String,Integrity.Assets.AssetInfo}
+    content.vb: Function GetLoadedAssets() As IReadOnlyDictionary(Of String, AssetInfo)
+  overload: Integrity.Interface.IAssetManager.GetLoadedAssets*
+- uid: Integrity.Interface.IAssetManager.GetTexture(System.String)
+  commentId: M:Integrity.Interface.IAssetManager.GetTexture(System.String)
+  id: GetTexture(System.String)
+  parent: Integrity.Interface.IAssetManager
+  langs:
+  - csharp
+  - vb
+  name: GetTexture(string)
+  nameWithType: IAssetManager.GetTexture(string)
+  fullName: Integrity.Interface.IAssetManager.GetTexture(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/interface/IAssetManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: GLTexture GetTexture(string assetPath)
+    parameters:
+    - id: assetPath
+      type: System.String
+    return:
+      type: Integrity.Assets.GLTexture
+    content.vb: Function GetTexture(assetPath As String) As GLTexture
+  overload: Integrity.Interface.IAssetManager.GetTexture*
+  nameWithType.vb: IAssetManager.GetTexture(String)
+  fullName.vb: Integrity.Interface.IAssetManager.GetTexture(String)
+  name.vb: GetTexture(String)
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Interface.IAssetManager.GetLoadedAssets*
+  commentId: Overload:Integrity.Interface.IAssetManager.GetLoadedAssets
+  isExternal: true
+  href: Integrity.Interface.IAssetManager.html#Integrity_Interface_IAssetManager_GetLoadedAssets
+  name: GetLoadedAssets
+  nameWithType: IAssetManager.GetLoadedAssets
+  fullName: Integrity.Interface.IAssetManager.GetLoadedAssets
+- uid: System.Collections.Generic.IReadOnlyDictionary{System.String,Integrity.Assets.AssetInfo}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{System.String,Integrity.Assets.AssetInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<string, AssetInfo>
+  nameWithType: IReadOnlyDictionary<string, AssetInfo>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<string, Integrity.Assets.AssetInfo>
+  nameWithType.vb: IReadOnlyDictionary(Of String, AssetInfo)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of String, Integrity.Assets.AssetInfo)
+  name.vb: IReadOnlyDictionary(Of String, AssetInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Integrity.Assets.AssetInfo
+    name: AssetInfo
+    isExternal: true
+    href: Integrity.Assets.AssetInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Integrity.Assets.AssetInfo
+    name: AssetInfo
+    isExternal: true
+    href: Integrity.Assets.AssetInfo.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Integrity.Interface.IAssetManager.GetTexture*
+  commentId: Overload:Integrity.Interface.IAssetManager.GetTexture
+  isExternal: true
+  href: Integrity.Interface.IAssetManager.html#Integrity_Interface_IAssetManager_GetTexture_System_String_
+  name: GetTexture
+  nameWithType: IAssetManager.GetTexture
+  fullName: Integrity.Interface.IAssetManager.GetTexture
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Integrity.Assets.GLTexture
+  commentId: T:Integrity.Assets.GLTexture
+  parent: Integrity.Assets
+  isExternal: true
+  href: Integrity.Assets.GLTexture.html
+  name: GLTexture
+  nameWithType: GLTexture
+  fullName: Integrity.Assets.GLTexture
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Assets
+  commentId: N:Integrity.Assets
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Assets
+  nameWithType: Integrity.Assets
+  fullName: Integrity.Assets
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Assets
+    name: Assets
+    isExternal: true
+    href: Integrity.Assets.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Assets
+    name: Assets
+    isExternal: true
+    href: Integrity.Assets.html

@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Utils
+  commentId: N:Integrity.Utils
+  id: Integrity.Utils
+  children:
+  - Integrity.Utils.MathHelper
+  - Integrity.Utils.MemoryMonitor
+  - Integrity.Utils.MemoryMonitor.MemorySnapshot
+  - Integrity.Utils.Rect
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Utils
+  nameWithType: Integrity.Utils
+  fullName: Integrity.Utils
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Utils.MathHelper
+  commentId: T:Integrity.Utils.MathHelper
+  isExternal: true
+  href: Integrity.Utils.MathHelper.html
+  name: MathHelper
+  nameWithType: MathHelper
+  fullName: Integrity.Utils.MathHelper
+- uid: Integrity.Utils.MemoryMonitor
+  commentId: T:Integrity.Utils.MemoryMonitor
+  isExternal: true
+  href: Integrity.Utils.MemoryMonitor.html
+  name: MemoryMonitor
+  nameWithType: MemoryMonitor
+  fullName: Integrity.Utils.MemoryMonitor
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  commentId: T:Integrity.Utils.MemoryMonitor.MemorySnapshot
+  parent: Integrity.Utils
+  isExternal: true
+  href: Integrity.Utils.MemoryMonitor.html
+  name: MemoryMonitor.MemorySnapshot
+  nameWithType: MemoryMonitor.MemorySnapshot
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  spec.csharp:
+  - uid: Integrity.Utils.MemoryMonitor
+    name: MemoryMonitor
+    isExternal: true
+    href: Integrity.Utils.MemoryMonitor.html
+  - name: .
+  - uid: Integrity.Utils.MemoryMonitor.MemorySnapshot
+    name: MemorySnapshot
+    isExternal: true
+    href: Integrity.Utils.MemoryMonitor.MemorySnapshot.html
+  spec.vb:
+  - uid: Integrity.Utils.MemoryMonitor
+    name: MemoryMonitor
+    isExternal: true
+    href: Integrity.Utils.MemoryMonitor.html
+  - name: .
+  - uid: Integrity.Utils.MemoryMonitor.MemorySnapshot
+    name: MemorySnapshot
+    isExternal: true
+    href: Integrity.Utils.MemoryMonitor.MemorySnapshot.html
+- uid: Integrity.Utils.Rect
+  commentId: T:Integrity.Utils.Rect
+  parent: Integrity.Utils
+  isExternal: true
+  href: Integrity.Utils.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: Integrity.Utils.Rect
+- uid: Integrity.Utils
+  commentId: N:Integrity.Utils
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Utils
+  nameWithType: Integrity.Utils
+  fullName: Integrity.Utils
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Utils
+    name: Utils
+    isExternal: true
+    href: Integrity.Utils.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Utils
+    name: Utils
+    isExternal: true
+    href: Integrity.Utils.html

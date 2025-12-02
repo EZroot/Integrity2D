@@ -1,6 +1,6 @@
 using Silk.NET.OpenGL;
-using System.Runtime.InteropServices; // Needed for Marshal
 
+namespace Integrity.Assets;
 public class GLTexture
 {
     public uint TextureId { get; private set; }

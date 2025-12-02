@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Rendering
+  commentId: N:Integrity.Rendering
+  id: Integrity.Rendering
+  children:
+  - Integrity.Rendering.Camera2D
+  - Integrity.Rendering.CameraManager
+  - Integrity.Rendering.ImGuiPipeline
+  - Integrity.Rendering.RenderPipeline
+  - Integrity.Rendering.SpriteRenderSystem
+  - Integrity.Rendering.WindowPipeline
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Rendering
+  nameWithType: Integrity.Rendering
+  fullName: Integrity.Rendering
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Rendering.Camera2D
+  commentId: T:Integrity.Rendering.Camera2D
+  parent: Integrity.Rendering
+  isExternal: true
+  href: Integrity.Rendering.Camera2D.html
+  name: Camera2D
+  nameWithType: Camera2D
+  fullName: Integrity.Rendering.Camera2D
+- uid: Integrity.Rendering.CameraManager
+  commentId: T:Integrity.Rendering.CameraManager
+  isExternal: true
+  href: Integrity.Rendering.CameraManager.html
+  name: CameraManager
+  nameWithType: CameraManager
+  fullName: Integrity.Rendering.CameraManager
+- uid: Integrity.Rendering.ImGuiPipeline
+  commentId: T:Integrity.Rendering.ImGuiPipeline
+  isExternal: true
+  href: Integrity.Rendering.ImGuiPipeline.html
+  name: ImGuiPipeline
+  nameWithType: ImGuiPipeline
+  fullName: Integrity.Rendering.ImGuiPipeline
+- uid: Integrity.Rendering.RenderPipeline
+  commentId: T:Integrity.Rendering.RenderPipeline
+  isExternal: true
+  href: Integrity.Rendering.RenderPipeline.html
+  name: RenderPipeline
+  nameWithType: RenderPipeline
+  fullName: Integrity.Rendering.RenderPipeline
+- uid: Integrity.Rendering.SpriteRenderSystem
+  commentId: T:Integrity.Rendering.SpriteRenderSystem
+  parent: Integrity.Rendering
+  isExternal: true
+  href: Integrity.Rendering.SpriteRenderSystem.html
+  name: SpriteRenderSystem
+  nameWithType: SpriteRenderSystem
+  fullName: Integrity.Rendering.SpriteRenderSystem
+- uid: Integrity.Rendering.WindowPipeline
+  commentId: T:Integrity.Rendering.WindowPipeline
+  isExternal: true
+  href: Integrity.Rendering.WindowPipeline.html
+  name: WindowPipeline
+  nameWithType: WindowPipeline
+  fullName: Integrity.Rendering.WindowPipeline
+- uid: Integrity.Rendering
+  commentId: N:Integrity.Rendering
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Rendering
+  nameWithType: Integrity.Rendering
+  fullName: Integrity.Rendering
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Rendering
+    name: Rendering
+    isExternal: true
+    href: Integrity.Rendering.html

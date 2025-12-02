@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Interface.IGameObjectFactory
+  commentId: T:Integrity.Interface.IGameObjectFactory
+  id: IGameObjectFactory
+  parent: Integrity.Interface
+  children:
+  - Integrity.Interface.IGameObjectFactory.CreateGameObject(System.String,Integrity.Interface.IComponent[])
+  - Integrity.Interface.IGameObjectFactory.CreateSpriteObject(System.String,System.String,Integrity.Interface.IComponent[])
+  langs:
+  - csharp
+  - vb
+  name: IGameObjectFactory
+  nameWithType: IGameObjectFactory
+  fullName: Integrity.Interface.IGameObjectFactory
+  type: Interface
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/factories/interface/IGameObjectFactory.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: 'public interface IGameObjectFactory : IService'
+    content.vb: Public Interface IGameObjectFactory Inherits IService
+- uid: Integrity.Interface.IGameObjectFactory.CreateGameObject(System.String,Integrity.Interface.IComponent[])
+  commentId: M:Integrity.Interface.IGameObjectFactory.CreateGameObject(System.String,Integrity.Interface.IComponent[])
+  id: CreateGameObject(System.String,Integrity.Interface.IComponent[])
+  parent: Integrity.Interface.IGameObjectFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateGameObject(string, IComponent[]?)
+  nameWithType: IGameObjectFactory.CreateGameObject(string, IComponent[]?)
+  fullName: Integrity.Interface.IGameObjectFactory.CreateGameObject(string, Integrity.Interface.IComponent[]?)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/factories/interface/IGameObjectFactory.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: GameObject CreateGameObject(string name, IComponent[]? componentsToAdd = null)
+    parameters:
+    - id: name
+      type: System.String
+    - id: componentsToAdd
+      type: Integrity.Interface.IComponent[]
+    return:
+      type: Integrity.Objects.GameObject
+    content.vb: Function CreateGameObject(name As String, componentsToAdd As IComponent() = Nothing) As GameObject
+  overload: Integrity.Interface.IGameObjectFactory.CreateGameObject*
+  nameWithType.vb: IGameObjectFactory.CreateGameObject(String, IComponent())
+  fullName.vb: Integrity.Interface.IGameObjectFactory.CreateGameObject(String, Integrity.Interface.IComponent())
+  name.vb: CreateGameObject(String, IComponent())
+- uid: Integrity.Interface.IGameObjectFactory.CreateSpriteObject(System.String,System.String,Integrity.Interface.IComponent[])
+  commentId: M:Integrity.Interface.IGameObjectFactory.CreateSpriteObject(System.String,System.String,Integrity.Interface.IComponent[])
+  id: CreateSpriteObject(System.String,System.String,Integrity.Interface.IComponent[])
+  parent: Integrity.Interface.IGameObjectFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateSpriteObject(string, string, IComponent[]?)
+  nameWithType: IGameObjectFactory.CreateSpriteObject(string, string, IComponent[]?)
+  fullName: Integrity.Interface.IGameObjectFactory.CreateSpriteObject(string, string, Integrity.Interface.IComponent[]?)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/factories/interface/IGameObjectFactory.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Interface
+  syntax:
+    content: SpriteObject CreateSpriteObject(string name, string assetPath, IComponent[]? componentsToAdd = null)
+    parameters:
+    - id: name
+      type: System.String
+    - id: assetPath
+      type: System.String
+    - id: componentsToAdd
+      type: Integrity.Interface.IComponent[]
+    return:
+      type: Integrity.Objects.SpriteObject
+    content.vb: Function CreateSpriteObject(name As String, assetPath As String, componentsToAdd As IComponent() = Nothing) As SpriteObject
+  overload: Integrity.Interface.IGameObjectFactory.CreateSpriteObject*
+  nameWithType.vb: IGameObjectFactory.CreateSpriteObject(String, String, IComponent())
+  fullName.vb: Integrity.Interface.IGameObjectFactory.CreateSpriteObject(String, String, Integrity.Interface.IComponent())
+  name.vb: CreateSpriteObject(String, String, IComponent())
+references:
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Interface.IGameObjectFactory.CreateGameObject*
+  commentId: Overload:Integrity.Interface.IGameObjectFactory.CreateGameObject
+  isExternal: true
+  href: Integrity.Interface.IGameObjectFactory.html#Integrity_Interface_IGameObjectFactory_CreateGameObject_System_String_Integrity_Interface_IComponent___
+  name: CreateGameObject
+  nameWithType: IGameObjectFactory.CreateGameObject
+  fullName: Integrity.Interface.IGameObjectFactory.CreateGameObject
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Integrity.Interface.IComponent[]
+  isExternal: true
+  href: Integrity.Interface.IComponent.html
+  name: IComponent[]
+  nameWithType: IComponent[]
+  fullName: Integrity.Interface.IComponent[]
+  nameWithType.vb: IComponent()
+  fullName.vb: Integrity.Interface.IComponent()
+  name.vb: IComponent()
+  spec.csharp:
+  - uid: Integrity.Interface.IComponent
+    name: IComponent
+    isExternal: true
+    href: Integrity.Interface.IComponent.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Integrity.Interface.IComponent
+    name: IComponent
+    isExternal: true
+    href: Integrity.Interface.IComponent.html
+  - name: (
+  - name: )
+- uid: Integrity.Objects.GameObject
+  commentId: T:Integrity.Objects.GameObject
+  parent: Integrity.Objects
+  isExternal: true
+  href: Integrity.Objects.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: Integrity.Objects.GameObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Objects
+  commentId: N:Integrity.Objects
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Objects
+  nameWithType: Integrity.Objects
+  fullName: Integrity.Objects
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Objects
+    name: Objects
+    isExternal: true
+    href: Integrity.Objects.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Objects
+    name: Objects
+    isExternal: true
+    href: Integrity.Objects.html
+- uid: Integrity.Interface.IGameObjectFactory.CreateSpriteObject*
+  commentId: Overload:Integrity.Interface.IGameObjectFactory.CreateSpriteObject
+  isExternal: true
+  href: Integrity.Interface.IGameObjectFactory.html#Integrity_Interface_IGameObjectFactory_CreateSpriteObject_System_String_System_String_Integrity_Interface_IComponent___
+  name: CreateSpriteObject
+  nameWithType: IGameObjectFactory.CreateSpriteObject
+  fullName: Integrity.Interface.IGameObjectFactory.CreateSpriteObject
+- uid: Integrity.Objects.SpriteObject
+  commentId: T:Integrity.Objects.SpriteObject
+  parent: Integrity.Objects
+  isExternal: true
+  href: Integrity.Objects.SpriteObject.html
+  name: SpriteObject
+  nameWithType: SpriteObject
+  fullName: Integrity.Objects.SpriteObject

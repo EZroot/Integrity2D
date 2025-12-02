@@ -1,0 +1,511 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Sound.AudioManager
+  commentId: T:Integrity.Sound.AudioManager
+  id: AudioManager
+  parent: Integrity.Sound
+  children:
+  - Integrity.Sound.AudioManager.#ctor
+  - Integrity.Sound.AudioManager.InitializeAudio
+  - Integrity.Sound.AudioManager.PlaySound(System.String)
+  langs:
+  - csharp
+  - vb
+  name: AudioManager
+  nameWithType: AudioManager
+  fullName: Integrity.Sound.AudioManager
+  type: Class
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/sound/AudioManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Sound
+  syntax:
+    content: 'public class AudioManager : IAudioManager, IService'
+    content.vb: Public Class AudioManager Implements IAudioManager, IService
+  inheritance:
+  - System.Object
+  implements:
+  - Integrity.Interface.IAudioManager
+  - Integrity.Interface.IService
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Integrity.Sound.AudioManager.InitializeAudio
+  commentId: M:Integrity.Sound.AudioManager.InitializeAudio
+  id: InitializeAudio
+  parent: Integrity.Sound.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: InitializeAudio()
+  nameWithType: AudioManager.InitializeAudio()
+  fullName: Integrity.Sound.AudioManager.InitializeAudio()
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/sound/AudioManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Sound
+  example: []
+  syntax:
+    content: public void InitializeAudio()
+    content.vb: Public Sub InitializeAudio()
+  overload: Integrity.Sound.AudioManager.InitializeAudio*
+  implements:
+  - Integrity.Interface.IAudioManager.InitializeAudio
+- uid: Integrity.Sound.AudioManager.PlaySound(System.String)
+  commentId: M:Integrity.Sound.AudioManager.PlaySound(System.String)
+  id: PlaySound(System.String)
+  parent: Integrity.Sound.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: PlaySound(string)
+  nameWithType: AudioManager.PlaySound(string)
+  fullName: Integrity.Sound.AudioManager.PlaySound(string)
+  type: Method
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/sound/AudioManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Sound
+  example: []
+  syntax:
+    content: public void PlaySound(string soundPath)
+    parameters:
+    - id: soundPath
+      type: System.String
+    content.vb: Public Sub PlaySound(soundPath As String)
+  overload: Integrity.Sound.AudioManager.PlaySound*
+  implements:
+  - Integrity.Interface.IAudioManager.PlaySound(System.String)
+  nameWithType.vb: AudioManager.PlaySound(String)
+  fullName.vb: Integrity.Sound.AudioManager.PlaySound(String)
+  name.vb: PlaySound(String)
+- uid: Integrity.Sound.AudioManager.#ctor
+  commentId: M:Integrity.Sound.AudioManager.#ctor
+  id: '#ctor'
+  parent: Integrity.Sound.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: AudioManager()
+  nameWithType: AudioManager.AudioManager()
+  fullName: Integrity.Sound.AudioManager.AudioManager()
+  type: Constructor
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/sound/AudioManager.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Sound
+  syntax:
+    content: public AudioManager()
+    content.vb: Public Sub New()
+  overload: Integrity.Sound.AudioManager.#ctor*
+  nameWithType.vb: AudioManager.New()
+  fullName.vb: Integrity.Sound.AudioManager.New()
+  name.vb: New()
+references:
+- uid: Integrity.Sound
+  commentId: N:Integrity.Sound
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Sound
+  nameWithType: Integrity.Sound
+  fullName: Integrity.Sound
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Sound
+    name: Sound
+    isExternal: true
+    href: Integrity.Sound.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Sound
+    name: Sound
+    isExternal: true
+    href: Integrity.Sound.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Integrity.Interface.IAudioManager
+  commentId: T:Integrity.Interface.IAudioManager
+  parent: Integrity.Interface
+  isExternal: true
+  href: Integrity.Interface.IAudioManager.html
+  name: IAudioManager
+  nameWithType: IAudioManager
+  fullName: Integrity.Interface.IAudioManager
+- uid: Integrity.Interface.IService
+  commentId: T:Integrity.Interface.IService
+  parent: Integrity.Interface
+  isExternal: true
+  href: Integrity.Interface.IService.html
+  name: IService
+  nameWithType: IService
+  fullName: Integrity.Interface.IService
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Interface
+  commentId: N:Integrity.Interface
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Interface
+  nameWithType: Integrity.Interface
+  fullName: Integrity.Interface
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Interface
+    name: Interface
+    isExternal: true
+    href: Integrity.Interface.html
+- uid: Integrity.Sound.AudioManager.InitializeAudio*
+  commentId: Overload:Integrity.Sound.AudioManager.InitializeAudio
+  isExternal: true
+  href: Integrity.Sound.AudioManager.html#Integrity_Sound_AudioManager_InitializeAudio
+  name: InitializeAudio
+  nameWithType: AudioManager.InitializeAudio
+  fullName: Integrity.Sound.AudioManager.InitializeAudio
+- uid: Integrity.Interface.IAudioManager.InitializeAudio
+  commentId: M:Integrity.Interface.IAudioManager.InitializeAudio
+  parent: Integrity.Interface.IAudioManager
+  isExternal: true
+  href: Integrity.Interface.IAudioManager.html#Integrity_Interface_IAudioManager_InitializeAudio
+  name: InitializeAudio()
+  nameWithType: IAudioManager.InitializeAudio()
+  fullName: Integrity.Interface.IAudioManager.InitializeAudio()
+  spec.csharp:
+  - uid: Integrity.Interface.IAudioManager.InitializeAudio
+    name: InitializeAudio
+    isExternal: true
+    href: Integrity.Interface.IAudioManager.html#Integrity_Interface_IAudioManager_InitializeAudio
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IAudioManager.InitializeAudio
+    name: InitializeAudio
+    isExternal: true
+    href: Integrity.Interface.IAudioManager.html#Integrity_Interface_IAudioManager_InitializeAudio
+  - name: (
+  - name: )
+- uid: Integrity.Sound.AudioManager.PlaySound*
+  commentId: Overload:Integrity.Sound.AudioManager.PlaySound
+  isExternal: true
+  href: Integrity.Sound.AudioManager.html#Integrity_Sound_AudioManager_PlaySound_System_String_
+  name: PlaySound
+  nameWithType: AudioManager.PlaySound
+  fullName: Integrity.Sound.AudioManager.PlaySound
+- uid: Integrity.Interface.IAudioManager.PlaySound(System.String)
+  commentId: M:Integrity.Interface.IAudioManager.PlaySound(System.String)
+  parent: Integrity.Interface.IAudioManager
+  isExternal: true
+  href: Integrity.Interface.IAudioManager.html#Integrity_Interface_IAudioManager_PlaySound_System_String_
+  name: PlaySound(string)
+  nameWithType: IAudioManager.PlaySound(string)
+  fullName: Integrity.Interface.IAudioManager.PlaySound(string)
+  nameWithType.vb: IAudioManager.PlaySound(String)
+  fullName.vb: Integrity.Interface.IAudioManager.PlaySound(String)
+  name.vb: PlaySound(String)
+  spec.csharp:
+  - uid: Integrity.Interface.IAudioManager.PlaySound(System.String)
+    name: PlaySound
+    isExternal: true
+    href: Integrity.Interface.IAudioManager.html#Integrity_Interface_IAudioManager_PlaySound_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Integrity.Interface.IAudioManager.PlaySound(System.String)
+    name: PlaySound
+    isExternal: true
+    href: Integrity.Interface.IAudioManager.html#Integrity_Interface_IAudioManager_PlaySound_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Integrity.Sound.AudioManager.#ctor*
+  commentId: Overload:Integrity.Sound.AudioManager.#ctor
+  isExternal: true
+  href: Integrity.Sound.AudioManager.html#Integrity_Sound_AudioManager__ctor
+  name: AudioManager
+  nameWithType: AudioManager.AudioManager
+  fullName: Integrity.Sound.AudioManager.AudioManager
+  nameWithType.vb: AudioManager.New
+  fullName.vb: Integrity.Sound.AudioManager.New
+  name.vb: New

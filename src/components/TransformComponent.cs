@@ -1,3 +1,6 @@
+using Integrity.Interface;
+
+namespace Integrity.Components;
 public class TransformComponent : IComponent
 {
     public float X, Y;

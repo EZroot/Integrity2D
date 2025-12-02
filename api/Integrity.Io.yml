@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Io
+  commentId: N:Integrity.Io
+  id: Integrity.Io
+  children:
+  - Integrity.Io.InputManager
+  langs:
+  - csharp
+  - vb
+  name: Integrity.Io
+  nameWithType: Integrity.Io
+  fullName: Integrity.Io
+  type: Namespace
+  assemblies:
+  - Integrity
+references:
+- uid: Integrity.Io.InputManager
+  commentId: T:Integrity.Io.InputManager
+  isExternal: true
+  href: Integrity.Io.InputManager.html
+  name: InputManager
+  nameWithType: InputManager
+  fullName: Integrity.Io.InputManager

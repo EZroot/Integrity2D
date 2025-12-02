@@ -1,3 +1,4 @@
+namespace Integrity.Interface;
 public interface IGame
 {
     void Initialize();

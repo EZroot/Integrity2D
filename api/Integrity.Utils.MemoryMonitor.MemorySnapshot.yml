@@ -1,0 +1,482 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  commentId: T:Integrity.Utils.MemoryMonitor.MemorySnapshot
+  id: MemoryMonitor.MemorySnapshot
+  parent: Integrity.Utils
+  children:
+  - Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes
+  - Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB
+  - Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes
+  - Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB
+  - Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes
+  - Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB
+  langs:
+  - csharp
+  - vb
+  name: MemoryMonitor.MemorySnapshot
+  nameWithType: MemoryMonitor.MemorySnapshot
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  type: Struct
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/utils/MemoryMonitor.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Utils
+  syntax:
+    content: public struct MemoryMonitor.MemorySnapshot
+    content.vb: Public Structure MemoryMonitor.MemorySnapshot
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes
+  commentId: P:Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes
+  id: PrivateWorkingSetBytes
+  parent: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  langs:
+  - csharp
+  - vb
+  name: PrivateWorkingSetBytes
+  nameWithType: MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/utils/MemoryMonitor.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Utils
+  syntax:
+    content: public long PrivateWorkingSetBytes { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property PrivateWorkingSetBytes As Long
+  overload: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes*
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes
+  commentId: P:Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes
+  id: VirtualMemorySizeBytes
+  parent: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  langs:
+  - csharp
+  - vb
+  name: VirtualMemorySizeBytes
+  nameWithType: MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/utils/MemoryMonitor.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Utils
+  syntax:
+    content: public long VirtualMemorySizeBytes { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property VirtualMemorySizeBytes As Long
+  overload: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes*
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes
+  commentId: P:Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes
+  id: ManagedHeapSizeBytes
+  parent: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  langs:
+  - csharp
+  - vb
+  name: ManagedHeapSizeBytes
+  nameWithType: MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/utils/MemoryMonitor.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Utils
+  syntax:
+    content: public long ManagedHeapSizeBytes { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property ManagedHeapSizeBytes As Long
+  overload: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes*
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB
+  commentId: P:Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB
+  id: PrivateWorkingSetMB
+  parent: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  langs:
+  - csharp
+  - vb
+  name: PrivateWorkingSetMB
+  nameWithType: MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/utils/MemoryMonitor.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Utils
+  syntax:
+    content: public float PrivateWorkingSetMB { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property PrivateWorkingSetMB As Single
+  overload: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB*
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB
+  commentId: P:Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB
+  id: VirtualMemorySizeMB
+  parent: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  langs:
+  - csharp
+  - vb
+  name: VirtualMemorySizeMB
+  nameWithType: MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/utils/MemoryMonitor.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Utils
+  syntax:
+    content: public float VirtualMemorySizeMB { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property VirtualMemorySizeMB As Single
+  overload: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB*
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB
+  commentId: P:Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB
+  id: ManagedHeapSizeMB
+  parent: Integrity.Utils.MemoryMonitor.MemorySnapshot
+  langs:
+  - csharp
+  - vb
+  name: ManagedHeapSizeMB
+  nameWithType: MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/utils/MemoryMonitor.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Utils
+  syntax:
+    content: public float ManagedHeapSizeMB { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property ManagedHeapSizeMB As Single
+  overload: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB*
+references:
+- uid: Integrity.Utils
+  commentId: N:Integrity.Utils
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Utils
+  nameWithType: Integrity.Utils
+  fullName: Integrity.Utils
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Utils
+    name: Utils
+    isExternal: true
+    href: Integrity.Utils.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Utils
+    name: Utils
+    isExternal: true
+    href: Integrity.Utils.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes*
+  commentId: Overload:Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes
+  isExternal: true
+  href: Integrity.Utils.MemoryMonitor.MemorySnapshot.html#Integrity_Utils_MemoryMonitor_MemorySnapshot_PrivateWorkingSetBytes
+  name: PrivateWorkingSetBytes
+  nameWithType: MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetBytes
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes*
+  commentId: Overload:Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes
+  isExternal: true
+  href: Integrity.Utils.MemoryMonitor.MemorySnapshot.html#Integrity_Utils_MemoryMonitor_MemorySnapshot_VirtualMemorySizeBytes
+  name: VirtualMemorySizeBytes
+  nameWithType: MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeBytes
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes*
+  commentId: Overload:Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes
+  isExternal: true
+  href: Integrity.Utils.MemoryMonitor.MemorySnapshot.html#Integrity_Utils_MemoryMonitor_MemorySnapshot_ManagedHeapSizeBytes
+  name: ManagedHeapSizeBytes
+  nameWithType: MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeBytes
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB*
+  commentId: Overload:Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB
+  isExternal: true
+  href: Integrity.Utils.MemoryMonitor.MemorySnapshot.html#Integrity_Utils_MemoryMonitor_MemorySnapshot_PrivateWorkingSetMB
+  name: PrivateWorkingSetMB
+  nameWithType: MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.PrivateWorkingSetMB
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB*
+  commentId: Overload:Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB
+  isExternal: true
+  href: Integrity.Utils.MemoryMonitor.MemorySnapshot.html#Integrity_Utils_MemoryMonitor_MemorySnapshot_VirtualMemorySizeMB
+  name: VirtualMemorySizeMB
+  nameWithType: MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.VirtualMemorySizeMB
+- uid: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB*
+  commentId: Overload:Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB
+  isExternal: true
+  href: Integrity.Utils.MemoryMonitor.MemorySnapshot.html#Integrity_Utils_MemoryMonitor_MemorySnapshot_ManagedHeapSizeMB
+  name: ManagedHeapSizeMB
+  nameWithType: MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB
+  fullName: Integrity.Utils.MemoryMonitor.MemorySnapshot.ManagedHeapSizeMB

@@ -1,3 +1,4 @@
+namespace Integrity.Utils;
 public class MathHelper
 {
     public static System.Numerics.Matrix4x4 Translation(float x, float y, float width, float height)

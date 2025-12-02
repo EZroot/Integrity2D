@@ -1,5 +1,7 @@
 #!/bin/bash
 
+dotnet build -c Release   
+
 # Resolve the repo root (two levels up from this script)
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"

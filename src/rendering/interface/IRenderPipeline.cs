@@ -1,7 +1,9 @@
 using System.Numerics;
+using Integrity.Assets;
 using Silk.NET.OpenGL;
 using Silk.NET.SDL;
 
+namespace Integrity.Interface;
 public interface IRenderPipeline : IService
 {
     GL? GlApi { get; }

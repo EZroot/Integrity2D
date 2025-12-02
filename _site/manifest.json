@@ -84,30 +84,870 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BIGTITS.Tits.yml",
+      "source_relative_path": "api/Integirty.Assets.AssetManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BIGTITS.Tits.html"
+          "relative_path": "api/Integirty.Assets.AssetManager.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "BIGTITS.Tits",
-      "Summary": "<p sourcefile=\"api/BIGTITS.Tits.yml\" sourcestartlinenumber=\"1\">Tits class to measure tits</p>\n"
+      "Title": "Integirty.Assets.AssetManager",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BIGTITS.yml",
+      "source_relative_path": "api/Integirty.Assets.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BIGTITS.html"
+          "relative_path": "api/Integirty.Assets.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "BIGTITS",
+      "Title": "Integirty.Assets",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Assets.AssetInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Assets.AssetInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Assets.AssetInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Assets.GLTexture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Assets.GLTexture.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Assets.GLTexture",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Assets.ImageData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Assets.ImageData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Assets.ImageData",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Assets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Assets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Assets",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Components.SpriteComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Components.SpriteComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Components.SpriteComponent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Components.TransformComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Components.TransformComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Components.TransformComponent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Components.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Components",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Core.DefaultGame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Core.DefaultGame.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Core.DefaultGame",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Core.Engine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Core.Engine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Core.Engine",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Core.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Core.Service.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Core.Service",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Core",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Factories.GameObjectFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Factories.GameObjectFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Factories.GameObjectFactory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Factories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Factories.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Factories",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IAssetManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IAssetManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IAssetManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IAudioManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IAudioManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IAudioManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.ICameraManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.ICameraManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.ICameraManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IComponent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IEngineSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IEngineSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IEngineSettings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IGame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IGame.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IGame",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IGameObjectFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IGameObjectFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IGameObjectFactory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IImGuiPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IImGuiPipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IImGuiPipeline",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IInputManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IInputManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IInputManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IProfiler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IProfiler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IProfiler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IRenderPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IRenderPipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IRenderPipeline",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.ISceneManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.ISceneManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.ISceneManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.IWindowPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.IWindowPipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface.IWindowPipeline",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Interface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Interface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Interface",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Io.InputManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Io.InputManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Io.InputManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Io.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Io.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Io",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Objects.GameObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Objects.GameObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Objects.GameObject",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Objects.SpriteObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Objects.SpriteObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Objects.SpriteObject",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Objects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Objects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Objects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Rendering.Camera2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Rendering.Camera2D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Rendering.Camera2D",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Rendering.CameraManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Rendering.CameraManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Rendering.CameraManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Rendering.ImGuiPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Rendering.ImGuiPipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Rendering.ImGuiPipeline",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Rendering.RenderPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Rendering.RenderPipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Rendering.RenderPipeline",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Rendering.SpriteRenderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Rendering.SpriteRenderSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Rendering.SpriteRenderSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Rendering.WindowPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Rendering.WindowPipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Rendering.WindowPipeline",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Rendering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Rendering.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Rendering",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Scenes.Scene.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Scenes.Scene.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Scenes.Scene",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Scenes.SceneManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Scenes.SceneManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Scenes.SceneManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Scenes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Scenes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Scenes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Settings.EngineSettings.EngineSettingsData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Settings.EngineSettings.EngineSettingsData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Settings.EngineSettings.EngineSettingsData",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Settings.EngineSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Settings.EngineSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Settings.EngineSettings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Settings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Settings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Sound.AudioManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Sound.AudioManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Sound.AudioManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Sound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Sound.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Sound",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Src.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Src.Program.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Src.Program",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Src.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Src.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Src",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Tools.Profiler.ProfileResultCpu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Tools.Profiler.ProfileResultCpu.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Tools.Profiler.ProfileResultCpu",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Tools.Profiler.ProfileResultGpu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Tools.Profiler.ProfileResultGpu.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Tools.Profiler.ProfileResultGpu",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Tools.Profiler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Tools.Profiler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Tools.Profiler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Tools.ToolGui.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Tools.ToolGui.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Tools.ToolGui",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Tools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Tools.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Tools",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Utils.MathHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Utils.MathHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Utils.MathHelper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Utils.MemoryMonitor.MemorySnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Utils.MemoryMonitor.MemorySnapshot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Utils.MemoryMonitor.MemorySnapshot",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Utils.MemoryMonitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Utils.MemoryMonitor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Utils.MemoryMonitor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Utils.Rect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Utils.Rect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Utils.Rect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Integrity.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Integrity.Utils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Integrity.Utils",
       "Summary": null
     },
     {

@@ -1,3 +1,4 @@
+namespace Integrity.Interface;
 public interface IAudioManager : IService
 {
     void InitializeAudio();

@@ -1,4 +1,10 @@
+using Integrity.Assets;
+using Integrity.Core;
+using Integrity.Interface;
+using Integrity.Utils;
 using StbImageSharp;
+
+namespace Integirty.Assets;
 
 public class AssetManager : IAssetManager
 {

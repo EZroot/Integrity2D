@@ -1,5 +1,6 @@
 using Silk.NET.SDL;
 
+namespace Integrity.Interface;
 public interface IWindowPipeline : IService
 {
     unsafe Window* WindowHandler { get; }

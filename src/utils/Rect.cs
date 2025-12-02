@@ -1,3 +1,4 @@
+namespace Integrity.Utils;
 public struct Rect
 {
     public float X, Y, Width, Height;

@@ -1,0 +1,516 @@
+### YamlMime:ManagedReference
+items:
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData
+  commentId: T:Integrity.Settings.EngineSettings.EngineSettingsData
+  id: EngineSettings.EngineSettingsData
+  parent: Integrity.Settings
+  children:
+  - Integrity.Settings.EngineSettings.EngineSettingsData.#ctor
+  - Integrity.Settings.EngineSettings.EngineSettingsData.EngineName
+  - Integrity.Settings.EngineSettings.EngineSettingsData.EngineVersion
+  - Integrity.Settings.EngineSettings.EngineSettingsData.UseVsync
+  - Integrity.Settings.EngineSettings.EngineSettingsData.WindowHeight
+  - Integrity.Settings.EngineSettings.EngineSettingsData.WindowTitle
+  - Integrity.Settings.EngineSettings.EngineSettingsData.WindowWidth
+  langs:
+  - csharp
+  - vb
+  name: EngineSettings.EngineSettingsData
+  nameWithType: EngineSettings.EngineSettingsData
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData
+  type: Struct
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/EngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Settings
+  syntax:
+    content: public struct EngineSettings.EngineSettingsData
+    content.vb: Public Structure EngineSettings.EngineSettingsData
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.#ctor
+  commentId: M:Integrity.Settings.EngineSettings.EngineSettingsData.#ctor
+  id: '#ctor'
+  parent: Integrity.Settings.EngineSettings.EngineSettingsData
+  langs:
+  - csharp
+  - vb
+  name: EngineSettingsData()
+  nameWithType: EngineSettings.EngineSettingsData.EngineSettingsData()
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.EngineSettingsData()
+  type: Constructor
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/EngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Settings
+  syntax:
+    content: public EngineSettingsData()
+    content.vb: Public Sub New()
+  overload: Integrity.Settings.EngineSettings.EngineSettingsData.#ctor*
+  nameWithType.vb: EngineSettings.EngineSettingsData.New()
+  fullName.vb: Integrity.Settings.EngineSettings.EngineSettingsData.New()
+  name.vb: New()
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.EngineName
+  commentId: P:Integrity.Settings.EngineSettings.EngineSettingsData.EngineName
+  id: EngineName
+  parent: Integrity.Settings.EngineSettings.EngineSettingsData
+  langs:
+  - csharp
+  - vb
+  name: EngineName
+  nameWithType: EngineSettings.EngineSettingsData.EngineName
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.EngineName
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/EngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Settings
+  syntax:
+    content: public string EngineName { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EngineName As String
+  overload: Integrity.Settings.EngineSettings.EngineSettingsData.EngineName*
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.EngineVersion
+  commentId: P:Integrity.Settings.EngineSettings.EngineSettingsData.EngineVersion
+  id: EngineVersion
+  parent: Integrity.Settings.EngineSettings.EngineSettingsData
+  langs:
+  - csharp
+  - vb
+  name: EngineVersion
+  nameWithType: EngineSettings.EngineSettingsData.EngineVersion
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.EngineVersion
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/EngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Settings
+  syntax:
+    content: public string EngineVersion { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EngineVersion As String
+  overload: Integrity.Settings.EngineSettings.EngineSettingsData.EngineVersion*
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.WindowWidth
+  commentId: P:Integrity.Settings.EngineSettings.EngineSettingsData.WindowWidth
+  id: WindowWidth
+  parent: Integrity.Settings.EngineSettings.EngineSettingsData
+  langs:
+  - csharp
+  - vb
+  name: WindowWidth
+  nameWithType: EngineSettings.EngineSettingsData.WindowWidth
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.WindowWidth
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/EngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Settings
+  syntax:
+    content: public int WindowWidth { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property WindowWidth As Integer
+  overload: Integrity.Settings.EngineSettings.EngineSettingsData.WindowWidth*
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.WindowHeight
+  commentId: P:Integrity.Settings.EngineSettings.EngineSettingsData.WindowHeight
+  id: WindowHeight
+  parent: Integrity.Settings.EngineSettings.EngineSettingsData
+  langs:
+  - csharp
+  - vb
+  name: WindowHeight
+  nameWithType: EngineSettings.EngineSettingsData.WindowHeight
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.WindowHeight
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/EngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Settings
+  syntax:
+    content: public int WindowHeight { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property WindowHeight As Integer
+  overload: Integrity.Settings.EngineSettings.EngineSettingsData.WindowHeight*
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.WindowTitle
+  commentId: P:Integrity.Settings.EngineSettings.EngineSettingsData.WindowTitle
+  id: WindowTitle
+  parent: Integrity.Settings.EngineSettings.EngineSettingsData
+  langs:
+  - csharp
+  - vb
+  name: WindowTitle
+  nameWithType: EngineSettings.EngineSettingsData.WindowTitle
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.WindowTitle
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/EngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Settings
+  syntax:
+    content: public string WindowTitle { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property WindowTitle As String
+  overload: Integrity.Settings.EngineSettings.EngineSettingsData.WindowTitle*
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.UseVsync
+  commentId: P:Integrity.Settings.EngineSettings.EngineSettingsData.UseVsync
+  id: UseVsync
+  parent: Integrity.Settings.EngineSettings.EngineSettingsData
+  langs:
+  - csharp
+  - vb
+  name: UseVsync
+  nameWithType: EngineSettings.EngineSettingsData.UseVsync
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.UseVsync
+  type: Property
+  source:
+    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/settings/EngineSettings.cs
+  assemblies:
+  - Integrity
+  namespace: Integrity.Settings
+  syntax:
+    content: public int UseVsync { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property UseVsync As Integer
+  overload: Integrity.Settings.EngineSettings.EngineSettingsData.UseVsync*
+references:
+- uid: Integrity.Settings
+  commentId: N:Integrity.Settings
+  isExternal: true
+  href: Integrity.html
+  name: Integrity.Settings
+  nameWithType: Integrity.Settings
+  fullName: Integrity.Settings
+  spec.csharp:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Settings
+    name: Settings
+    isExternal: true
+    href: Integrity.Settings.html
+  spec.vb:
+  - uid: Integrity
+    name: Integrity
+    isExternal: true
+    href: Integrity.html
+  - name: .
+  - uid: Integrity.Settings
+    name: Settings
+    isExternal: true
+    href: Integrity.Settings.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.#ctor*
+  commentId: Overload:Integrity.Settings.EngineSettings.EngineSettingsData.#ctor
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.EngineSettingsData.html#Integrity_Settings_EngineSettings_EngineSettingsData__ctor
+  name: EngineSettingsData
+  nameWithType: EngineSettings.EngineSettingsData.EngineSettingsData
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.EngineSettingsData
+  nameWithType.vb: EngineSettings.EngineSettingsData.New
+  fullName.vb: Integrity.Settings.EngineSettings.EngineSettingsData.New
+  name.vb: New
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.EngineName*
+  commentId: Overload:Integrity.Settings.EngineSettings.EngineSettingsData.EngineName
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.EngineSettingsData.html#Integrity_Settings_EngineSettings_EngineSettingsData_EngineName
+  name: EngineName
+  nameWithType: EngineSettings.EngineSettingsData.EngineName
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.EngineName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.EngineVersion*
+  commentId: Overload:Integrity.Settings.EngineSettings.EngineSettingsData.EngineVersion
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.EngineSettingsData.html#Integrity_Settings_EngineSettings_EngineSettingsData_EngineVersion
+  name: EngineVersion
+  nameWithType: EngineSettings.EngineSettingsData.EngineVersion
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.EngineVersion
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.WindowWidth*
+  commentId: Overload:Integrity.Settings.EngineSettings.EngineSettingsData.WindowWidth
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.EngineSettingsData.html#Integrity_Settings_EngineSettings_EngineSettingsData_WindowWidth
+  name: WindowWidth
+  nameWithType: EngineSettings.EngineSettingsData.WindowWidth
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.WindowWidth
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.WindowHeight*
+  commentId: Overload:Integrity.Settings.EngineSettings.EngineSettingsData.WindowHeight
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.EngineSettingsData.html#Integrity_Settings_EngineSettings_EngineSettingsData_WindowHeight
+  name: WindowHeight
+  nameWithType: EngineSettings.EngineSettingsData.WindowHeight
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.WindowHeight
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.WindowTitle*
+  commentId: Overload:Integrity.Settings.EngineSettings.EngineSettingsData.WindowTitle
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.EngineSettingsData.html#Integrity_Settings_EngineSettings_EngineSettingsData_WindowTitle
+  name: WindowTitle
+  nameWithType: EngineSettings.EngineSettingsData.WindowTitle
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.WindowTitle
+- uid: Integrity.Settings.EngineSettings.EngineSettingsData.UseVsync*
+  commentId: Overload:Integrity.Settings.EngineSettings.EngineSettingsData.UseVsync
+  isExternal: true
+  href: Integrity.Settings.EngineSettings.EngineSettingsData.html#Integrity_Settings_EngineSettings_EngineSettingsData_UseVsync
+  name: UseVsync
+  nameWithType: EngineSettings.EngineSettingsData.UseVsync
+  fullName: Integrity.Settings.EngineSettings.EngineSettingsData.UseVsync

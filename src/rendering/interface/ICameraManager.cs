@@ -1,3 +1,6 @@
+using Integrity.Rendering;
+
+namespace Integrity.Interface;
 public interface ICameraManager : IService
 {
     Camera2D? MainCamera { get; }
