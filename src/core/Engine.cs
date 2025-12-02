@@ -35,7 +35,7 @@ public class Engine
 
     private int m_FrameCount;
     private float m_FpsTimeAccumulator;
-    private float m_CurrentFps; // The stable, averaged FPS value
+    private float m_CurrentFps;
     private bool m_IsRunning;
 
     /// <summary>

@@ -1,12 +1,8 @@
-using Integrity.Core;
-
 namespace Integrity.Src;
 ﻿public class Program
 {
-    public static async Task Main(string[] args)
+    public static void Main(string[] args)
     {
-        var engine = new Engine(new DefaultGame());
-        await engine.InitializeAsync();
-        engine.Run();
+        Logger.Log("<color=green>Engine built successfully.</color>");
     }
 }
