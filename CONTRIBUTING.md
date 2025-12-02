@@ -31,7 +31,7 @@ To contribute code, please follow the standard GitHub **Fork & Pull Request** wo
 1.  **Fork** the `ezroot/Integrity2D` repository to your own GitHub account.
 2.  **Clone** your fork locally:
     ```bash
-    git clone [https://github.com/EZroot/Integrity2D.git](https://github.com/EZroot/Integrity2D.git)
+    git clone https://github.com/<youre-username>/Integrity2D.git
     ```
 3.  **Create a Branch:** Create a dedicated branch for your feature or fix. Use descriptive names like `bugfix/issue-123` or `feature/add-new-input-system`.
     ```bash
