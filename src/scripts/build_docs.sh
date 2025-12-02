@@ -19,8 +19,8 @@ docfx metadata docfx.json
 docfx build docfx.json
 
 # Serve _site over HTTP
-echo "Serving _site on http://localhost:8000 ..."
-cd _site || exit
+echo "Serving docs on http://localhost:8000 ..."
+cd docs || exit
 
 # Open browser (Linux / macOS)
 xdg-open http://localhost:8000/index.html 2>/dev/null || open http://localhost:8000/index.html

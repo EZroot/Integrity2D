@@ -13,7 +13,7 @@ items:
   fullName: Integrity.Interface.IComponent
   type: Interface
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/components/interface/IComponent.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/0f88b9d5c54189c75ea5b22f47809407b748a4c8/src/components/interface/IComponent.cs
   assemblies:
   - Integrity
   namespace: Integrity.Interface

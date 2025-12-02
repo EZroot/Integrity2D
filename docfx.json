@@ -24,7 +24,7 @@
         "exclude": [
           "README.md",
           "obj/**",
-          "_site/**"
+          "docs/**"
         ]
       },
       {
@@ -43,7 +43,7 @@
       "_disableGitFeatures": true
     },
     "overwrite": [],
-    "dest": "_site",
+    "dest": "docs",
     "templates": ["default"],
     "markdownEngineName": "markdig"
   }
