@@ -16,7 +16,7 @@ items:
   fullName: Integrity.Core.Service
   type: Class
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/Service.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/core/Service.cs
   assemblies:
   - Integrity
   namespace: Integrity.Core
@@ -45,7 +45,7 @@ items:
   fullName: Integrity.Core.Service.ClearRegistry()
   type: Method
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/Service.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/core/Service.cs
   assemblies:
   - Integrity
   namespace: Integrity.Core
@@ -65,7 +65,7 @@ items:
   fullName: Integrity.Core.Service.Register<T>()
   type: Method
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/Service.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/core/Service.cs
   assemblies:
   - Integrity
   namespace: Integrity.Core
@@ -90,7 +90,7 @@ items:
   fullName: Integrity.Core.Service.Get<T>()
   type: Method
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/core/Service.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/core/Service.cs
   assemblies:
   - Integrity
   namespace: Integrity.Core

@@ -15,7 +15,7 @@ items:
   fullName: Integrity.Objects.SpriteObject
   type: Class
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/objects/SpriteObject.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/objects/SpriteObject.cs
   assemblies:
   - Integrity
   namespace: Integrity.Objects
@@ -50,7 +50,7 @@ items:
   fullName: Integrity.Objects.SpriteObject.SpriteObject(string, Integrity.Assets.GLTexture)
   type: Constructor
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/objects/SpriteObject.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/objects/SpriteObject.cs
   assemblies:
   - Integrity
   namespace: Integrity.Objects
@@ -78,7 +78,7 @@ items:
   fullName: Integrity.Objects.SpriteObject.Sprite
   type: Property
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/objects/SpriteObject.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/objects/SpriteObject.cs
   assemblies:
   - Integrity
   namespace: Integrity.Objects

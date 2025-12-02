@@ -2,25 +2,18 @@
 apiRules:
 - include:
     uid: '*'
+- include:
+    uid: '*'
     type: Namespace
-    visibility:
-      - Public
-      - Protected
-      - Internal
-      - Private
 - include:
     uid: '*'
     type: Type
     visibility:
       - Public
       - Protected
-      - Internal
-      - Private
 - include:
     uid: '*'
     type: Member
     visibility:
       - Public
       - Protected
-      - Internal
-      - Private

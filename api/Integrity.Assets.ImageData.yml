@@ -18,7 +18,7 @@ items:
   fullName: Integrity.Assets.ImageData
   type: Struct
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/assets/ImageData.cs
   assemblies:
   - Integrity
   namespace: Integrity.Assets
@@ -44,7 +44,7 @@ items:
   fullName: Integrity.Assets.ImageData.PixelData
   type: Field
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/assets/ImageData.cs
   assemblies:
   - Integrity
   namespace: Integrity.Assets
@@ -65,7 +65,7 @@ items:
   fullName: Integrity.Assets.ImageData.Width
   type: Field
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/assets/ImageData.cs
   assemblies:
   - Integrity
   namespace: Integrity.Assets
@@ -86,7 +86,7 @@ items:
   fullName: Integrity.Assets.ImageData.Height
   type: Field
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/assets/ImageData.cs
   assemblies:
   - Integrity
   namespace: Integrity.Assets
@@ -107,7 +107,7 @@ items:
   fullName: Integrity.Assets.ImageData.Channels
   type: Field
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/assets/ImageData.cs
   assemblies:
   - Integrity
   namespace: Integrity.Assets
@@ -128,7 +128,7 @@ items:
   fullName: Integrity.Assets.ImageData.ImageData(byte[], int, int, int)
   type: Constructor
   source:
-    href: https://github.com/EZroot/IntegrityEngine/blob/7aa5528ebea687ae1705f8a7a342d9dfa930935f/src/assets/ImageData.cs
+    href: https://github.com/EZroot/IntegrityEngine/blob/d72418eca8cb89cf453850a645451b13240a2db0/src/assets/ImageData.cs
   assemblies:
   - Integrity
   namespace: Integrity.Assets
