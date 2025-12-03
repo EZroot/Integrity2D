@@ -8,20 +8,6 @@ Integrity utilizes **SDL2** (via Silk.NET) solely for cross-platform window mana
 
 ---
 
-## Modern Rendering Pipeline
-
-Integrity's greatest focus is on high-performance 2D rendering using modern graphics techniques.
-
-### Core Features
-
-* **OpenGL 3.3 Core:** Enforces the use of modern VAOs, VBOs, and programmable shaders (GLSL 330).
-* **Instanced Rendering (Batching):** All sprite rendering is performed using hardware **instancing**. During the `Render()` loop, objects are grouped by their **`GLTexture`** into the `m_RenderingBatchMap`, and then drawn in a single, highly efficient `DrawSpritesInstanced` call.
-* **2D Coordinate System:** Implements a top-left origin (Y-down) orthographic projection, ideal for 2D development.
-* **Asset Pipeline:** Dedicated managers handle loading image files (via **StbImageSharp**) and converting them directly into GPU-ready **`GLTexture`** resources.
-* **Debugging/GUI:** Integrated **ImGui** (via `IImGuiPipeline`) for real-time debugging tools and engine statistics visualization (FPS, Profiler data).
-
----
-
 ## Docs
 
 Dive deeper into the Integrity Engine architecture, detailed component guides, and advanced usage examples in the **official documentation**:
