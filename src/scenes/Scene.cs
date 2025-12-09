@@ -13,9 +13,11 @@ public class Scene
     private readonly List<GameObject> m_GameObjectsList;
     private SpriteRenderSystem m_SpriteRenderSystem;
     private AnimationRenderSystem m_AnimationRenderSystem;
+    private TileRenderSystem m_TileRenderSystem;
 
     public SpriteRenderSystem SpriteRenderSystem => m_SpriteRenderSystem;
     public AnimationRenderSystem AnimationRenderSystem => m_AnimationRenderSystem;
+    public TileRenderSystem TileRenderSystem => m_TileRenderSystem;
 
     public Scene(string name)
     {
@@ -24,8 +26,10 @@ public class Scene
 
         m_GameObjectsMap = new Dictionary<Guid, GameObject>(capacity: 1024);
         m_GameObjectsList = new List<GameObject>(capacity: 1024);
+
         m_SpriteRenderSystem = new SpriteRenderSystem();
         m_AnimationRenderSystem = new AnimationRenderSystem();
+        m_TileRenderSystem = new TileRenderSystem();
     }
 
     /// <summary>

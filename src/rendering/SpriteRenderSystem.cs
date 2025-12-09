@@ -7,6 +7,7 @@ using Integrity.Utils;
 namespace Integrity.Rendering;
 public class SpriteRenderSystem
 {
+    private IRenderPipeline m_RenderPipe;
     private readonly Dictionary<Assets.Texture, List<Matrix4x4>> m_RenderingBatchMap;
     private readonly Dictionary<Assets.Texture, List<Vector4>> m_UvBatchMap;
 
@@ -18,6 +19,7 @@ public class SpriteRenderSystem
     {
         m_RenderingBatchMap = new();
         m_UvBatchMap = new();
+        m_RenderPipe = Service.Get<IRenderPipeline>() ?? throw new Exception("Render pipeline couldn't be found by sprite render system!");
     }
 
     /// <summary>
@@ -88,8 +90,7 @@ public class SpriteRenderSystem
     /// <summary>
     /// Render sprites by batch
     /// </summary>
-    /// <param name="renderPipe"></param>
-    public void RenderSprites(IRenderPipeline renderPipe)
+    public void RenderSprites()
     {
         foreach (var kvp in m_RenderingBatchMap)
         {
@@ -97,7 +98,7 @@ public class SpriteRenderSystem
             var matrices = kvp.Value;
             if (m_UvBatchMap.TryGetValue(texture, out var uvrects))
             {
-                renderPipe.DrawSpritesInstanced(texture, matrices, uvrects, matrices.Count);
+                m_RenderPipe.DrawSpritesInstanced(texture, matrices, uvrects, matrices.Count);
             }
         }
     }

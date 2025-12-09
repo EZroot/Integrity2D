@@ -34,11 +34,17 @@ public class RenderPipeline : IRenderPipeline
     private uint m_UvRectVboId;
     private nuint m_UvBufferCapacityBytes = 0;
 
+    private uint m_TileShaderProgramId;
+    private uint m_TileVaoId;
+    private uint m_TileVboId;
+    private int m_TileProjectionUniformLocation;
+    private int m_TileModelUniformLocation;
+
+    private int m_ProjectionUniformLocation;
+
     private unsafe Window* m_WindowHandler;
     private readonly ClearBufferMask m_ClearBufferMask = ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit;
     private System.Drawing.Color m_ClearColor = System.Drawing.Color.CornflowerBlue;
-
-    private int m_ProjectionUniformLocation;
 
     public GL? GlApi => m_GlApi;
 
@@ -65,9 +71,18 @@ public class RenderPipeline : IRenderPipeline
             Path.Combine(EngineSettings.SHADER_DIR, "default.vert"),
             Path.Combine(EngineSettings.SHADER_DIR, "default.frag")
         );
-
-        SetupQuadMesh();
         m_ProjectionUniformLocation = m_GlApi.GetUniformLocation(m_ShaderProgramId, "projection");
+
+        m_TileShaderProgramId = CreateShaderProgram(
+            Path.Combine(EngineSettings.SHADER_DIR, "tile.vert"), // Assuming you created this file
+            Path.Combine(EngineSettings.SHADER_DIR, "tile.frag") // Reusing fragment shader
+        );
+
+        m_TileProjectionUniformLocation = m_GlApi.GetUniformLocation(m_TileShaderProgramId, "projection");
+        m_TileModelUniformLocation = m_GlApi.GetUniformLocation(m_TileShaderProgramId, "model");
+
+        SetupTileMeshVao();
+        SetupQuadMesh();
     }
 
     /// <summary>
@@ -116,18 +131,73 @@ public class RenderPipeline : IRenderPipeline
         m_GlApi.BindBuffer(GLEnum.ArrayBuffer, 0);
     }
 
-    private unsafe void EnsureBufferCapacity(nuint requiredBytes, uint vboId, ref nuint currentCapacity)
+    public unsafe void DrawStaticMesh(Assets.Texture texture, uint vboId, int vertexCount, in Matrix4x4 modelMatrix)
     {
-        if (requiredBytes <= currentCapacity)
+        if (vertexCount == 0 || m_GlApi == null)
+        {
+            Logger.Log("DrawStaticMesh: Vertex count {vertexCount}  is 0 or GLAPI couldnt be found!", Logger.LogSeverity.Error);
             return;
+        }
 
-        nuint newCapacity = Math.Max(requiredBytes, currentCapacity == 0 ? requiredBytes : currentCapacity * 2);
+        m_GlApi.UseProgram(m_TileShaderProgramId);
+        texture.Use(TextureUnit.Texture0);
 
-        m_GlApi!.BindBuffer(GLEnum.ArrayBuffer, vboId);
-        m_GlApi!.BufferData(GLEnum.ArrayBuffer, newCapacity, null, GLEnum.DynamicDraw);
-        m_GlApi!.BindBuffer(GLEnum.ArrayBuffer, 0);
+        if (m_TileModelUniformLocation != -1)
+        {
+            fixed (float* ptr = &modelMatrix.M11)
+            {
+                m_GlApi.UniformMatrix4(m_TileModelUniformLocation, 1, false, ptr);
+            }
+        }
 
-        currentCapacity = newCapacity;
+        int location = m_GlApi.GetUniformLocation(m_TileShaderProgramId, "textureSampler");
+        if (location != -1)
+        {
+            m_GlApi.Uniform1(location, 0);
+        }
+
+        m_GlApi.BindVertexArray(m_TileVaoId);
+        m_GlApi.BindBuffer(GLEnum.ArrayBuffer, vboId);
+
+        int stride = 4 * sizeof(float);
+
+        // Position 
+        m_GlApi.VertexAttribPointer(0, 2, VertexAttribPointerType.Float, false, (uint)stride, (void*)0);
+        m_GlApi.EnableVertexAttribArray(0);
+
+        // UV 
+        m_GlApi.VertexAttribPointer(1, 2, VertexAttribPointerType.Float, false, (uint)stride, (void*)(2 * sizeof(float)));
+        m_GlApi.EnableVertexAttribArray(1);
+
+        m_GlApi.DrawArrays(PrimitiveType.Triangles, 0, (uint)vertexCount);
+
+        m_GlApi.DisableVertexAttribArray(1);
+        m_GlApi.DisableVertexAttribArray(0);
+        m_GlApi.BindBuffer(GLEnum.ArrayBuffer, 0);
+        m_GlApi.BindVertexArray(0);
+        m_GlApi.BindTexture(TextureTarget.Texture2D, 0);
+        m_GlApi.UseProgram(0);
+    }
+
+    /// <summary>
+    /// Creates or updates the VBO for a specific tile chunk
+    /// </summary>
+    public unsafe void UpdateTileChunkVbo(TileChunk chunk)
+    {
+        if (chunk.VboId == 0)
+        {
+            chunk.VboId = m_GlApi!.GenBuffer();
+        }
+
+        m_GlApi!.BindBuffer(GLEnum.ArrayBuffer, chunk.VboId);
+
+        fixed (float* vPtr = CollectionsMarshal.AsSpan(chunk.Vertices))
+        {
+            // Static draw for tiles
+            m_GlApi.BufferData(GLEnum.ArrayBuffer, (nuint)(chunk.Vertices.Count * sizeof(float)), vPtr, GLEnum.StaticDraw);
+        }
+
+        m_GlApi.BindBuffer(GLEnum.ArrayBuffer, 0);
     }
 
     public void RenderFrameStart()
@@ -163,11 +233,18 @@ public class RenderPipeline : IRenderPipeline
     {
         Debug.Assert(m_GlApi != null, "GL API is null.");
 
+        // 1. Update Dynamic Sprite Shader
         m_GlApi.UseProgram(m_ShaderProgramId);
-
         fixed (float* ptr = &matrix.M11)
         {
             m_GlApi.UniformMatrix4(m_ProjectionUniformLocation, 1, false, ptr);
+        }
+
+        // 2. Update Static Tile Shader (THE FIX)
+        m_GlApi.UseProgram(m_TileShaderProgramId);
+        fixed (float* ptr = &matrix.M11)
+        {
+            m_GlApi.UniformMatrix4(m_TileProjectionUniformLocation, 1, false, ptr);
         }
 
         m_GlApi.UseProgram(0);
@@ -276,9 +353,30 @@ public class RenderPipeline : IRenderPipeline
         m_GlApi.BindVertexArray(0);
     }
 
+    private unsafe void SetupTileMeshVao()
+    {
+        m_TileVaoId = m_GlApi!.GenVertexArray();
+        m_GlApi.BindVertexArray(m_TileVaoId);
+        m_GlApi.BindVertexArray(0);
+    }
+
     private unsafe IntPtr GetProcAddress(string procName)
     {
         Debug.Assert(m_SdlApi != null, "SDL Api is null when getting proc address!");
         return (IntPtr)m_SdlApi.GLGetProcAddress(procName);
+    }
+
+    private unsafe void EnsureBufferCapacity(nuint requiredBytes, uint vboId, ref nuint currentCapacity)
+    {
+        if (requiredBytes <= currentCapacity)
+            return;
+
+        nuint newCapacity = Math.Max(requiredBytes, currentCapacity == 0 ? requiredBytes : currentCapacity * 2);
+
+        m_GlApi!.BindBuffer(GLEnum.ArrayBuffer, vboId);
+        m_GlApi!.BufferData(GLEnum.ArrayBuffer, newCapacity, null, GLEnum.DynamicDraw);
+        m_GlApi!.BindBuffer(GLEnum.ArrayBuffer, 0);
+
+        currentCapacity = newCapacity;
     }
 }
