@@ -47,7 +47,7 @@ public class GameObject
         }
 
         Logger.Log($"Component of type {typeof(T).Name} not found in GameObject ({Name}).", Logger.LogSeverity.Warning);
-        comp = (T)default;
+        comp = default;
         return false;
     }
 }

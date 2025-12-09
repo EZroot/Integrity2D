@@ -87,11 +87,6 @@ public class ToolGui
             DrawEngineStatusTool(Service.Get<ISceneManager>()!, Service.Get<ICameraManager>()!);
         }
 
-        if(m_AssetsWindowOpened)
-        {
-            DrawAssets();
-        }
-
         if(m_SettingsWindowOpened)
         {
             DrawSettingsTool(Service.Get<IWindowPipeline>()!);
@@ -227,108 +222,6 @@ public void DrawEngineStatusTool(ISceneManager sceneManager, ICameraManager came
             ImGui.End(); // END "Inspector"
         }
     }
-
-    //-------------------------------------------------------------------------
-    // REQUIRED HELPER FUNCTIONS (Placeholder/Example Implementations)
-    //-------------------------------------------------------------------------
-    
-
-
-private void DrawAssets()
-{
-    // 1. Begin the Tab Bar
-    if (ImGui.BeginTabBar("AssetManagerTabBar"))
-    {
-        // 2. Begin the Tab Item (This is the line that previously caused the error)
-        if (ImGui.BeginTabItem("Assets"))
-        {
-            var assetManager = Service.Get<IAssetManager>();
-            
-            // Check if the service exists before accessing it
-            if (assetManager != null)
-            {
-                var loadedAssets = assetManager.GetLoadedAssets();
-
-                ImGui.Text($"Asset Manager Status");
-                ImGui.Separator();
-
-                ImGui.Text($"Total Loaded Assets: {loadedAssets.Count}");
-                ImGui.Spacing();
-
-                if (ImGui.BeginTable("LoadedAssetTable", 3, ImGuiTableFlags.Borders | ImGuiTableFlags.RowBg | ImGuiTableFlags.Resizable))
-                {
-                    ImGui.TableSetupColumn("Name / Details", ImGuiTableColumnFlags.WidthStretch, 0.5f);
-                    ImGui.TableSetupColumn("Type", ImGuiTableColumnFlags.WidthFixed, 100.0f);
-                    ImGui.TableSetupColumn("Size (MB)", ImGuiTableColumnFlags.WidthFixed, 100.0f);
-                    ImGui.TableHeadersRow();
-
-                    const float MB = 1024f * 1024f;
-                    foreach (var kvp in loadedAssets)
-                    {
-                        string path = kvp.Key;
-                        var assetInfo = kvp.Value;
-
-                        // Ensure GetTexture and TextureId access is safe if assetInfo.Type is "ImageData"
-                        bool isTexture = assetInfo.Type.Equals("ImageData", StringComparison.OrdinalIgnoreCase);
-                        Assets.Texture glTexture = isTexture ? assetManager.GetTexture(path) : null;
-                        
-                        // Check if texture is valid before trying to draw/access properties
-                        bool textureValid = isTexture && glTexture != null && glTexture.TextureId != IntPtr.Zero;
-
-                        ImGui.TableNextRow();
-                        ImGui.TableSetColumnIndex(0);
-                        ImGui.PushID(path);
-
-                        ImGuiTreeNodeFlags flags = textureValid ? ImGuiTreeNodeFlags.None : ImGuiTreeNodeFlags.Leaf | ImGuiTreeNodeFlags.NoTreePushOnOpen;
-
-                        if (ImGui.TreeNodeEx(path, flags, path))
-                        {
-                            ImGui.Text($"Full Path: {path}");
-                            ImGui.Text($"Bytes: {assetInfo.MemoryFootprintBytes:N0}");
-                            if (textureValid)
-                            {
-                                ImGui.Separator();
-                                Vector2 previewSize = new Vector2(128, 128);
-                                float aspect = (float)glTexture.Width / glTexture.Height;
-                                if (glTexture.Width > glTexture.Height)
-                                {
-                                    previewSize.Y = previewSize.X / aspect;
-                                }
-                                else
-                                {
-                                    previewSize.X = previewSize.Y * aspect;
-                                }
-                                
-                                // Casting IntPtr to nint is correct for ImGui.Image in ImGui.NET
-                                ImGui.Image((nint)glTexture.TextureId, previewSize);
-                                ImGui.Text($"Dimensions: {glTexture.Width}x{glTexture.Height}");
-                            }
-                            ImGui.TreePop();
-                        }
-
-                        ImGui.PopID();
-
-                        ImGui.TableSetColumnIndex(1);
-                        ImGui.Text(assetInfo.Type);
-
-                        ImGui.TableSetColumnIndex(2);
-                        float sizeMB = assetInfo.MemoryFootprintBytes / MB;
-
-                        ImGui.Text($"{sizeMB:F2} MB");
-                    }
-
-                    ImGui.EndTable();
-                }
-            }
-            
-            // 3. End the Tab Item
-            ImGui.EndTabItem();
-        }
-
-        // 4. End the Tab Bar
-        ImGui.EndTabBar();
-    }
-}
 
     private void DrawSettingsTool(IWindowPipeline windowPipe)
     {
