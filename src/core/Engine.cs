@@ -134,7 +134,6 @@ public class Engine
 
     private void Update(float deltaTime)
     {
-        m_ImGuiPipe.Tools.DrawToolsUpdate(deltaTime);
         m_Game.Update(deltaTime);
 
         if (m_SceneManager.CurrentScene != null)
@@ -160,7 +159,7 @@ public class Engine
 
         m_ImGuiPipe.BeginFrame();
         m_ImGuiPipe.Tools.DrawMenuBar(m_CurrentFps);
-        m_ImGuiPipe.Tools.DrawTools(m_Profiler);
+        m_ImGuiPipe.Tools.DrawTools();
         m_ImGuiPipe.EndFrame();
 
         m_RenderPipe.RenderFrameEnd();

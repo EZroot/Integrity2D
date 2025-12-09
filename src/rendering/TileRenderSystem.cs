@@ -54,6 +54,8 @@ public class TileRenderSystem
 
     private Matrix4x4 m_MatrixModel = Matrix4x4.Identity;
 
+    public IReadOnlyDictionary<Vector2, TileChunk> TileChunks => m_TileChunks;
+
     public TileRenderSystem()
     {
         m_RenderPipe = Service.Get<IRenderPipeline>() ?? throw new Exception("RenderPipeline couldn't be found for TileRenderSystem!");
