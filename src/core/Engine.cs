@@ -1,8 +1,6 @@
 using System.Diagnostics;
 using System.Numerics;
-using System.Linq;
 using Integrity.Interface;
-using Integrity.Utils;
 using Silk.NET.SDL;
 
 namespace Integrity.Core;
@@ -55,14 +53,10 @@ public class Engine
     public void Run()
     {
         Initialize();
-        // m_Profiler.InitializeRenderProfiler("Full_Render");
-        // m_Profiler.InitializeRenderProfiler("Draw_Sprite_Instanced");
-        // m_Profiler.InitializeRenderProfiler("Draw_ImGui");
         m_Stopwatch.Start();
         m_IsRunning = true;
         while (m_IsRunning)
         {
-            // m_Profiler.StartCpuProfile("Full_Update");
             m_Stopwatch.Stop();
             float deltaTime = (float)m_Stopwatch.Elapsed.TotalSeconds;
             m_Stopwatch.Restart();
@@ -75,16 +69,9 @@ public class Engine
                 m_FpsTimeAccumulator = 0.0f;
             }
 
-            // m_Profiler.StartCpuProfile("Cpu_Input");
             HandleInput();
-            // m_Profiler.StopCpuProfile("Cpu_Input");
-            // m_Profiler.StartCpuProfile("Cpu_Update");
             Update(deltaTime);
-            // m_Profiler.StopCpuProfile("Cpu_Update");
-            // m_Profiler.StopCpuProfile("Full_Update");
-            // m_Profiler.StartRenderProfile("Full_Render");
             Render();
-            // m_Profiler.StopRenderProfile("Full_Render");
         }
 
         Cleanup();
@@ -152,12 +139,8 @@ public class Engine
 
         if (m_SceneManager.CurrentScene != null)
         {
-            // m_Profiler.StartCpuProfile("Sprite_Batch_Update");
             m_SceneManager.CurrentScene.SpriteRenderSystem.UpdateSpriteBatchByTexture();
-            // m_Profiler.StopCpuProfile("Sprite_Batch_Update");
-            // m_Profiler.StartCpuProfile("Sprite_Animation");
-            m_SceneManager.CurrentScene.AnimationRenderSystem.Update(deltaTime);
-            // m_Profiler.StopCpuProfile("Sprite_Animation");
+            m_SceneManager.CurrentScene.AnimationRenderSystem.UpdateAnimationFrames(deltaTime);
         }
     }
 
@@ -174,12 +157,10 @@ public class Engine
 
         m_Game.Render();
 
-        // m_Profiler.StartRenderProfile("Draw_ImGui");
         m_ImGuiPipe.BeginFrame();
         m_ImGuiPipe.Tools.DrawMenuBar(m_CurrentFps);
         m_ImGuiPipe.Tools.DrawTools(m_Profiler);
         m_ImGuiPipe.EndFrame();
-        // m_Profiler.StopRenderProfile("Draw_ImGui");
 
         m_RenderPipe.RenderFrameEnd();
     }

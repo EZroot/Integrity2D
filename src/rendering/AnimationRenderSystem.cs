@@ -12,6 +12,11 @@ public class AnimationRenderSystem
         m_AnimatedObjects = new List<(GameObject, AnimationComponent, SpriteComponent)>();
     }
 
+    /// <summary>
+    /// Register an object with animation component to play through the animation
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <exception cref="Exception"></exception>
     public void RegisterObject(GameObject obj)
     {
         var animationComp = obj.GetComponent<AnimationComponent>();
@@ -28,7 +33,11 @@ public class AnimationRenderSystem
         }
     }
 
-    public void Update(float deltaTime)
+    /// <summary>
+    /// Play through the current animation of sprite objects
+    /// </summary>
+    /// <param name="deltaTime"></param>
+    public void UpdateAnimationFrames(float deltaTime)
     {
         foreach (var tuple in m_AnimatedObjects)
         {
