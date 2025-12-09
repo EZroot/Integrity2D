@@ -26,7 +26,6 @@ Our primary example project showcases scene setup, input handling, and the engin
 New game objects are instantiated via the factory and registered with the active scene to be rendered automatically.
 
 ```csharp
-// Inside Engine.Initialize() (Will become IGame.Initialize() later)
 // Create a new scene
 Scene defaultScene = new Scene("DefaultScene");
 
@@ -48,7 +47,7 @@ playerSprite.Transform.ScaleX = 0.5f;
 // Once registered, the Engine's main Render() loop will automatically draw it batched and instanced.
 sceneManager.CurrentScene.RegisterGameObject(playerSprite);
 
-// Load and set the scene
+// Load and set the scene, rendering will happen automagically
 m_SceneManager.AddScene(defaultScene);
 m_SceneManager.LoadScene(defaultScene);
 ```
