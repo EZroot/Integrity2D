@@ -36,7 +36,6 @@ public class RenderPipeline : IRenderPipeline
 
     private uint m_TileShaderProgramId;
     private uint m_TileVaoId;
-    private uint m_TileVboId;
     private int m_TileProjectionUniformLocation;
     private int m_TileModelUniformLocation;
 

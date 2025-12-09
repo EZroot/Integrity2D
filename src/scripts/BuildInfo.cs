@@ -4,5 +4,5 @@
 /// </summary>
 public static class BuildInfo
 {
-    public const int BuildNumber = 396;
+    public const int BuildNumber = 400;
 }
