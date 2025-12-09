@@ -3,7 +3,6 @@ using ImGuiNET;
 using Integrity.Core;
 using Integrity.Interface;
 using Integrity.Rendering;
-using System;
 
 namespace Integrity.Tools;
 public class ToolTileMonitor
@@ -32,23 +31,23 @@ public class ToolTileMonitor
             ImGui.Separator();
 
             ImGui.BeginChild("ChunkList", new Vector2(250, 0));
-            
+
             ImGui.Text("🌐 Tile Chunks");
             ImGui.Separator();
 
             ImGui.PushID("ChunkListRoot");
-            
+
             if (ImGui.TreeNodeEx("Loaded Chunks", ImGuiTreeNodeFlags.DefaultOpen))
             {
                 foreach (var kvp in tileChunks)
                 {
                     var chunkId = kvp.Key;
                     var chunk = kvp.Value;
-                    
+
                     ImGui.PushID(chunk.GetHashCode());
 
                     string label = $"Chunk ({chunkId.X}, {chunkId.Y}) | Tiles: {chunk.TileDataMap.Count} | Dirty: {chunk.IsDirty}";
-                    
+
                     ImGuiTreeNodeFlags nodeFlags = ImGuiTreeNodeFlags.Leaf | ImGuiTreeNodeFlags.NoTreePushOnOpen;
                     bool isSelected = m_SelectedTileChunk == chunk;
 
@@ -63,7 +62,7 @@ public class ToolTileMonitor
                     {
                         m_SelectedTileChunk = chunk;
                     }
-                    
+
                     if (ImGui.IsItemHovered())
                     {
                         ImGui.SetTooltip($"Coords: ({chunkId.X}, {chunkId.Y})\nVertices: {chunk.VertexCount}\nTexture ID: {chunk.Texture.TextureId}");
@@ -85,11 +84,11 @@ public class ToolTileMonitor
                 var chunk = m_SelectedTileChunk;
                 ImGui.Text($"Details for Chunk: ({chunk.ChunkId.X}, {chunk.ChunkId.Y})");
                 ImGui.Separator();
-                
+
                 ImGui.Text($"Texture ID: {chunk.Texture.TextureId}");
                 ImGui.Text($"Tile Count: **{chunk.TileDataMap.Count}**");
                 ImGui.Text($"Vertices: **{chunk.VertexCount}**");
-                
+
                 bool isDirty = chunk.IsDirty;
                 if (ImGui.Checkbox("Is Dirty (Needs Update)", ref isDirty))
                 {
@@ -115,11 +114,11 @@ public class ToolTileMonitor
                             ImGui.TableHeadersRow();
 
                             int maxVertices = Math.Min(chunk.VertexCount / 4, 100);
-                            
+
                             for (int i = 0; i < maxVertices * 4; i += 4)
                             {
                                 ImGui.TableNextRow();
-                                
+
                                 ImGui.TableNextColumn(); ImGui.Text($"{i / 4:D3}");
                                 ImGui.TableNextColumn(); ImGui.Text($"{chunk.Vertices[i]:F2}");
                                 ImGui.TableNextColumn(); ImGui.Text($"{chunk.Vertices[i + 1]:F2}");
@@ -131,7 +130,7 @@ public class ToolTileMonitor
                             {
                                 ImGui.TableNextRow();
                                 ImGui.TableNextColumn(); ImGui.Text("...");
-                                ImGui.TableNextColumn(); ImGui.TableNextColumn(); 
+                                ImGui.TableNextColumn(); ImGui.TableNextColumn();
                                 ImGui.TableNextColumn(); ImGui.TableNextColumn();
                             }
 
@@ -139,9 +138,9 @@ public class ToolTileMonitor
                         }
                     }
                 }
-                
+
                 ImGui.Spacing();
-                
+
                 if (ImGui.CollapsingHeader($"Tile Data Map ({chunk.TileDataMap.Count} Tiles)"))
                 {
                     if (chunk.TileDataMap.Count == 0)
@@ -154,9 +153,9 @@ public class ToolTileMonitor
                         {
                             var localId = tileKVP.Key;
                             var tileData = tileKVP.Value;
-                            
+
                             ImGui.PushID(tileData.GetHashCode());
-                            
+
                             if (ImGui.TreeNode($"Tile ({localId.X}, {localId.Y})"))
                             {
                                 bool isVisible = tileData.IsVisible;
@@ -165,18 +164,18 @@ public class ToolTileMonitor
                                     tileData.IsVisible = isVisible;
                                     chunk.IsDirty = true;
                                 }
-                                
+
                                 ImGui.Text($"Texture ID: {tileData.Texture.TextureId}");
-                                
+
                                 ImGui.Text("Source Rect:");
-                                
+
                                 float x = tileData.SourceRect.X;
                                 float y = tileData.SourceRect.Y;
                                 float w = tileData.SourceRect.Width;
                                 float h = tileData.SourceRect.Height;
-                                
+
                                 bool changed = false;
-                                
+
                                 ImGui.PushItemWidth(60);
                                 if (ImGui.InputFloat("X##TileSrcX", ref x)) changed = true; ImGui.SameLine();
                                 if (ImGui.InputFloat("Y##TileSrcY", ref y)) changed = true; ImGui.SameLine();
@@ -192,12 +191,12 @@ public class ToolTileMonitor
                                     sourceRect.Width = w;
                                     sourceRect.Height = h;
                                     tileData.SourceRect = sourceRect;
-                                    chunk.IsDirty = true; 
+                                    chunk.IsDirty = true;
                                 }
 
                                 ImGui.TreePop();
                             }
-                            
+
                             ImGui.PopID();
                         }
                     }

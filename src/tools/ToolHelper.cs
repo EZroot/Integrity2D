@@ -33,11 +33,11 @@ public static class ToolHelper
         }
 
         Type targetType = targetObject.GetType();
-        
-        if (targetObject is GameObject && memberInfo == null) 
+
+        if (targetObject is GameObject && memberInfo == null)
         {
             ImGui.Text($"Name: {((GameObject)targetObject).Name}");
-            return; 
+            return;
         }
 
         if (targetType.IsPrimitive || targetType.IsEnum || targetType == typeof(string) ||
@@ -58,7 +58,7 @@ public static class ToolHelper
                 ImGui.Text($"{label}: {targetObject}");
                 return;
             }
-            
+
             if (targetType == typeof(bool))
             {
                 bool value = (bool)targetObject;
@@ -86,7 +86,7 @@ public static class ToolHelper
             else if (targetType == typeof(System.Numerics.Vector3))
             {
                 System.Numerics.Vector3 value = (System.Numerics.Vector3)targetObject;
-                if (ImGui.InputFloat3($"##{label}{memberInfo!.GetHashCode()}", ref value)) 
+                if (ImGui.InputFloat3($"##{label}{memberInfo!.GetHashCode()}", ref value))
                 {
                     SetValue(memberInfo!, parentObject, value);
                 }
@@ -96,7 +96,7 @@ public static class ToolHelper
             else if (targetType == typeof(System.Numerics.Vector2))
             {
                 System.Numerics.Vector2 value = (System.Numerics.Vector2)targetObject;
-                if (ImGui.InputFloat2($"##{label}{memberInfo!.GetHashCode()}", ref value)) 
+                if (ImGui.InputFloat2($"##{label}{memberInfo!.GetHashCode()}", ref value))
                 {
                     SetValue(memberInfo!, parentObject, value);
                 }
@@ -129,20 +129,20 @@ public static class ToolHelper
         {
             ImGui.SetNextItemOpen(true, ImGuiCond.Once);
         }
-        
+
         if (ImGui.TreeNode(nodeId, $"{label} ({targetType.Name})"))
         {
             var members = targetType.GetMembers(
-                BindingFlags.Public | 
-                BindingFlags.NonPublic | 
-                BindingFlags.Instance | 
+                BindingFlags.Public |
+                BindingFlags.NonPublic |
+                BindingFlags.Instance |
                 BindingFlags.DeclaredOnly
             );
 
             foreach (var member in members)
             {
                 if (member.Name is "GetType" or "ToString" or "Equals" or "GetHashCode" or "Component" ||
-                    member.Name.StartsWith("<")) 
+                    member.Name.StartsWith("<"))
                 {
                     continue;
                 }
@@ -153,8 +153,8 @@ public static class ToolHelper
 
                 if (member is PropertyInfo property)
                 {
-                    if (property.IsSpecialName) continue; 
-                    
+                    if (property.IsSpecialName) continue;
+
                     if (property.CanRead)
                     {
                         value = property.GetValue(targetObject);
@@ -169,7 +169,7 @@ public static class ToolHelper
 
                 if (value != null && valueType != null)
                 {
-                    ImGui.PushID(member.GetHashCode()); 
+                    ImGui.PushID(member.GetHashCode());
 
                     DrawObjectProperties(value, memberName, member, targetObject);
 

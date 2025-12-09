@@ -4,6 +4,7 @@ using Integrity.Core;
 using Integrity.Interface;
 using Integrity.Objects;
 
+namespace Integrity.Tools;
 public class ToolInspector
 {
     private GameObject? m_SelectedGameObject = null;
@@ -30,22 +31,22 @@ public class ToolInspector
             {
                 if (ImGui.IsItemClicked())
                 {
-                    m_SelectedGameObject = null; 
+                    m_SelectedGameObject = null;
                 }
                 ImGui.TreePop();
             }
 
             foreach (var gameObject in currentScene.GetAllGameObjects())
             {
-                ImGui.PushID(gameObject.GetHashCode()); 
-                
+                ImGui.PushID(gameObject.GetHashCode());
+
                 bool isSelected = m_SelectedGameObject == gameObject;
-                
+
                 if (ImGui.Selectable(gameObject.Name, isSelected))
                 {
-                    m_SelectedGameObject = gameObject; 
+                    m_SelectedGameObject = gameObject;
                 }
-                
+
                 ImGui.PopID();
             }
 
@@ -59,23 +60,23 @@ public class ToolInspector
             {
                 ImGui.Text($"Object: {m_SelectedGameObject.Name}");
                 ImGui.Separator();
-                
+
                 ImGui.Text("GameObject Properties");
                 ToolHelper.DrawObjectProperties(m_SelectedGameObject, "GameObject");
                 ImGui.Separator();
-                
+
                 ImGui.Text("Components");
                 var componentMap = ToolHelper.GetPrivateComponentMap(m_SelectedGameObject);
-                
+
                 if (componentMap != null)
                 {
                     foreach (var pair in componentMap)
                     {
                         var component = pair.Value;
                         ImGui.PushID(component.GetHashCode());
-                        
+
                         ToolHelper.DrawObjectProperties(component, component.GetType().Name);
-                        
+
                         ImGui.PopID();
                         ImGui.Separator();
                     }
@@ -91,7 +92,7 @@ public class ToolInspector
             }
 
             ImGui.EndChild();
-            
+
             ImGui.End();
         }
     }
